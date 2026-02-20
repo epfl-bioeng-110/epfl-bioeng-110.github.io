@@ -1,0 +1,513 @@
+[
+  {
+    "id": "A001",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les classes de molécules ci-dessous, laquelle ne fait pas partie des quatre classes de biomolécules ?",
+    "options": [
+      "Acides inorganiques", 
+      "Glucides", 
+      "Acides nucléiques", 
+      "Protéines", 
+      "Lipides"
+    ],
+    "correct": [0],
+    "explanation": "Les quatre classes de biomolécules sont les acides nucléiques, les glucides, les lipides et les protéines. Tous les êtres vivants en sont constitués."
+  },
+  {
+    "id": "A002",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant les macromolécules, lesquelles sont correctes ?",
+    "options": [
+      "Les glucides, protéines et acides nucléiques sont des polymères.", 
+      "Les enzymes sont des macromolécules.",
+      "Toutes les macromolécules sont des polymères.", 
+      "La synthèse des polymères implique une réaction d'hydrolyse.",
+      "Toutes les cellules d'un organisme possèdent exactement les mêmes polymères."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Les glucides, protéines et acides nucléiques sont généralement considérés comme des polymères. En revanche, les lipides ne sont généralement pas considérés comme des polymères.",
+      "Les lipides ne sont généralement pas considérés comme des polymères.",
+      "La synthèse des polymères implique une réaction de déshydradation (perte d'une molécule d'eau). C'est la dégradation des polymères qui implique une réaction d'hydrolyse.",
+      "Il existe une grande variété de polymères entre espèces, entre organismes, mais aussi entre différentes cellules d'un même organisme.",
+      "Les enzymes sont des protéines, qui sont des macromolécules."
+    ]
+  },
+  {
+    "id": "A003",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Un chercheur découvre un nouveau triglycéride. À température ambiante, ce nouveau lipide forme une matière compacte, similaire au beurre. Il s'agit probablement d'un triglycéride ___.",
+    "options": [
+      "Saturé",
+      "Avec des liaisons doubles carbone-carbone",
+      "Polyinsaturé",
+      "Insaturé",
+      "Avec un groupe phosphate"
+    ],
+    "correct": [0],
+    "hint": "Les liaisons doubles carbone-carbone influencent la forme et l'arrangement des triglycérides.",
+    "explanation": "Les liaisons doubles carbone-carbone (insaturations) empêchent les triglycérides de s'agglomérer étroitement et de se solidifier. Les triglycérides insaturés ont donc une température de fusion (passage solide -> liquide) plus élevée que les triglycérides insaturés."
+  },
+  {
+    "id": "A004",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les trois principaux types de lipides sont les triglycérides, qui jouent un rôle dans ___, les stéroïdes, qui jouent un rôle dans ___, et les phospholipides, qui jouent un rôle dans ___.",
+    "options": [
+      "Le stockage de l'énergie / la signalisation hormonale / la formation des membranes biologiques",
+      "Le stockage de l'énergie / la formation des membranes biologiques / la signalisation hormonale",
+      "La signalisation hormonale / le stockage de l'énergie / la formation des membranes biologiques",
+      "La signalisation hormonale / la formation des membranes biologiques / le stockage de l'énergie",
+      "La formation des membranes biologiques / la signalisation hormonale / le stockage de l'énergie"
+    ],
+    "correct": [0],
+    "hint": "Pensez à la forme de chaque type de lipides et à la manière dont cela pourrait influencer leur fonction.",
+    "explanation": "Les triglycérides possèdent trois acides gras, qui renferment beaucoup d'énergie. Les stéroïdes sont principalement impliqués dans la signalisation hormonale et la communication cellulaire, en agissant comme messagers. Les phospholipides possèdent une forme cylindrique propice à la formation de membranes biologiques."
+  },
+  {
+    "id": "A005",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle affirmation concernant les lipides est fausse ?",
+    "options": [
+      "La plupart des lipides sont solubles dans l'eau.",
+      "La plupart des lipides membranaires sont amphiphiles.",
+      "Le cholestérol est composé d'un squelette de quatre cycles carbonés.",
+      "La plupart des phospholipides membranaires contiennent une queue insaturée pour diminuer leur rigidité.",
+      "De manière générale, la température de fusion d'un lipide est inversement proportionnelle à son nombre de liaisons doubles."
+    ],
+    "correct": [0],
+    "hint": "Comment se comporte l'huile dans l'eau ?",
+    "explanation": [
+      "La plupart des lipides sont apolaires et sont donc insolubles dans l'eau.",
+      "Les membranes biologiques contiennent une partie polaire, au contact de l'environnement externe (eau), et une partie apolaire, à l'intérieur de la membrane. La plupart des lipides membranaires sont donc amphiphiles : ils sont composés d'une partie polaire, qui interagit avec l'environnement externe, et d'une partie apolaire, à l'intérieur de la membrane.",
+      "Le cholestérol est composé de quatre cycles carbonés, qui lui confèrent sa rigidité, ainsi que d'une queue apolaire et d'une tête polaire (groupe -OH).",
+      "Pour assurer la fluidité des membranes, la plupart des phospholipides membranaires contiennent une queue insaturée.",
+      "Les liaisons doubles carbone-carbone (insaturations) empêchent les lipides de s'agglomérer étroitemenet, ce qui a pour effet d'augmenter leur point de fusion (passage solide -> liquide)."
+    ]
+  },
+  {
+    "id": "A006",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Quelles affirmations concernant les glucides sont correctes ?",
+    "options": [
+      "Certains polysaccharides jouent un rôle protecteur en assurant le maintien d'une structure.",
+      "La polymérisation de monosaccharides en polysaccharides implique une réaction de déshydratation.",
+      "La plupart des glucides peuvent exister sous forme cyclique ou linéaire.",
+      "Les animaux stockent les glucides sous forme d'amidon.",
+      "Le brunissement du pain pendant sa cuisson est le résultat d'une réaction enzymatique impliquant des sucres et favorisée par la chaleur."
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "Les polysaccharides structuraux, comme la cellulose ou la chitine, forment des structures protectrices.",
+      "La polymérisation de biomolécules implique une réaction de déshydratation (perte d'une molécule d'eau). À l'inverse, la dégradation de polymères implique une réaction d'hydrolyse.",
+      "Les glucides peuvent exister sous forme cyclique ou linéaire, en fonction de l'environnement dans lequel ils se trouvent. Dans l'eau, la plupart des glucides adoptent une conformation cyclique, qui est énergétiquement favorable.",
+      "Les animaux stockent les glucides sous forme de glycogène. Ce sont les plantes qui stockent les glucides sous forme d'amidon.",
+      "La réaction de Maillard, responsable du brunissement du pain pendant sa cuisson, est le résultat d'une réaction NON-enzymatique."
+    ]
+  },
+  {
+    "id": "A007",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Comment s'appelle la liaison entre monomères de glucose au sein d'un polysaccharide ?",
+    "options": [
+      "Liaison glycosidique",
+      "Liaison ester",
+      "Liaison phosphodiester",
+      "Liaison peptidique",
+      "Liaison hydrogène"
+    ],
+    "correct": [0],
+    "hint": "On en retrouve dans le glycogène.",
+    "explanation": "La liaison entre deux monomères de glucose est appelée \"liaison glycosidique\"."
+  },
+  {
+    "id": "A008",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant la structure des acides aminés, lesquelles sont correctes ?",
+    "options": [
+      "La cystéine peut être phosphorylée.",
+      "Tous les acides aminés possèdent un squelette constitué d'un groupement amine et d'un groupement carboxyle reliés par un carbone.",
+      "Grâce à sa structure cyclique, la proline s'intègre particulièrement bien dans les hélices ɑ (alpha).",
+      "Grâce à sa structure cyclique, l'acide aminé \"M\" s'intègre particulièrement bien dans les hélices ɑ (alpha).",
+      "La phosphorylation de l'arginine a pour effet d'augmenter sa charge."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Bien que la plupart des phosphorylations aient lieu sur la sérine, la thréonine et la tyrosine, d'autres acides aminés peuvent aussi être phosphorylés, notamment la cystéine.",
+      "Le squelette des acides aminés est composé d'un groupement amine et d'un groupement carboxyle reliés par un carbone, appelé carbone alpha.",
+      "À cause de sa structure cyclique, la proline s'intègre mal dans les structures rigides, comme les hélices ɑ (alpha). La proline est donc généralement située dans des zones de transition entre structures secondaires.",
+      "L'acide aminé \"M\" (méthionine) n'est pas cyclique.",
+      "L'arginine est chargée positivement (+1) ; sa phosphorylation, c'est-à-dire l'ajout d'une charge négative (-1), a donc pour effet de neutraliser sa charge."
+    ]
+  },
+  {
+    "id": "A009",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel acide aminé est représenté sur l'image ci-contre ?",
+    "image": "a009_amino_acid.png",
+    "options": [
+      "Glutamine",
+      "Asparagine",
+      "Acide glutamique",
+      "Acide aspartique",
+      "Il ne s'agit pas d'un acide aminé."
+    ],
+    "correct": [0],
+    "hint": "Le squelette des acides aminés peut adopter une forme \"zwitterionique\" (structure globalement neutre avec une charge positive et une charge négative). Le reste de la structure (chaîne latérale) est spécifique à chaque acide aminé.",
+    "explanation": "L'asparagine et la glutamine sont les deux seuls acides aminés à être composés d'un groupe C(=O)NH2."
+  },
+  {
+    "id": "A010",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel est la séquence du tripeptide représenté sur l'image ci-contre ?",
+    "image": "a010_tripeptide.png",
+    "options": [
+      "Cys-Ala-Phe",
+      "Met-Gly-Tyr",
+      "MKQ",
+      "CGY",
+      "Méthionine - glycine - thréonine"
+    ],
+    "correct": [0],
+    "hint": "Essayez de répérer des caractéristiques spécifiques à certains acides aminés, p. ex. groupes, structure cyclique, etc.",
+    "explanation": "La cystéine est le seul acide aminé composé de soufre. La phénylalanine est reconnaissable à sa structure cyclique."
+  },
+  {
+    "id": "A011",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'hémoglobine est un tétramère protéique constitué de deux paires de deux sous-unités. Parmi les structures primaire, secondaire, tertiaire et quaternaire, laquelle n'est pas possédée par l'hémoglobine ?",
+    "options": [
+      "L'hémoglobine possède des structures primaire, secondaire, tertiaire et quaternaire.",
+      "Primaire",
+      "Secondaire",
+      "Tertiaire",
+      "Quaternaire"
+    ],
+    "correct": [0],
+    "hint": "L'hémoglobine est un complexe, c'est à dire qu'elle est constituée de plusieurs sous-unités.",
+    "explanation": [
+      "L'hémoglobine est un complexe protéique, qui possède donc à la fois des structures primaire, secondaire, tertiaire et quaternaire.",
+      "La structure primaire fait référence à la séquence d'acides aminés.",
+      "La structure secondaire fait référence aux motifs de repliement, par exemple les hélices ɑ (alpha) et les feuillets β (bêta).",
+      "La structure tertiaire fait référence à la structure tridimensionnelle de la protéine.",
+      "La structure quaternaire fait référence à l'arrangement spatial de plusieurs sous-unités pour former un complexe protéique."
+    ]
+  },
+  {
+    "id": "A012",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant les acides nucléiques, laquelle est vraie ?",
+    "options": [
+      "Un nucléotide sans groupe phosphate est appelé \"nucléoside\".",
+      "Dans une molécule d'ADN bicaténaire (double brin), la proportion d'adénine est strictement égale à celle de thymine (%A = %T), mais la proportion de cytosine n'est pas égale à celle de guanine (%C ≠ %G).",
+      "Les purines s'apparient toujours avec des purines, et les pyrimidines avec des pyrimidines.",
+      "Les bases azotées de l'ADN ne sont pas les mêmes selon qu'il s'agit d'ADN bicaténaire (double brin) ou monocaténaire (simple brin).",
+      "L'ARN est généralement composé de deux brins antiparallèles."
+    ],
+    "correct": [0],
+    "hint": "L'adénine (A) et la guanine (G) sont des purines ; la thymine (T) et la cytosine (C) sont des pyrimidines.",
+    "explanation": [
+      "L'hémoglobine est un complexe protéique, qui possède donc à la fois des structures primaire, secondaire, tertiaire et quaternaire.",
+      "Dans une molécule d'ADN bicaténaire (double brin), la proportion d'adénine est strictement égale à celle de thymine (%A = %T), et la proportion de cytosine est strictement àgale à celle de guanine (%C = %G) en raison de l'appariement complémentaire des bases (appariement de type Watson-Crick : A-T, C-G).",
+      "Les purines (A, G) s'apparient toujours avec des pyrimidines (T, C).",
+      "La structure de l'ADN (double brin vs simple brin) n'a aucun impact sur les bases azotées de l'ADN (A, T, C, G).",
+      "L'ARN est généralement composé d'un seul brin. C'est l'ADN qui est généralement composé de deux brins antiparallèles."
+    ]
+  },
+  {
+    "id": "A013",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Environ 1 % des enfants de moins de cinq ans présentent une allergie aux œufs. La plupart sont allergiques à l'ovalbumine, une protéine présente dans le blanc d'œuf. Ces enfants peuvent tout de même manger des œufs, mais uniquement cuits. Quelle explication est la plus plausible ?",
+    "options": [
+      "Lors de la cuisson, l'ovalbumine est dénaturée par la chaleur et n'est plus reconnue par le corps comme allergène",
+      "L'ovalbumine est une protéine relativement grande et lourde, qui \"coule\" au fond de la poêle lors de la cuisson. Elle colle alors au revêtement de la poêle et ne se retrouve pas dans les œufs cuits.",
+      "Une enzyme présente dans le jaune d'oeuf dégrade l'ovalbumine, mais cette enzyme nécessite une température élevée (cuisson) pour catalyser la réaction.",
+      "La chaleur rompt les liaisons peptidiques entre les acides aminés de l'ovalbumine, ce qui a pour effet de la détruire."
+    ],
+    "correct": [0],
+    "hint": "Les conditions environnementales (température, pH, concentration de sel) ont un effet important sur la structure des protéines.",
+    "explanation": [
+      "La chaleur rompt les liaisons non covalentes (liaisons hydrogène, etc.) entre les chaînes latérales d'acides aminés, ce qui a pour effet de dénaturer (\"dérouler\") l'ovalbumine, c'est-à-dire de lui faire perdre sa structure tridimensionnelle. Les protéines dénaturées sont biologiquement inactives.",
+      "Proposition intéressante mais pas tout à fait correcte :-)",
+      "Bien qu'il s'agisse d'une réponse plausible, cette explication est beaucoup moins plausible que la dénaturation de l'ovalbumine par la chaleur.",
+      "La chaleur atteinte lors de la cuisson d'un œuf est beaucoup trop faible pour rompre les liaisons peptidiques entre acides aminés. Les liaisons peptidiques sont des liaisons covalentes, beaucoup plus stables que les liaisons non covalentes."
+    ]
+  },
+  {
+    "id": "A014",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Comment s'appelle l'extrémité pointée par la flèche rouge sur la molécule ci-contre ?",
+    "options": [
+      "Extrémité 3'",
+      "Extrémité 5'",
+      "Extrémité C-terminale",
+      "Extrémité N-terminale"
+    ],
+    "correct": [0],
+    "hint": "Comptez les carbones (dans le sens des aiguilles d'une montre).",
+    "explanation": [
+      "Il s'agit de l'extrémité 3' d'une molécule d'ADN.",
+      "L'extrémité 5' d'une molécule d'ADN est située à l'autre bout de la molécule.",
+      "L'extrémité C-terminale désigne l'extrémité finale d'une protéine.",
+      "L'extrémité N-terminale désigne l'extrémité initiale d'une protéine."
+    ]
+  },
+  {
+    "id": "A015",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle liaison entre deux bases complémentaires de l'ADN est la plus stable ?",
+    "options": [
+      "C-G",
+      "A-T",
+      "A-U",
+      "U-A",
+      "T-A"
+    ],
+    "correct": [0],
+    "hint": "L'uracile (U) n'est pas présente dans l'ADN.",
+    "explanation": "Les liaisons C-G sont composées de trois liaisons hydrogène, contre seulement deux pour les liaisons A-T, qui sont donc moins stables."
+  },
+  {
+    "id": "A016",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle affirmation concernant les virus est fausse ?",
+    "options": [
+      "Contrairement aux autres types de virus, les rétrovirus sont capables de se répliquer en dehors d'une cellule hôte.",
+      "Le vaccin de la grippe est renouvelé chaque année en raison des mutations accumulées par le virus au cours du temps (dérive antigénique).",
+      "Lorsqu'il est intégré au génome de son hôte, le génome d'un phage est appelé \"prophage\".",
+      "Le matériel génétique d'un virus peut être de l'ADN ou de l'ARN.",
+      "Les virus ne sont généralement pas considérés comme des êtres vivants par les biologistes."
+    ],
+    "correct": [0],
+    "hint": "Les virus ne disposent pas de toute la machinerie nécessaire à leur réplication.",
+    "explanation": "Tous les virus, y compris les rétrovirus, sont incapables de se reproduire en dehors d'une cellule hôte."
+  },
+  {
+    "id": "A017",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Sous quelle(s) forme(s) peut exister le matériel génétique des virus ?",
+    "options": [
+      "ARN",
+      "ADN",
+      "Lipides",
+      "Glucides",
+      "Protéines"
+    ],
+    "correct": [0, 1],
+    "hint": "Bien qu'ils ne soient pas considérés comme vivants, le matériel génétique des virus est encodé par la même classe de biomolécules que chez les être vivants.",
+    "explanation": "Le matériel génétique des virus peut exister sous forme d'ADN monocaténaire (simple brin) ou bicaténaire (double brin), ou d'ARN monocaténaire ou bicaténaire."
+  },
+  {
+    "id": "A018",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles affirmations concernant les archées sont correctes ?",
+    "options": [
+      "Bien qu'elles partagent certaines caractéristiques avec les eucaryotes, les archées sont des procaryotes.",
+      "Certaines archées nécessitent des conditions extrêmes pour survivre, par exemple une concentration élevée en sel ou une température très faible.",
+      "Les archées sont des procaryotes et ne possèdent donc qu'un seul type d'ARN polymérase, comme les bactéries.",
+      "En raison de leur faible complexité, les archées ne possèdent pas d'intérêt particulier pour la recherche en biologie",
+      "Tout comme les eucaryotes, les archées possèdent une enveloppe nucléaire."
+    ],
+    "correct": [0, 1],
+    "hint": "Les archées possèdent à la fois des caractéristiques similaires aux bactéries et aux eucaryotes.",
+    "explanation": [
+      "Les archées sont des procaryotes, tout comme les bactéries.",
+      "De nombreuses archées sont \"extrêmophiles\", c'est-à-dire qu'elles vivent dans des milieux extrêmes.",
+      "Bien que les archées soient des procaryotes, elles possèdent plusieurs types d'ARN polymérases, comme les eucaryotes. Il s'agit d'un exemple de caractéristique commune aux archées et aux eucaryotes.",
+      "De nombreuses archées possèdent des caractéristiques uniques, notamment la capacité de survivre à des températures très élevées (> 120°C) ou très faibles (< -10°C), ce qui les rend particulièrement intéressantes pour la recherche biologique.",
+      "Les archées sont des procaryotes et ne possèdent donc pas d'enveloppe nucléaire, une caractéristique propre aux eucaryotes."
+    ]
+  },
+  {
+    "id": "A019",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel énoncé décrit le mieux le mode de croissance des bactéries ?",
+    "options": [
+      "La croissance des bactéries est d'abord exponentielle et atteint ensuite un plateau, en raison de la disponiblité limitée des ressources.",
+      "Les bactéries se reproduisent de manière sexuée et leur croissance est similaire à celle des eucaryotes.",
+      "En raison de la disponibilité illimitée des ressources, la croissance des bactéries est exponentielle.",
+      "En raison de la disponibilité limitée des ressources, la croissance des bactéries est linéaire.",
+      "Seule une des deux cellules filles est génétiquement identique à la cellule mère après la division d'une bactérie."
+    ],
+    "correct": [0],
+    "hint": "Les ressources d'un environnement naturel sont toujours limitées.",
+    "explanation": "Lorsque la taille d'une colonie bactérienne est faible, les ressources sont suffisantes pour permettre aux bactéries de se diviser rapidement. À chaque \"génération\", le nombre de bactéries double (croissance exponentielle). Lorsque la colonie devient grande, les ressources deviennent insuffisantes pour permettre à toutes les bactéries de survivre et de se diviser ; la croissance atteint alors un plateau."
+  },
+  {
+    "id": "A020",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel affirmation concernant les bactéries est fausse ?",
+    "options": [
+      "La structure de la paroi de toutes les espèces bactériennes est identique.",
+      "Les fimbriae sont des appendices permettant notamment aux bactéries d'adhérer à d'autres cellules.",
+      "Les bactéries ne possèdent pas de noyau et font donc partie des procaryotes.",
+      "De l'ADN peut être transféré d'une bactérie à une autre par l'intermédiaire d'un phage.",
+      "En raison de leur évolution relativement \"rapide\", les bactéries sont souvent utilisées en laboratoire pour étudier l'évolution."
+    ],
+    "correct": [0],
+    "hint": "Il existe une énorme diversité de bactéries, y compris d'un point de vue structurel.",
+    "explanation": [
+      "La structure de la paroi des bactéries peut considérablement varier entre espèces. Les bactéries sont d'ailleurs généralement divisées en bactéries à Gram positif et bactéries à Gram négatif, une classification qui repose sur la structure de leur paroi.",
+      "Les fimbriae sont des appendices semblables à des poils, qui permettent aux cellules bactériennes d'adhérer à d'autres cellules ou à un substrat.",
+      "Les bactéries, tout comme les archées, ne possèdent pas de noyau et sont donc des procaryotes.",
+      "Il s'agit du phénomène de transduction, lors duquel un phage emporte un bout d'ADN d'une bactérie et le transmet à une autre bactérie lors de l'infection suivante.",
+      "La rapidité de reproduction des bactéries en fait des organismes appropriés à l'étude de l'évolution en laboratoire."
+    ]
+  },
+  {
+    "id": "A021",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel mode de nutrition n'existe pas ?",
+    "options": [
+      "Autohétérotrophe",
+      "Photohétérotrophe",
+      "Photoautotrophe",
+      "Chimiohétérotrophe",
+      "Hétérotrophe"
+    ],
+    "correct": [0],
+    "hint": "",
+    "explanation": "Les modes de nutrition peuvent être divisés sur la base de la source de carbone (autotrophe, hétérotrophe) et/ou de la source d'énergie (phototrophe, chimiotrophe)."
+  },
+  {
+    "id": "A022",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quels modes de nutrition ne se retrouvent que chez les procaryotes ?",
+    "options": [
+      "Chimioautotrophe",
+      "Photohétérotrophe",
+      "Chimiohétérotrophe",
+      "Photoautotrophe",
+      "Autotrophe"
+    ],
+    "correct": [0, 1],
+    "hint": "La source de carbone des autotrophes est non organique ; la source d'énergie des phototrophes est la lumière.",
+    "explanation": "Les chimioautotrophes et photohétérotrophes sont spécifiques aux procaryotes et ne sont pas retrouvés chez les eucaryotes."
+  },
+  {
+    "id": "A023",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles affirmations concernant les cellules eucaryotes et leurs organites sont fausses ?",
+    "options": [
+      "La synthèse des protéines a lieu dans l'appareil de Golgi.",
+      "Au contraire de la production d'ATP, qui a lieu dans la mitochondrie, la respiration cellulaire a lieu dans le lysosome.",
+      "Les réticulums endoplasmiques lisse et rugueux possèdent des différences à la fois structurelles et fonctionnelles.",
+      "Le réticulum endoplasmique est en continuité avec la membrane du noyau.",
+      "Le nucléole est un organite sans membrane situé à l'intérieur du noyau et impliqué dans la synthèse des ribosomes."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "La synthèse des protéines a lieu dans le cytosol, généralement à la surface du réticulum endoplasmique rugueux.",
+      "La respiration cellulaire à lieu dans la mitochondrie.",
+      "Comme presque toujours en biologie, la structure et le fonction sont intimement liées. De nombreux ribosomes sont accrochés à la surface du réticulum endoplasmique (RE) rugueux et participent à la synthèse des protéines de sécrétion, tandis que le RE lisse ne possède pas de ribosomes et est impliqué dans la synthèse des glucides, le stockage des ions calcium et la détoxication des médicaments, des drogues et des poisons.",
+      "L'enveloppe nucléaire est en continuité avec le réticulum endoplasmique.",
+      "Les noyaux peuvent en contenir plusieurs."
+    ]
+  },
+  {
+    "id": "A024",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle est le rôle du peroxysome ?",
+    "options": [
+      "Il est impliqué dans des processus métaboliques et de détoxication. Il contient notamment des enzymes qui produisent du peroxyde d'hydrogène H2O2 à partir de dioxygène O2 et d'autres qui dégradent le H2O2 en eau H2O.",
+      "Il contient des enzymes hydrolytiques qui permettent de recycler des substances ingérées et des macromolécules cellulaires.",
+      "Il est le lieu de la photosynthèse chez les plantes.",
+      "Il est impliqué dans la modification des protéines, des glucides protéiniques et des phosphoglycérolipides.",
+      "Il est impliqué dans la synthèse des protéines de sécrétion et incorpore des glucides aux protéines pour produire des glycoprotéines."
+    ],
+    "correct": [0],
+    "hint": "Le nom de cet organite est intimement lié à sa fonction.",
+    "explanation": [
+      "Les peroxysomes sont délimités par une membrane simple et peuvent se multiplier par scissiparité.",
+      "Il s'agit des lysosomes.",
+      "Il s'agit des chloroplastes.",
+      "Il s'agit de l'appareil de Golgi.",
+      "Il s'agit du réticulum endoplasmique rugueux."
+    ]
+  },
+  {
+    "id": "A025",
+    "section": "biomolecules",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les organites et sous-organites suivants, lesquels font partie d'une cellule animale mais pas d'une cellule végétale ?",
+    "options": [
+      "Lysosome",
+      "Centrioles",
+      "Peroxysome",
+      "Ribosome",
+      "Nucléole"
+    ],
+    "correct": [0],
+    "explanation": "Les organites spécifiques aux cellules animales sont les lysosomes, les centrosomes avec centrioles, et les flagelles."
+  },
+  {
+    "id": "A026",
+    "section": "biomolecules",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes à propos des organites eucaryotes, lesquelles sont fausses ?",
+    "options": [
+      "L'appareil de Golgi est un lieu de stockage et de tri mais n'est impliqué dans aucun processus cellulaire actif (p. ex. synthèse de macromolécules).",
+      "Le réticulum endoplasmique lisse est notamment impliqué dans le stockage des ions calcium alors que le réticulum endoplasmique rugueux est notamment impliqué dans la synthèse des lipides.",
+      "Alors que certains ribosomes sont liés au réticulum endoplasmique, d'autres sont libres dans le cytosol.",
+      "Les lysosomes participent notamment à la dégradation d'organites défectueux et du contenu de vacuoles digestives.",
+      "La membrane (enveloppe) du noyau contient des milliers de pores et est contiguë avec la membrane du réticulum endoplasmique."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "L'appareil de Golgi est notamment le lieu de la synthèse de nombreux polysaccharides.",
+      "La synthèse des lipides a lieu dans le réticulum endoplasmique lisse.",
+      "Les ribosomes sont responsables de la synthèse protéinique.",
+      "Les lysosomes sont impliqués dans la dégradation de nombreuses molécules et structures.",
+      "Les pores nucléaires permettent notamment l'échange de molécules entre le noyau et le cytosol."
+    ]
+  }
+]

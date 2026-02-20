@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOENG-110 – Tableau de bord TA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --accent: #3b82f6;
+            --accent-dark: #2563eb;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        /* Login screen */
+        .login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .login-card h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .login-card p {
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: var(--accent-dark);
+            transform: translateY(-1px);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: none;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            width: auto;
+            padding: 0.5rem 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-label {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-detail {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            color: var(--text-dim);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+        }
+
+        .badge-error {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+        }
+
+        .progress-bar {
+            background: var(--bg);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .progress-success {
+            background: var(--success);
+        }
+
+        .progress-warning {
+            background: var(--warning);
+        }
+
+        .progress-error {
+            background: var(--error);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-dim);
+        }
+
+        .spinner {
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--accent);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filters select {
+            padding: 0.5rem 1rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .chart-container {
+            margin: 2rem 0;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .bar-label {
+            width: 200px;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        .bar-track {
+            flex: 1;
+            background: var(--bg);
+            height: 24px;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: width 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .bar-label {
+                width: 100px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-card">
+            <h2>🔒 Accès TA</h2>
+            <p>Tableau de bord d'analytique pour les assistants BIOENG-110</p>
+            <input 
+                type="password" 
+                id="password-input" 
+                placeholder="Entrez le code d'accès"
+                onkeypress="if(event.key==='Enter') checkPassword()"
+            >
+            <button onclick="checkPassword()">Se connecter</button>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <div class="container">
+            <div class="header">
+                <div>
+                    <h1>📊 Tableau de bord TA</h1>
+                    <p class="subtitle">Analytique en temps réel — BIOENG-110</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-secondary" onclick="refreshData()">🔄 Actualiser</button>
+                    <button class="btn-secondary" onclick="exportCSV()">📥 Export CSV</button>
+                    <button class="btn-secondary" onclick="logout()">🚪 Déconnexion</button>
+                </div>
+            </div>
+
+            <!-- Global Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Sessions actives</div>
+                    <div class="stat-value" id="total-sessions">-</div>
+                    <div class="stat-detail">Étudiants uniques</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Réponses totales</div>
+                    <div class="stat-value" id="total-answers">-</div>
+                    <div class="stat-detail">Toutes questions confondues</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Taux de réussite global</div>
+                    <div class="stat-value" id="global-success-rate">-%</div>
+                    <div class="stat-detail">Réponses correctes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Questions marquées</div>
+                    <div class="stat-value" id="total-flagged">-</div>
+                    <div class="stat-detail">Par les étudiants</div>
+                </div>
+            </div>
+
+            <!-- Most Difficult Questions -->
+            <div class="card">
+                <h2>🔴 Questions les plus difficiles</h2>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    Questions avec le taux de réussite le plus faible (minimum 10 réponses)
+                </p>
+                <div id="difficult-questions-table"></div>
+            </div>
+
+            <!-- Most Answered Questions -->
+            <div class="card">
+                <h2>📈 Questions les plus répondues</h2>
+                <div class="filters">
+                    <select id="section-filter" onchange="updateMostAnswered()">
+                        <option value="all">Toutes les sections</option>
+                        <option value="biomolecules">Biomolécules</option>
+                        <option value="genetics">Génétique</option>
+                        <option value="molecular-biology">Biologie moléculaire</option>
+                        <option value="cell-cycle">Cycle cellulaire</option>
+                    </select>
+                </div>
+                <div id="most-answered-chart"></div>
+            </div>
+
+            <!-- Section Performance -->
+            <div class="card">
+                <h2>📊 Performance par section</h2>
+                <div id="section-performance"></div>
+            </div>
+
+            <!-- Question Details -->
+            <div class="card">
+                <h2>🔍 Détails par question</h2>
+                <div class="filters">
+                    <input 
+                        type="text" 
+                        id="question-search" 
+                        placeholder="Rechercher par ID (ex: A001)"
+                        oninput="filterQuestions()"
+                        style="max-width: 300px;"
+                    >
+                </div>
+                <div id="questions-details-table"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ── Configuration ───────────────────────────────────────────────────
+        const ACCESS_CODE = 'Sim@nisTheGo@t2022';
+        const SUPABASE_URL = 'https://nygrbpxqiwuuscgbmybs.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55Z3JicHhxaXd1dXNjZ2JteWJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4NjgxNTgsImV4cCI6MjA4NTQ0NDE1OH0.ateA4HeIm56Jv53_zv3bX7UCAt0UzMOb1UXT1s1jycE';
+
+        let allAnswers = [];
+        let allQuestions = [];
+
+        // ── Authentication ──────────────────────────────────────────────────
+        function checkPassword() {
+            const input = document.getElementById('password-input').value;
+            const errorMsg = document.getElementById('error-message');
+            
+            if (input === ACCESS_CODE) {
+                localStorage.setItem('ta-auth', 'true');
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('dashboard').classList.add('active');
+                loadData();
+            } else {
+                errorMsg.textContent = '❌ Code incorrect';
+                setTimeout(() => errorMsg.textContent = '', 3000);
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('ta-auth');
+            location.reload();
+        }
+
+        // Check if already authenticated
+        if (localStorage.getItem('ta-auth') === 'true') {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('dashboard').classList.add('active');
+            loadData();
+        }
+
+        // ── Data Loading ────────────────────────────────────────────────────
+        async function loadData() {
+            showLoading();
+            try {
+                console.log('📊 Starting data load...');
+                await Promise.all([loadAnswers(), loadQuestions()]);
+                console.log('✅ Data loaded successfully');
+                updateAllStats();
+            } catch (error) {
+                console.error('❌ Error loading data:', error);
+                
+                // Show detailed error message
+                const errorDiv = document.createElement('div');
+                errorDiv.style.cssText = 'background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--error); margin: 2rem;';
+                errorDiv.innerHTML = `
+                    <h2 style="color: var(--error); margin-bottom: 1rem;">❌ Erreur de chargement</h2>
+                    <p style="margin-bottom: 1rem; color: var(--text);">${error.message}</p>
+                    <details style="margin-top: 1rem; color: var(--text-dim); font-size: 0.9rem;">
+                        <summary style="cursor: pointer; margin-bottom: 0.5rem;">Détails techniques</summary>
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-top: 0.5rem;">${error.stack || error}</pre>
+                    </details>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text);">🔧 Solutions possibles :</h3>
+                    <ul style="line-height: 2; color: var(--text-dim);">
+                        <li><strong>Vérifiez la console</strong> (F12) pour voir les logs détaillés</li>
+                        <li><strong>Fichiers questions manquants ?</strong> Vérifiez que <code>data/questions-*.json</code> existe</li>
+                        <li><strong>Problème Supabase ?</strong> Vérifiez l'URL et la clé API (lignes 491-492)</li>
+                        <li><strong>CORS ?</strong> Si vous ouvrez en <code>file://</code>, utilisez un serveur local</li>
+                    </ul>
+                    <button onclick="location.reload()" style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                        🔄 Réessayer
+                    </button>
+                `;
+                
+                document.querySelector('.container').innerHTML = '';
+                document.querySelector('.container').appendChild(errorDiv);
+            }
+        }
+
+        function showLoading() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const content = card.querySelector('div:last-child');
+                if (content) {
+                    content.innerHTML = '<div class="loading"><div class="spinner"></div>Chargement...</div>';
+                }
+            });
+        }
+
+        async function loadAnswers() {
+            try {
+                console.log('🔄 Fetching answers from Supabase...');
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/answers?select=*`, {
+                    headers: {
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Supabase error: ${response.status} ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                
+                // Check if we got an array or error object
+                if (Array.isArray(data)) {
+                    allAnswers = data;
+                    console.log('✅ Answers loaded:', allAnswers.length);
+                } else if (data.error) {
+                    throw new Error(`Supabase error: ${data.error.message}`);
+                } else {
+                    allAnswers = [];
+                    console.warn('⚠️ No answers found (empty database)');
+                }
+            } catch (error) {
+                console.error('❌ Error loading answers:', error);
+                allAnswers = [];
+                throw new Error(`Impossible de charger les réponses: ${error.message}`);
+            }
+        }
+
+        async function loadQuestions() {
+            // Load from all question files
+            const sections = ['biomolecules', 'genetics', 'molecular-biology', 'cell-cycle'];
+            allQuestions = [];
+            let loadedCount = 0;
+            
+            console.log('🔄 Loading questions from data/ folder...');
+            
+            for (const section of sections) {
+                try {
+                    const response = await fetch(`data/questions-${section}.json`);
+                    if (response.ok) {
+                        const questions = await response.json();
+                        allQuestions = allQuestions.concat(questions);
+                        loadedCount++;
+                        console.log(`✅ Loaded ${questions.length} questions from ${section}`);
+                    } else {
+                        console.warn(`⚠️ Could not load data/questions-${section}.json (${response.status})`);
+                    }
+                } catch (err) {
+                    console.warn(`⚠️ Error loading ${section}:`, err.message);
+                }
+            }
+            
+            if (allQuestions.length === 0) {
+                console.error('❌ No questions loaded from any file!');
+                throw new Error(`Aucun fichier de questions trouvé dans le dossier data/. Vérifiez que les fichiers questions-*.json sont bien présents.`);
+            }
+            
+            console.log(`✅ Total questions loaded: ${allQuestions.length} from ${loadedCount} file(s)`);
+        }
+
+        function refreshData() {
+            loadData();
+        }
+
+        // ── Statistics Calculation ──────────────────────────────────────────
+        function updateAllStats() {
+            // Check if we have any data
+            if (allAnswers.length === 0) {
+                showEmptyState();
+                return;
+            }
+            
+            updateGlobalStats();
+            updateDifficultQuestions();
+            updateMostAnswered();
+            updateSectionPerformance();
+            updateQuestionsDetails();
+        }
+
+        function showEmptyState() {
+            const container = document.querySelector('.container');
+            const emptyDiv = document.createElement('div');
+            emptyDiv.style.cssText = 'background: var(--bg-card); padding: 3rem; border-radius: 12px; border: 1px solid var(--border); text-align: center; margin: 2rem 0;';
+            emptyDiv.innerHTML = `
+                <div style="font-size: 4rem; margin-bottom: 1rem;">📊</div>
+                <h2 style="margin-bottom: 1rem;">Aucune donnée disponible</h2>
+                <p style="color: var(--text-dim); margin-bottom: 2rem;">
+                    La base de données est vide. Les statistiques apparaîtront dès que les étudiants commenceront à répondre aux questions.
+                </p>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">
+                    ✅ ${allQuestions.length} questions chargées depuis les fichiers JSON<br>
+                    ⏳ En attente des premières réponses...
+                </p>
+                <button onclick="refreshData()" style="margin-top: 2rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                    🔄 Actualiser
+                </button>
+            `;
+            
+            // Clear existing content and show empty state
+            const statsGrid = document.querySelector('.stats-grid');
+            if (statsGrid) statsGrid.style.display = 'none';
+            
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => card.style.display = 'none');
+            
+            if (!document.getElementById('empty-state')) {
+                emptyDiv.id = 'empty-state';
+                container.appendChild(emptyDiv);
+            }
+        }
+
+        function updateGlobalStats() {
+            // Unique sessions
+            const uniqueSessions = new Set(allAnswers.map(a => a.session_id));
+            document.getElementById('total-sessions').textContent = uniqueSessions.size;
+
+            // Total answers
+            document.getElementById('total-answers').textContent = allAnswers.length;
+
+            // Global success rate
+            const correctAnswers = allAnswers.filter(a => a.is_correct).length;
+            const successRate = allAnswers.length > 0 
+                ? Math.round((correctAnswers / allAnswers.length) * 100) 
+                : 0;
+            document.getElementById('global-success-rate').textContent = `${successRate}%`;
+
+            // Total flagged (from localStorage - estimate)
+            document.getElementById('total-flagged').textContent = '~';
+        }
+
+        function updateDifficultQuestions() {
+            const questionStats = {};
+
+            allAnswers.forEach(answer => {
+                const qid = answer.question_id;
+                if (!questionStats[qid]) {
+                    questionStats[qid] = { total: 0, correct: 0 };
+                }
+                questionStats[qid].total++;
+                if (answer.is_correct) {
+                    questionStats[qid].correct++;
+                }
+            });
+
+            // Filter questions with at least 10 answers
+            const difficultQuestions = Object.entries(questionStats)
+                .filter(([qid, stats]) => stats.total >= 10)
+                .map(([qid, stats]) => {
+                    const question = allQuestions.find(q => q.id === qid);
+                    return {
+                        id: qid,
+                        question: question ? question.question : 'Question inconnue',
+                        section: question ? question.section : 'unknown',
+                        level: question ? question.level : '-',
+                        total: stats.total,
+                        correct: stats.correct,
+                        successRate: (stats.correct / stats.total) * 100
+                    };
+                })
+                .sort((a, b) => a.successRate - b.successRate)
+                .slice(0, 10);
+
+            const container = document.getElementById('difficult-questions-table');
+            if (difficultQuestions.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-dim);">Pas assez de données</p>';
+                return;
+            }
+
+            let html = '<table><thead><tr><th>ID</th><th>Question</th><th>Section</th><th>Niveau</th><th>Réponses</th><th>Taux de réussite</th></tr></thead><tbody>';
+            
+            difficultQuestions.forEach(q => {
+                const badgeClass = q.successRate < 30 ? 'badge-error' : 
+                                   q.successRate < 50 ? 'badge-warning' : 'badge-success';
+                html += `
+                    <tr>
+                        <td><strong>${q.id}</strong></td>
+                        <td style="max-width: 400px;">${q.question.substring(0, 80)}...</td>
+                        <td>${q.section}</td>
+                        <td>${q.level}</td>
+                        <td>${q.total}</td>
+                        <td><span class="badge ${badgeClass}">${q.successRate.toFixed(1)}%</span></td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        function updateMostAnswered() {
+            const sectionFilter = document.getElementById('section-filter').value;
+            const questionCounts = {};
+
+            allAnswers.forEach(answer => {
+                const qid = answer.question_id;
+                const question = allQuestions.find(q => q.id === qid);
+                
+                if (sectionFilter !== 'all' && question && question.section !== sectionFilter) {
+                    return;
+                }
+
+                questionCounts[qid] = (questionCounts[qid] || 0) + 1;
+            });
+
+            const mostAnswered = Object.entries(questionCounts)
+                .map(([qid, count]) => {
+                    const question = allQuestions.find(q => q.id === qid);
+                    return { id: qid, count, question: question?.question || 'Unknown' };
+                })
+                .sort((a, b) => b.count - a.count)
+                .slice(0, 15);
+
+            const container = document.getElementById('most-answered-chart');
+            if (mostAnswered.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-dim);">Aucune donnée</p>';
+                return;
+            }
+
+            const maxCount = mostAnswered[0].count;
+            let html = '<div class="chart-container">';
+            
+            mostAnswered.forEach(item => {
+                const percentage = (item.count / maxCount) * 100;
+                html += `
+                    <div class="bar">
+                        <div class="bar-label">${item.id}</div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: ${percentage}%">${item.count}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function updateSectionPerformance() {
+            const sectionStats = {};
+
+            allAnswers.forEach(answer => {
+                const question = allQuestions.find(q => q.id === answer.question_id);
+                if (!question) return;
+
+                const section = question.section;
+                if (!sectionStats[section]) {
+                    sectionStats[section] = { total: 0, correct: 0 };
+                }
+                sectionStats[section].total++;
+                if (answer.is_correct) {
+                    sectionStats[section].correct++;
+                }
+            });
+
+            const sectionNames = {
+                'biomolecules': 'Biomolécules',
+                'genetics': 'Génétique',
+                'molecular-biology': 'Biologie moléculaire',
+                'cell-cycle': 'Cycle cellulaire'
+            };
+
+            const container = document.getElementById('section-performance');
+            let html = '';
+
+            Object.entries(sectionStats).forEach(([section, stats]) => {
+                const successRate = (stats.correct / stats.total) * 100;
+                const progressClass = successRate >= 70 ? 'progress-success' : 
+                                     successRate >= 50 ? 'progress-warning' : 'progress-error';
+                
+                html += `
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <strong>${sectionNames[section] || section}</strong>
+                            <span>${successRate.toFixed(1)}% (${stats.correct}/${stats.total})</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill ${progressClass}" style="width: ${successRate}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html || '<p style="color: var(--text-dim);">Aucune donnée</p>';
+        }
+
+        function updateQuestionsDetails() {
+            const questionStats = {};
+
+            allAnswers.forEach(answer => {
+                const qid = answer.question_id;
+                if (!questionStats[qid]) {
+                    questionStats[qid] = { total: 0, correct: 0, scores: [] };
+                }
+                questionStats[qid].total++;
+                if (answer.is_correct) questionStats[qid].correct++;
+                if (answer.score) questionStats[qid].scores.push(answer.score);
+            });
+
+            const details = allQuestions.map(q => {
+                const stats = questionStats[q.id] || { total: 0, correct: 0, scores: [] };
+                const avgScore = stats.scores.length > 0
+                    ? stats.scores.reduce((a, b) => a + b, 0) / stats.scores.length
+                    : 0;
+                
+                return {
+                    id: q.id,
+                    question: q.question,
+                    section: q.section,
+                    level: q.level,
+                    total: stats.total,
+                    correct: stats.correct,
+                    successRate: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
+                    avgScore: avgScore
+                };
+            }).sort((a, b) => b.total - a.total);
+
+            renderQuestionDetails(details);
+        }
+
+        function filterQuestions() {
+            const search = document.getElementById('question-search').value.toLowerCase();
+            const rows = document.querySelectorAll('#questions-details-table tbody tr');
+            
+            rows.forEach(row => {
+                const id = row.cells[0].textContent.toLowerCase();
+                row.style.display = id.includes(search) ? '' : 'none';
+            });
+        }
+
+        function renderQuestionDetails(details) {
+            const container = document.getElementById('questions-details-table');
+            
+            let html = '<table><thead><tr><th>ID</th><th>Section</th><th>Niveau</th><th>Réponses</th><th>Correct</th><th>Taux</th><th>Score moy.</th></tr></thead><tbody>';
+            
+            details.forEach(q => {
+                const badgeClass = q.successRate < 40 ? 'badge-error' : 
+                                   q.successRate < 70 ? 'badge-warning' : 'badge-success';
+                html += `
+                    <tr>
+                        <td><strong>${q.id}</strong></td>
+                        <td>${q.section}</td>
+                        <td>${q.level}</td>
+                        <td>${q.total}</td>
+                        <td>${q.correct}</td>
+                        <td><span class="badge ${badgeClass}">${q.successRate.toFixed(1)}%</span></td>
+                        <td>${q.avgScore.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        // ── Export ──────────────────────────────────────────────────────────
+        function exportCSV() {
+            const questionStats = {};
+
+            allAnswers.forEach(answer => {
+                const qid = answer.question_id;
+                if (!questionStats[qid]) {
+                    questionStats[qid] = { total: 0, correct: 0, scores: [] };
+                }
+                questionStats[qid].total++;
+                if (answer.is_correct) questionStats[qid].correct++;
+                if (answer.score) questionStats[qid].scores.push(answer.score);
+            });
+
+            let csv = 'Question ID,Section,Niveau,Total Réponses,Réponses Correctes,Taux de Réussite (%),Score Moyen\n';
+
+            allQuestions.forEach(q => {
+                const stats = questionStats[q.id] || { total: 0, correct: 0, scores: [] };
+                const successRate = stats.total > 0 ? (stats.correct / stats.total) * 100 : 0;
+                const avgScore = stats.scores.length > 0
+                    ? stats.scores.reduce((a, b) => a + b, 0) / stats.scores.length
+                    : 0;
+
+                csv += `${q.id},${q.section},${q.level},${stats.total},${stats.correct},${successRate.toFixed(2)},${avgScore.toFixed(2)}\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `bioeng110-analytics-${new Date().toISOString().split('T')[0]}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

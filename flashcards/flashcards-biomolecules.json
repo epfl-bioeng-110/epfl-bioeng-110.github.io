@@ -1,0 +1,65 @@
+[
+  {
+    "id": "FC-A001",
+    "section": "biomolecules",
+    "level": 1,
+    "front": "Quelles sont les quatre classes de biomolécules ?",
+    "back": "Les glucides, les lipides, les protéines et les acides nucléiques."
+  },
+  {
+    "id": "FC-A002",
+    "section": "biomolecules",
+    "level": 1,
+    "front": "Quelle réaction chimique permet de former un polymère à partir de monomères ?",
+    "back": "La réaction de déshydratation : une molécule d'eau est libérée à chaque liaison formée.",
+    "hint": "L'inverse est l'hydrolyse."
+  },
+  {
+    "id": "FC-A003",
+    "section": "biomolecules",
+    "level": 1,
+    "front": "Pourquoi les triglycérides saturés sont-ils solides à température ambiante ?",
+    "back": "Leurs acides gras sans double liaison C=C sont linéaires et s'emballent étroitement, augmentant la température de fusion.",
+    "hint": "Comparez avec le beurre (saturé) et l'huile végétale (insaturée)."
+  },
+  {
+    "id": "FC-A004",
+    "section": "biomolecules",
+    "level": 2,
+    "front": "Quelle est la structure générale d'un acide aminé ?",
+    "back": "Un carbone α central lié à : un groupe amino (–NH₂), un groupe carboxyle (–COOH), un atome d'hydrogène, et une chaîne latérale R variable.",
+    "hint": "La chaîne R détermine les propriétés de l'acide aminé."
+  },
+  {
+    "id": "FC-A005",
+    "section": "biomolecules",
+    "level": 2,
+    "front": "Quelle est la différence entre liaison glycosidique α et β dans les glucides ?",
+    "back": "La liaison α (ex. amidon) est hydrolysable par nos enzymes → source d'énergie. La liaison β (ex. cellulose) ne l'est pas → structure rigide.",
+    "hint": "L'orientation de la liaison hydroxyle en C1 diffère entre α et β."
+  },
+  {
+    "id": "FC-A006",
+    "section": "biomolecules",
+    "level": 2,
+    "front": "Quels sont les niveaux de structure des protéines ?",
+    "back": "Primaire (séquence d'acides aminés) → Secondaire (hélices α, feuillets β) → Tertiaire (repliement 3D) → Quaternaire (assemblage de plusieurs chaînes).",
+    "hint": "Chaque niveau émerge du précédent."
+  },
+  {
+    "id": "FC-A007",
+    "section": "biomolecules",
+    "level": 3,
+    "front": "Comment les phospholipides s'organisent-ils spontanément en milieu aqueux et pourquoi ?",
+    "back": "Ils forment une bicouche : les têtes polaires (hydrophiles) font face à l'eau, les queues apolaires (hydrophobes) se cachent à l'intérieur — minimisant l'énergie libre (effet hydrophobe).",
+    "hint": "Pensez à l'amphiphilie de la molécule."
+  },
+  {
+    "id": "FC-A008",
+    "section": "biomolecules",
+    "level": 3,
+    "front": "Qu'est-ce que la dénaturation d'une protéine et quels facteurs la provoquent ?",
+    "back": "Perte de la structure tridimensionnelle sans rupture de la séquence primaire. Facteurs : chaleur, pH extrême, détergents, agents chaotropes (urée, guanidine).",
+    "hint": "La fonction est perdue car la forme est perdue."
+  }
+]
