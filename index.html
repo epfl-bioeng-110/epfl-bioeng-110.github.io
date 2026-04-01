@@ -269,6 +269,7 @@
             display: flex;
             align-items: flex-start;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .option-letter {
@@ -281,15 +282,6 @@
             justify-content: center;
             font-weight: 700;
             flex-shrink: 0;
-        }
-
-        .option-explanation {
-            margin-top: 0.5rem;
-            padding: 0.75rem;
-            background: var(--bg-primary);
-            border-radius: 6px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
         }
 
         .explanation {
@@ -560,15 +552,6 @@
             }
         }
 
-        @media (max-width: 480px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            #summary-dual-score > div {
-                grid-template-columns: 1fr !important;
-            }
-        }
-
         /* Top bar (theme toggle) */
         #top-bar {
             display: flex;
@@ -641,7 +624,10 @@
         }
 
         /* Theme transitions */
-        *, *::before, *::after {
+        /**, *::before, *::after {
+            transition: background-color 0.25s, border-color 0.25s, color 0.15s;
+        }*/
+        body, .card, .question-card, .option, .modal-content, #top-bar, .explanation, .hint, .stat-card {
             transition: background-color 0.25s, border-color 0.25s, color 0.15s;
         }
 
@@ -900,6 +886,7 @@
 
         /* Option explanation: cleaner pill style */
         .option-explanation {
+            flex-basis: 100%;
             margin-top: 0.6rem;
             padding: 0.6rem 0.85rem;
             background: rgba(0,0,0,0.15);
