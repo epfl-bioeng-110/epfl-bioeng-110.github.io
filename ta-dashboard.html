@@ -467,12 +467,12 @@
                         <option value="biomolecules">Biomolécules</option>
                         <option value="genetics">Génétique</option>
                         <option value="molecular">Biologie moléculaire</option>
+                        <option value="cellcycle">Cycle cellulaire</option>
                     </select>
                     <select id="q-level" onchange="renderQuestionTable()">
                         <option value="all">Tous les niveaux</option>
                         <option value="1">Niveau 1</option>
                         <option value="2">Niveau 2</option>
-                        <option value="3">Niveau 3</option>
                     </select>
                     <select id="q-sort" onchange="renderQuestionTable()">
                         <option value="success_asc">Taux de réussite ↑ (difficiles en premier)</option>
@@ -589,13 +589,15 @@
     const SECTION_FILES = {
         'biomolecules': 'data/questions_biomolecules.json',
         'genetics':     'data/questions_genetics.json',
-        'molecular':    'data/questions_molecular.json'
+        'molecular':    'data/questions_molecular.json',
+        'cellcycle':    'data/questions_cellcycle.json'
     };
 
     const SECTION_LABELS = {
         'biomolecules': 'Biomolécules',
         'genetics':     'Génétique',
-        'molecular':    'Biologie moléculaire'
+        'molecular':    'Biologie moléculaire',
+        'cellcycle':    'Cycle cellulaire'
     };
 
     // ══════════════════════════════════════════════════════════════════
