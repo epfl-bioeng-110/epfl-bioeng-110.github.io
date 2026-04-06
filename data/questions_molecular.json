@@ -81,6 +81,7 @@
       "λ (lambda) / -5 bp et +5 bp"
     ],
     "correct": [0],
+    "hint": "L'espacement de ces séquences consensus est généralement de 15-20 bp.",
     "explanation": "Le facteur σ se lie à des séquences consensus généralement centrées en -35 bp et -10 bp. Le facteur λ n'existe pas."
   },
   {
@@ -129,6 +130,7 @@
       "Queue poly(A)"
     ],
     "correct": [0],
+    "hint": "Le rôle de la séquence en question est de déstabiliser l'interaction entre l'ARN et l'ADN.",
     "explanation": "La queue poly(U) déstabilise l'interaction entre le transcrit d'ARN et le brin matrice de la molécule d'ADN."
   },
   {
@@ -136,13 +138,14 @@
     "section": "molecular",
     "type": "single-choice",
     "level": 2,
-    "question": "Si la transcription a lieu dans la direction 3' → 5' (vers l'amont) de l'ADN, quel brin d'ADN est le brin codant ?",
+    "question": "Si la transcription a lieu vers l'amont (dans la direction 3' → 5') de l'ADN, quel brin d'ADN est le brin codant ?",
     "options": [
       "Brin 3'-5'",
       "Brin 5'-3'"
     ],
     "correct": [0],
-    "explanation": "Si la transcription a lieu dans la direction 3'-5' (vers l'amont), le brin 5'-3' sert de matrice. Le brin 3'-5' est donc le brin codant."
+    "hint": "Dessine un morceau d'ADN horizontalement et place l'extrémité 5' du brin du haut à gauche. Dans cette question, la transcription a lieu de la droite vers la gauche.",
+    "explanation": "Si la transcription a lieu dans la direction 3' → 5' (vers l'amont), le brin 5'-3' sert de matrice. Le brin 3'-5' est donc le brin codant. Pour rappel, toutes les polymérases synthétisent les acides nucléiques de 5' à 3' ; les notions d'amont et d'aval font référence à la position et direction sur le génome, pas à la direction de la synthèse de l'ARN (ou ADN)."
   },
   {
     "id": "C009",
@@ -180,6 +183,7 @@
       "Le gène E encode une ribulokinase qui phosphoryle le ribulose en ribulose-5-phosphate."
     ],
     "correct": [0],
+    "hint": "Les opérons comprennent des gènes qui participent à une même fonction. Essaie de trouver un lien entre certains gènes, p. ex. en essayant de trouver une voie métabolique qui convertit une molécule en une autre à travers plusieurs étapes.",
     "explanation": "Pour répondre à cette question, il faut se rappeler que les gènes d'un opéron participent à une même fonction, généralement à une même voie métabolique. Ici, un lien peut être fait entre quatre des cinq gènes, qui font tous partie de l'opéron ara, impliqué dans le métabolisme de l'arabinose. Une chaîne peut ainsi être construite entre trois gènes : la protéine encodée par le gène C convertit l'arabinose en ribulose, qui est ensuite converti en ribulose-5-phosphate par la protéine encodée par le gène E et la protéine encodée par le gène D convertit finalement le ribulose-5-phosphate en xylulose-5-phosphate. Le gène B utilise quant à lui l'arabinose, ce qui suggère qu'il fait partie de la même voie métabolique. En revanche, le gène A n'a aucun lien avec les quatre autres gènes, ce qui suggère qu'il ne fait pas partie de la même voie métabolique et du même opéron."
   },
   {
@@ -196,6 +200,7 @@
       "Le tryptophane et l'ADN sont en compétition pour se lier à la protéine trpR."
     ],
     "correct": [0, 1],
+    "hint": "L'opéron trp encode des protéines impliquées dans la synthèse du tryptophane. Quand est-ce que cet opéron devrait être inactif et comment le rendre inactif ?",
     "explanation": [
       "En présence de tryptophane, la bactérie n'a pas besoin de synthétiser du tryptophane et la transcription de l'opéron trp est donc réprimée.",
       "L'opéron trp est régulé par le répresseur trpR, qui inhibe la transcription lorsqu'il est lié à l'ADN. Lorsque la régulation implique un répresseur, on parle de \"régulation négative\" (ou \"contrôle négatif\"), par opposition à la \"régulation positive\" (ou \"contrôle positif\") qui désigne la régulation par un activateur.",
@@ -217,6 +222,7 @@
       "Présence de glucose"
     ],
     "correct": [0, 1],
+    "hint": "Les bactéries préfèrent le glucose : le lactose est généralement un deuxième choix.",
     "explanation": "L'opéron lac, dont les produits sont impliqués dans le métabolisme du lactose, est actif uniquement en présence de lactose et absence de glucose. En présence de glucose, la bactérie utilise le glucose et n'a donc pas besoin des produits impliqués dans le métabolisme du lactose, peu importe que du lactose soit présent ou non. D'autre part, en absence de lactose, la bactérie n'a pas besoin des produits impliqués dans le métabolisme du lactose."
   },
   {
@@ -259,7 +265,7 @@
       "Les bactéries utilisent des facteurs σ (sigma) spécifiques qui guident différentiellement l'ARN polymérase vers des groupes de gènes à transcrire.",
       "Les bactéries utilisent des opérons pour réguler la transcription de gènes impliqués dans une même fonction.",
       "Les procaryotes et les eucaryotes utilisent des boucles d'ADN pour réguler la transcription.",
-      "Les bactéries ne possèdent pas d'histones.",
+      "Les bactéries ne possèdent pas d'histones. (Pour aller plus loin : en réalité, la plupart des bactéries contiennent des homologues des protéines histones, mais vous n'en avez pas parlé en cours et il n'y a donc pas besoin de le savoir.)",
       "Le facteur de transcription TFIID et la boîte TATA sont spécifiques aux eucaryotes."
     ]
   },
@@ -299,7 +305,7 @@
       "Les facteurs de transcription TFIIB, TFIID, TFIIE, TFIIF et TFIIH sont nécessaires à l'initiation de la transcription."
     ],
     "correct": [0],
-    "explanation": "Les facteurs de transcription généraux, qui sont nécessaires pour la liaison de l'ARN polymérase au promoteur minimal et son déplacement pendant la phase d'élongation, sont requis pour la transcription basale. Les facteurs de transcription spécifiques régulent le taux de transcription des gènes alentour et influencent la capacité de l'ARN polymérase à initier la transcription d'un gène particulier."
+    "explanation": "Les facteurs de transcription généraux sont nécessaires pour la liaison de l'ARN polymérase au promoteur minimal et son déplacement pendant la phase d'élongation ; ils sont requis pour la transcription basale. Les facteurs de transcription spécifiques régulent le taux de transcription des gènes alentour et influencent la capacité de l'ARN polymérase à initier la transcription d'un gène particulier ; ils ne sont pas requis pour la transcription basale."
   },
   {
     "id": "C017",
@@ -463,6 +469,7 @@
       "ARN ribosomique (ARNr) 23 S"
     ],
     "correct": [0, 1],
+    "hint": "Les ribosomes procaryotes sont composés d'une petite sous-unité 30 S, composée d'un ARNr 16 S, et d'une grande sous-unité 50 S, composée d'un ARNr 5 S et d'un ARNr 23 S.",
     "explanation": [
       "Il s'agit de la grande sous-unité des ribosomes eucaryotes.",
       "L'ARNr 5 S fait partie de la grande sous-unité des ribosomes eucaryotes.",
@@ -485,6 +492,7 @@
       "5"
     ],
     "correct": [0],
+    "hint": "Il existe des sites de liaison à l'ARN messager (ARNm) et à l'ARN de transfert (ARNt).",
     "explanation": "Un ribosome contient trois sites de liaison à l'ARNt (E, P, A) et un site de liaison à l'ARNm."
   },
   {
@@ -599,6 +607,7 @@
       "La réplication de l'ADN nécessite une hélicase."
     ],
     "correct": [0],
+    "hint": "Certaines affirmations sont correctes mais n'ont pas été mises en évidence par l'expérience de Meselson et Stahl.",
     "explanation": "L'expérience de Meselson et Stahl a permis d'exclure les modèles conservatif et dispersif de la réplication de l'ADN, en faveur du modèle semi-conservatif."
   },
   {
@@ -641,6 +650,7 @@
       "Cela dépend de quel brin est choisi comme brin parental."
     ],
     "correct": [0],
+    "hint": "Cette question fait référence au sens de synthèse des brins d'ADN et non à la direction dans laquelle les enzymes se déplacent.",
     "explanation": "L'ADN polymérase synthétise toujours l'ADN dans la direction 5' → 3'."
   },
   {
@@ -657,6 +667,7 @@
       "Extrémité P-terminale → extrémité N-terminale"
     ],
     "correct": [0],
+    "hint": "Cette question fait référence au sens de synthèse de l'ADN et non à la direction dans laquelle les enzymes se déplacent.",
     "explanation": "Toutes les ADN polymérases synthétisent de l'ADN dans la direction 5' → 3'."
   },
   {
@@ -768,5 +779,299 @@
       "L'apoptose est une forme de mort cellulaire contrôlée.",
       "Même dans un environnement hypothétique protégé, le vieillissement existe. Pourquoi ? C'est justement la question à laquelle les théories évolutives du vieillissement tentent de répondre."
     ]
+  },
+  {
+    "id": "C040",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle fraction du génome humain code pour des protéines ?",
+    "options": [
+      "1-2 %",
+      "10 %",
+      "50 %",
+      "99 %",
+      "99.9 %"
+    ],
+    "correct": [0],
+    "explanation": "Seulement 1-2 % du génome humain code pour des protéines."
+  },
+  {
+    "id": "C041",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Combien de gènes compte le génome humain ?",
+    "options": [
+      "~ 20'000",
+      "~ 10'000",
+      "~ 1000",
+      "~ 2000",
+      "~ 100'000"
+    ],
+    "correct": [0],
+    "explanation": "Le génome humain contient ~ 22'000 gènes (entre 20'000 et 25'000 selon les estimations)."
+  },
+  {
+    "id": "C042",
+    "section": "molecular",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles affirmations concernant les mutations sont correctes ?",
+    "options": [
+      "Une mutation somatique n'affecte que l'individu qui la porte.",
+      "Une mutation germinale n'affecte pas (ou peu) l'individu qui la porte.",
+      "La plupart des mutations n'ont pas d'effet direct.",
+      "Les mutations germinales sont présentes dans toutes les cellules de la descendance.",
+      "Toutes les mutations sont délétères."
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": [
+      "Les mutations somatiques apparaissent dans les cellules somatiques. Elles n'ont donc pas d'impact sur la descendance et n'affectent que l'individu qui les porte.",
+      "Les mutations germinales apparaissent dans la lignée germinale (gamètes) et n'ont donc que peu d'impact sur l'individu.",
+      "Les gènes codant pour des protéines ne représentent qu'une infime partie du génome (1-2 %). La majorité des mutations ont lieu dans des régions du génome qui n'ont pas d'impact sur la séquence des protéines ou la régulation de leur expression et sont donc considérées comme neutres.",
+      "Les mutations germinales sont présentes dans les gamètes et donc dans le zygote de la descendance, la première cellule d'un organisme. Lors du développement, toutes les cellules descendent du zygote : toutes les cellules de la descendance auront donc ces mutations.",
+      "Certaines mutations sont bénéfiques, d'autres délétères et la plupart sont neutres."
+    ]
+  },
+  {
+    "id": "C043",
+    "section": "molecular",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les mutations suivantes, lesquelles sont des mutations chromosomiques ?",
+    "options": [
+      "Inversion",
+      "Duplication",
+      "Translocation",
+      "Transition",
+      "Transversion"
+    ],
+    "correct": [0, 1, 2],
+    "hint": "Les mutations chromosomiques interviennent à l'échelle d'un chromosome, contrairement aux mutations locales.",
+    "explanation": [
+      "Une inversion intervient lorsqu'une section d'un chromosome est inversée.",
+      "Une duplication intervient lorsqu'une section d'un chromosome est dupliquée.",
+      "Une translocation intervient lorsqu'une section d'un chromosome est rattachée à un autre chromosome.",
+      "Les transitions sont des substitutions (mutations locales) d'une purine en purine ou d'une pyrimidine en pyrimidine.",
+      "Les transversions sont des substitutions (mutations locales) d'une purine en pyrimidine ou d'une pyrimidine en purine."
+    ]
+  },
+  {
+    "id": "C044",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Une substitution de G en T est une ___.",
+    "options": [
+      "Transversion",
+      "Transition",
+      "Délétion",
+      "Insertion",
+      "Translocation"
+    ],
+    "correct": [0],
+    "hint": "Les transitions sont des substitutions d'une purine en purine ou d'une pyrimidine en pyrimidine. Les transversions sont des substitutions d'une purine en pyrimidine ou d'une pyrimidine en purine.",
+    "explanation": "La guanine (G) est une purine tandis que la thymine (T) est une pyrimidine : il s'agit donc d'une transversion."
+  },
+  {
+    "id": "C045",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "À quelle position du codon ont généralement lieu les mutations synonymes ?",
+    "options": [
+      "3ème nucléotide",
+      "2ème nucléotide",
+      "3ème acide aminé",
+      "2ème acide aminé",
+      "1er acide aminé"
+    ],
+    "correct": [0],
+    "explanation": "Les mutations synonymes changent la séquence d'ADN mais pas la séquence d'acides aminés correspondante. Elles sont rendues possibles par la redondance (dégénérescence) du code génétique, c'est-à-dire que plusieurs codons peuvent coder pour le même acide aminé. Ces codons diffèrent généralement par le 3ème nucléotide."
+  },
+  {
+    "id": "C046",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les définitions suivantes de mutations, laquelle est fausse ?",
+    "options": [
+      "Une mutation frameshift désigne l'insertion ou la délétion d'un nombre de nucléotides multiple de 3.",
+      "Une mutation non-sens désigne le remplacement d'un codon codant pour un acide aminé par un codon STOP.",
+      "Une mutation faux-sens désigne le remplacement d'un codon codant pour un acide aminé par un codon codant pour un autre acide aminé.",
+      "Une mutation non-sens mène à une protéine plus courte, avec parfois une perte de fonction.",
+      "Une mutation silencieuse n'a pas d'effet sur la séquence de la protéine mais peut affecter l'épissage, l'efficacité de la transcription ou de la traduction, ou encore la stabilité de l'ARN."
+    ],
+    "correct": [0],
+    "explanation": "Une mutation frameshift désigne l'insertion ou la délétion d'un nombre de nucléotides non multiple de 3."
+  },
+  {
+    "id": "C047",
+    "section": "molecular",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles affirmations concernant les conséquences des mutations sont fausses ?",
+    "options": [
+      "Une mutation avec gain de fonction réduit l'activité d'une protéine inhibitrice.",
+      "Une mutation avec gain de fonction donne un avantage évolutif.",
+      "Une mutation avec gain de fonction mène à une expression ou une activité accrue d'une protéine.",
+      "Une mutation avec perte de fonction réduit ou abolit l'activité ou la production d'une protéine.",
+      "Une mutation neutre n'a pas d'impact sur la fonction ou le niveau de production d'une protéine."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Même si la protéine est inhibitrice, une mutation qui réduit son activité est une mutation avec perte de fonction.",
+      "Certaines mutations avec un gain de fonction donnent un avantage évolutif, d'autres un désavantage et d'autres n'ont pas d'effet évolutif direct.",
+      "Il s'agit de la définition d'une mutation avec gain de fonction.",
+      "Il s'agit de la définition d'une mutation avec perte de fonction.",
+      "Il s'agit de la définition d'une mutation neutre."
+    ]
+  },
+  {
+    "id": "C048",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Qu'est-ce qu'un suppresseur intergénique ?",
+    "options": [
+      "Une mutation située dans un gène différent de celui qui porte une mutation initiale, mais qui compense les effets de cette première mutation.",
+      "Une mutation située dans le même gène qu'une mutation initiale et qui restaure la fonction normale de la protéine correspondante.",
+      "Une mutation qui restaure le phénotype initial en rétablissant la séquence originale du gène muté.",
+      "Une mutation qui réduit ou abolit l'activité ou la production d'une protéine.",
+      "Une mutation qui n'a pas d'impact sur la fonction ou le niveau de production d'une protéine."
+    ],
+    "correct": [0],
+    "explanation": [
+      "Il s'agit de la définition d'un suppresseur intergénique. Les suppresseurs compensent l'effet d'une mutation, sans l'inverser ; ils apparaissent à un site différent de la mutation originelle.",
+      "Il s'agit d'un suppresseur intragénique.",
+      "C'est la définition d'un révertant.",
+      "Il s'agit d'une mutation avec perte de fonction.",
+      "C'est la définition d'une mutation neutre."
+    ]
+  },
+  {
+    "id": "C049",
+    "section": "molecular",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Les mutations peuvent être divisées en mutations \"spontanées\" et mutations \"induites\". Quelles sources de mutations font partie des mutations induites ?",
+    "options": [
+      "Exposition à des mutagènes chimiques",
+      "Exposition à des mutagènes physiques",
+      "Exposition à des radiations",
+      "Erreurs lors de la réplication de l'ADN",
+      "Mouvement de transposons (éléments génétiques mobiles)"
+    ],
+    "correct": [0, 1, 2],
+    "hint": "Les mutations spontanées surviennent sans influence externe.",
+    "explanation": "Les mutations induites incluent principalement l'exposition à des mutagènes chimiques et physiques, p. ex. des radiations, tandis que les mutations spontanées sont principalement dues à des erreurs lors de la réplication de l'ADN ou au mouvement de transposons."
+  },
+  {
+    "id": "C050",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle activité de l'ADN polymérase participe au mécanisme de relecture (proofreading) et permet de corriger la plupart des erreurs lors de la réplication de l'ADN ?",
+    "options": [
+      "Exonucléase 3'-5'",
+      "Exonucléase 5'-3'",
+      "Endonucléase 5'-3'",
+      "Endonucléase 3'-5'"
+    ],
+    "correct": [0],
+    "explanation": "L'activité de relecture de l'ADN polymérase est une activité exonucléase 3'-5', qui permet d'enlever les nucléotides incorrects intégrés lors de la réplication de l'ADN."
+  },
+  {
+    "id": "C051",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Avec proofreading (activité de relecture de l'ADN polymérase), quel est le taux d'erreur lors de la réplication de l'ADN ?",
+    "options": [
+      "1 / 100'000'000 bp",
+      "1 / 10 bp",
+      "1 / 1'000 bp",
+      "1 / 100'000 bp",
+      "1 / 1'000'000 bp"
+    ],
+    "correct": [0],
+    "explanation": "Sans proofreading, le taux d'erreur est d'environ 1 / 100'000 bp à 1 / 1'000'000 bp. Avec proofreading, ce taux diminue à environ 1 / 100'000'000 bp."
+  },
+  {
+    "id": "C052",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Que devient une cytosine désaminée ?",
+    "options": [
+      "Uracile",
+      "Adénine",
+      "Thymine",
+      "Guanine",
+      "Glycine",
+      "Alanine"
+    ],
+    "correct": [0],
+    "hint": "La base azotée résultante ne fait normalement pas partie de l'ADN.",
+    "explanation": "La désamination de la cytosine (C) résulte en une uracile (U)."
+  },
+  {
+    "id": "C053",
+    "section": "molecular",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Parmi les affirmations suivantes concernant les mutations, lesquelles sont fausses ?",
+    "options": [
+      "Le produit le plus important des espèces réactives de l'oxygène (ROS) est la 8-oxoC (cytosine).",
+      "Les agents intercalants s'intercalent dans l'ADN et modifient la structure de l'hélice ; ils sont toxiques mais pas cancérigènes.",
+      "La tautomérisation des bases est considérée comme une source de mutations spontanées.",
+      "La cigarette contient de nombreux mutagènes, qui augmentent le risque de cancer.",
+      "Les rayons X créent généralement des ruptures simple brin ou double brin de l'ADN.",
+      "Les rayons UV mènent généralement à la création de dimères de pyrimidines.",
+      "Les espèces réactives de l'oxygène (ROS) peuvent être divisées en ROS exogènes et ROS endogènes."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Le produit le plus important des ROS est la 8-oxoG (guanine).",
+      "Les agents intercalants sont toxiques et cancérigènes.",
+      "La tautomérisation des bases cause de mauvais appariements.",
+      "Le risque de cancer du poumon est 25x plus élevé chez les fumeurs que chez les non-fumeurs.",
+      "Ces cassures bloquent la réplication de l'ADN car l'ADN polymérase ne peut pas continuer.",
+      "Cela déforme la double hélice d'ADN, ce qui cause le mauvais appariement des bases et bloque l'ADN polymérase lors de la réplication.",
+      "Les ROS exogènes incluent notamment les produits de radiation, polluants et fumée. Les ROS endogènes incluent notamment les produits de complexes NADPH oxydases dans les membranes cellulaires, mitochondries, peroxysomes et réticulum endoplasmique."
+    ]
+  },
+  {
+    "id": "C054",
+    "section": "molecular",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle affirmation décrit l'importance des mutations ?",
+    "options": [
+      "Les mutations sont essentielles pour la survie et l'adaptation de l'espèce.",
+      "Toutes les mutations sont néfastes.",
+      "Toutes les mutations sont bénéfiques.",
+      "La survie et l'évolution de l'espèce nécessitent un taux élevé de mutations pour que la sélection naturelle puisse intervenir."
+    ],
+    "correct": [0],
+    "explanation": "Les mutations sont essentielles pour la survie et l'adaptation de l'espèce, en permettant la sélection naturelle. En revanche, un excès de mutations est néfaste, de sorte que le taux de mutations doit rester faible."
+  },
+  {
+    "id": "C055",
+    "section": "molecular",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quels mécanismes de réparation de l'ADN permettent de corriger les cassures double brin de l'ADN ?",
+    "options": [
+      "NHEJ",
+      "HR",
+      "MMR",
+      "NER",
+      "BER",
+      "Proofreading"
+    ],
+    "correct": [0, 1],
+    "explanation": "Les deux mécanismes qui permettent de corriger les cassures double brin de l'ADN sont la jonction d'extrémités non-homologues (NHEJ) et la recombinaison homologue (HR)."
   }
 ]
