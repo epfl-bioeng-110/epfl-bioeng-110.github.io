@@ -173,5 +173,232 @@
     "correct": [0, 1],
     "hint": "Certaines mutations dans les gènes BRCA1/2 augmentent le risque de cancer du sein. Mais certaines personnes ayant ces mutations ne développent jamais de cancer !",
     "explanation": "Le phénotype dépend à la fois du génotype et de l'histoire environnementale. Par conséquent, pas tous les individus ayant le même génotype expriment le même phénotype ; on parle de \"pénétrance\" pour désigner la proportion d'individus exprimant un phénotype correspondant à un génotype."
+  },
+  {
+    "id": "B011",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Dans un arbre généalogique, quel symbole désigne une femme présentant le caractère étudié ?",
+    "options": [
+      "Rond coloré",
+      "Rond blanc",
+      "Carré coloré",
+      "Carré blanc",
+      "Losange coloré",
+      "Losange blanc"
+    ],
+    "correct": [0],
+    "explanation": "Un rond désigne une femme, un carré désigne un homme et un losange désigne un individu de sexe inconnu. Un symbole blanc désigne un individu ne présentant pas le caractère étudié, tandis qu'un symbole coloré désigne un individu présentant le caractère étudié."
+  },
+  {
+    "id": "B012",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant les cellules humaines, laquelle est fausse ?",
+    "options": [
+      "Toutes les cellules humaines contiennent au moins un chromosome X.",
+      "Les cellules somatiques sont diploïdes (2n = 46 chromosomes).",
+      "Les gamètes sont haploïdes (n = 23 chromosomes).",
+      "Le chromosome Y est plus petit que le chromosome X.",
+      "Les cellules somatiques contiennent 44 autosomes."
+    ],
+    "correct": [0],
+    "explanation": "Toutes les cellules somatiques contiennent au moins un chromosome X : les cellules somatiques des hommes contiennent un chromosome X et un chromosome Y, alors que les cellules somatiques des femmes contiennent deux chromosomes X. Les gamètes des femmes (ovocytes) possèdent également un chromosome X. En revanche, les spermatozoïdes contiennent soit un chromosome X (et aucun chromosome Y), soit un chromosome Y (et aucun chromosome X) ; il existe donc des gamètes qui ne possèdent aucun chromosome X."
+  },
+  {
+    "id": "B013",
+    "section": "genetics",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles affirmations sur la génétique sont fausses ?",
+    "options": [
+      "Chez l'humain, tous les gènes liés au sexe sont situés sur le chromosome X.",
+      "Chez les mammifères, les femelles produisent 2x plus de protéines que les mâles pour les gènes situés sur le chromosome X.",
+      "Certains caractères phénotypiques peuvent être influencés par plusieurs gènes.",
+      "Les expériences de T. H. Morgan ont notamment permis de déterminer que les gènes sont situés sur les chromosomes et que certains gènes sont liés au sexe.",
+      "Le daltonisme est un trouble génétique récessif de la vision causé par un allèle d'un gène situé sur le chromosome X."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Certains gènes liés au sexe sont situés sur le chromosome Y.",
+      "Chez les mammifères, les femelles inactivent aléatoirement un chromosome X dans chaque cellule, de sorte qu'elles produisent la même quantité de protéines dont le gène est situé sur le chromosome X que les mâles.",
+      "Il s'agit d'hérédité polygénique.",
+      "Les expériences de Morgan sont parmi les plus importantes de l'histoire de la génétique.",
+      "Le daltonisme est donc beaucoup plus fréquent chez les hommes que chez les femmes."
+    ]
+  },
+  {
+    "id": "B014",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Quelle affirmation concernant les bases chromosomiques de l'hérédité est fausse ?",
+    "options": [
+      "Le centimorgan (cM) est l'unité de mesure de liaison génétique et 1 cM correspond à une distance de 1'000'000 de nucléotides.",
+      "La recombinaison génétique se produit pendant la méiose.",
+      "La fréquence de recombinaison désigne la proportion d'individus recombinés parmi l'ensemble des descendants d'un croisement.",
+      "En analysant la fréquence de recombinaison suite à une série de croisements, il est généralement possible de déterminer si deux gènes sont génétiquement liés.",
+      "Le centimorgan (cM) est l'unité de mesure de liaison génétique et 1 cM correspond à une fréquence de recombinaison de 1 %."
+    ],
+    "correct": [0],
+    "hint": "Deux affirmations sont contradictoires.",
+    "explanation": "Le centimorgan (cM) est l'unité de mesure de liaison génétique et 1 cM correspond à une fréquence de recombinaison de 1 %. La distance à laquelle correspond 1 cM varie en fonction de l'espèce, de la région du génome, etc."
+  },
+  {
+    "id": "B015",
+    "section": "genetics",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Les affirmations suivantes concernent des expériences célèbres en génétique et biologie moléculaire (les dates ne sont pas à connaître). Lesquelles sont fausses ?",
+    "options": [
+      "L'expérience de F. Griffith (1928) sur les souches S et R de pneumocoques a permis de mettre en évidence le phénomène de transduction.",
+      "L'expérience de Hershey et Chase (1952) a permis de déterminer que les protéines, plutôt que l'ADN, constituent le matériel génétique des cellules.",
+      "L'expérience de Matthaei et Nirenberg (1961) a permis de déterminer quel triplet d'acides aminés code pour chaque nucléotide.",
+      "Pour déterminer quel composant constitue le matériel génétique des cellules, Hershey et Chase (1952) ont marqué radioactivement des composants du bactériophage T2 et déterminé quel composant marqué se retrouve dans des celllues bactériennes infectées par ces bactériophages.",
+      "Les résultats d'expériences de diffraction de rayons X menées par R. Franklin ont permis à J. Watson et F. Crick (1953) de développer un modèle de la structure de l'ADN, selon lequel l'ADN forme une double hélice."
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "Cette expérience a permis de mettre en évidence le phénomène de transformation, qui correspond à l'intégration d'un fragment d'ADN étranger dans une cellule (sans intermédiaire viral ou contact direct). Ce phénomène est différent du phénomène de transduction, qui correspond à l'intégration d'un fragment d'ADN étranger par l'intermédiaire d'un virus.",
+      "C'est l'inverse : cette expérience a permis de déterminer que l'ADN, plutôt que les protéines, constituait le matériel génétique des cellules.",
+      "C'est l'inverse : cette expérience a permis de déterminer quel triplet de nucléotides code pour chaque acide aminé. Pour rappel, le dogme central de la biologie moléculaire postule que le flux d'information suit la séquence : ADN → ARN → protéines.",
+      "Hershey et Chase ont ainsi découvert que l'ADN et non les protéines compose le matériel génétique des cellules.",
+      "Watson et Crick ont reçu le prix Nobel de physiologie ou médecine en 1962. Franklin est décédée en 1958 et n'a jamais été reconnue officiellement pour son rôle dans cette découverte."
+    ]
+  },
+  {
+    "id": "B016",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle affirmation concernant le génome humain est correcte ?",
+    "options": [
+      "La plus grande partie du génome humain est faite d'ADN répétitif.",
+      "Les exons et introns composent environ 50 % du génome humain.",
+      "L'ADN répétitif ne possède aucun rôle particulier, bien qu'il constitue une grande partie du génome humain.",
+      "Les centromères sont des régions situées approximativement au milieu des chromosomes et composées d'ADN monocaténaire (simple brin) grâce à la formation d'une boucle en T (T loop).",
+      "Les télomères sont des régions situées approximativement au milieu des chromosomes et composées d'ADN monocaténaire (simple brin) grâce à la formation d'une boucle en T (T loop)."
+    ],
+    "correct": [0],
+    "explanation": [
+      "On estime que l'ADN répétitif constitue environ 60 % du génome humain.",
+      "Les exons et introns constituent seulement 5-7 % du génome humain.",
+      "L'ADN répétitif possède de nombreux rôles, p. ex. des rôles structuraux ou de régulation. L'étude de ces régions du génome est toutefois compliquée et plusieurs de ses rôles n'ont probablement pas encore été découverts.",
+      "Les centromères sont en effet situés approximativement au milieu des chromosomes, mais ils sont constitués d'ADN bicaténaire (double brin) en ne forment pas de boucle en T.",
+      "Les télomères sont des régions situées aux extrémités des chromosomes, qui sont composées d'ADN monocaténaire (simple brin) et forment une structure dénommée \"boucle en T\"."
+    ]
+  },
+  {
+    "id": "B017",
+    "section": "genetics",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "L'épigénétique désigne l'adaptation structurelle des régions chromosomiques de façon à enregistrer, signaler ou perpétuer des états d'activité alternatifs. Quelles affirmations concernant l'épigénétique sont fausses ?",
+    "options": [
+      "Les modifications épigénétiques affectent l'identité d'une cellule, p. ex. son phénotype, mais ne sont pas héritables.",
+      "Les histones permettent de relâcher l'ADN, qui a une tendance naturelle à se compacter en leur absence.",
+      "Un nucléosome est constitué d'ADN et d'histones.",
+      "Les histones sont parmi les protéines les plus conservées du domaine eucaryote, démontrant ainsi leur importance fondamentale.",
+      "L'interaction réciproque entre les octamères d'histones et les queues d'histones permet de compacter la chromatine."
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Les modifications épigénétiques (modifications post-traductionnelles d'histones, méthylation de l'ADN) sont héritables.",
+      "C'est l'inverse : les histones permettent de compacter l'ADN, qui a une tendance naturelle à se relâcher en leur absence.",
+      "Un nucléosome contient environ 200 bp d'ADN et un octamère d'histones (protéines).",
+      "Toutes les histones H4 connues sont p. ex. identiques à plus de 95 %.",
+      "Il s'agit de l'un des deux processus principaux qui permettent de compacter l'ADN, avec l'histone de liaison H1."
+    ]
+  },
+  {
+    "id": "B018",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Parmi les affirmations suivantes concernant les modifications post-traductionnelles d'histones, laquelle est correcte ?",
+    "options": [
+      "L'acétylation d'une lysine neutralise sa charge.",
+      "L'acétylation et la méthylation ne sont jamais en compétition, car ces deux réactions interviennent sur des acides aminés différents.",
+      "Les modifications post-traductionnelles d'histones ont lieu exclusivement dans les régions promotrices des gènes, afin de pouvoir réguler le taux de transcription.",
+      "La phosphorylation d'une sérine neutralise sa charge.",
+      "L'acétylation peut avoir un effet activateur ou inhibiteur sur la transcription en fonction de l'histone sur laquelle elle a lieu."
+    ],
+    "correct": [0],
+    "explanation": [
+      "La lysine est positivement chargée (+1 à pH 7.0), tandis que l'acétylation ajoute une charge négative (-1), de sorte qu'elle permet de neutraliser la charge de la lysine.",
+      "L'acétylation et la méthylation peuvent notamment toutes deux avoir lieu sur les lysines, de sorte qu'elles peuvent être en compétition.",
+      "Les modifications post-traductionnelles d'histones peuvent potentiellement avoir lieu n'importe où dans le génome. Elles peuvent d'ailleurs aider à la régulation du taux de transcription même si elles ne sont pas situées dans une région promotrice, p. ex. en étant situées dans une région de régulation (enhancer, etc.).",
+      "La sérine est neutre (à pH 7.0), tandis que la phosphorylation ajoute des charges négatives (-2). La phosphorylation d'une sérine ne neutralise donc pas sa charge, mais lui en ajoute.",
+      "L'acétylation d'une histone a toujours un effet activateur."
+    ]
+  },
+  {
+    "id": "B019",
+    "section": "genetics",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant les modifications post-traductionnelles d'histones, lesquelles sont fausses ?",
+    "options": [
+      "Les modifications post-traductionnelles d'histones ont principalement lieu sur la queue C-terminale des histones.",
+      "En fonction du coactivateur auquel elles sont liées, les histones déméthylases peuvent déméthyler ou désacétyler les queues d'histones.",
+      "La phosphorylation d'un résidu d'une histone est réalisée par une protéine phosphatase.",
+      "Sur une queue d'histone, certaines modifications post-traductionnelles sont mutuellement exclusives.",
+      "La phosphorylation d'un résidu d'histone est réalisée par une protéine kinase."
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "Les modifications post-traductionnelles d'histones ont principalement lieu sur la queue N-terminale des histones.",
+      "Les histones déméthylases ont pour rôle de déméthyler les histones, tandis que les histones désacétylases ont pour rôle de désacétyler les histones.",
+      "La phosphorylation d'un résidu d'une histone est réalisée par une protéine kinase, tandis que les protéines phosphatases s'occupent de la déphosphorylation.",
+      "Certaines modifications post-traductionnelles sont mutuellement exclusives, p. ex. si elles ont lieu sur le même acide aminé. Certaines modifications ayant lieu sur des acides aminés différents sont également mutuellement exclusives, p. ex. la méthylation de H3K9 et la phosphorylation de H3S10.",
+      "Les protéines kinases sont responsables de la phosphorylation, tandis que les protéines phosphatases sont responsables de la déphosphorylation."
+    ]
+  },
+  {
+    "id": "B020",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes à propos de la méthylation de l'ADN, laquelle est correcte ?",
+    "options": [
+      "La méthylation des promoteurs est généralement associée à la répression de la transcription.",
+      "La méthylation de l'ADN a principalement lieu sur les guanines des séquences CG.",
+      "La méthylation des promoteurs est généralement associée à l'activation de la transcription.",
+      "Contrairement aux modifications post-traductionnelles d'histones, la méthylation de l'ADN n'est pas héritable.",
+      "La méthylation de l'ADN correspond à l'addition d'un groupe phosphate sur les bases azotées des nucléotides."
+    ],
+    "correct": [0],
+    "hint": "Deux affirmations sont contradictoires.",
+    "explanation": [
+      "La méthylation des promoteurs est généralement associée à la répression de la transcription.",
+      "La méthylation de l'ADN a principalement lieu sur les cytosines des séquences CG.",
+      "La méthylation des promoteurs est généralement associée à la répression de la transcription.",
+      "La méthylation de l'ADN est héritable, tout comme les modifications post-traductionnelles.",
+      "La méthylation de l'ADN correspond à l'addition d'un groupe méthyle -CH3 sur les cytosines."
+    ]
+  },
+  {
+    "id": "B021",
+    "section": "genetics",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant l'héritabilité des modifications épigénétiques, laquelle est fausse ?",
+    "options": [
+      "La distinction entre hétérochromatine et euchromatine est uniquement fonctionnelle.",
+      "Les modifications post-traductionnelles d'histones peuvent être transmises lors de la division cellulaire.",
+      "La méthylation de l'ADN peut-être transmise lors de la division cellulaire.",
+      "Les gènes situés dans une région d'euchromatine sont généralement plus transcrits que ceux situés dans une région d'hétérochromatine.",
+      "Une inversion chromosomique peut participer à la propagation de régions d'euchromatine."
+    ],
+    "correct": [0],
+    "explanation": [
+      "La distinction est également structurelle : l'euchromatine (transcription activée) est généralement plus ouverte que l'hétérochromatine (transcription réprimée).",
+      "Les modifications épigénétiques (modifications post-traductionnelles d'histones et méthylation de l'ADN) sont héritables.",
+      "Les modifications épigénétiques (modifications post-traductionnelles d'histones et méthylation de l'ADN) sont héritables.",
+      "L'euchromatine désigne une région de chromatine dans laquelle la transcription est activée.",
+      "La variégation due à l'effet position désigne l'inactivation de gènes via la propagation d'hétérochromatine, p. ex. après une inversion chromosomique."
+    ]
   }
 ]
