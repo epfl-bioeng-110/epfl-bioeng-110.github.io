@@ -16,12 +16,12 @@
             --accent:        #fbbf24;
             --accent-dark:   #f59e0b;
             --text-primary:  #f1f5f9;
-            --text-secondary:#cbd5e1;
+            --text-secondary:#94a3b8;
             --success:       #10b981;
             --error:         #ef4444;
             --warning:       #f59e0b;
             --partial:       #3b82f6;
-            --border:        #475569;
+            --border:        #334155;
             --shadow:        rgba(0,0,0,0.4);
         }
 
@@ -63,11 +63,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .login-card p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-        }
+        .login-card p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem; }
 
         .login-card input {
             width: 100%;
@@ -83,18 +79,8 @@
             letter-spacing: 0.1em;
         }
 
-        .login-card input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(251,191,36,0.15);
-        }
-
-        .login-error {
-            color: var(--error);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: none;
-        }
+        .login-card input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(251,191,36,0.15); }
+        .login-error { color: var(--error); font-size: 0.9rem; margin-bottom: 1rem; display: none; }
 
         /* ── Dashboard ── */
         #dashboard { display: none; }
@@ -109,6 +95,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            gap: 1rem;
         }
 
         header h1 {
@@ -119,11 +106,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            white-space: nowrap;
         }
 
-        .header-actions { display: flex; gap: 0.75rem; align-items: center; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        .header-actions { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
         /* ── Buttons ── */
         button {
@@ -140,13 +127,8 @@
         }
 
         button:hover { background: var(--accent-dark); transform: scale(1.02); }
-        button.secondary {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-        button.secondary:hover { background: var(--border); }
-
+        button.secondary { background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border); }
+        button.secondary:hover { background: var(--border); transform: none; }
         button.small { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
 
         /* ── Cards ── */
@@ -158,17 +140,28 @@
             margin-bottom: 1.5rem;
         }
 
-        .card h2 {
+        .card-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
             color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            margin-left: auto;
         }
 
         /* ── KPI grid ── */
         .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
@@ -179,27 +172,35 @@
             padding: 1.25rem;
             border: 1px solid var(--border);
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--accent);
+            opacity: 0.6;
+        }
+
+        .kpi-card.kpi-alert::before { background: var(--error); opacity: 1; }
+        .kpi-card.kpi-good::before  { background: var(--success); opacity: 1; }
+
         .kpi-value {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--accent);
             font-family: 'Playfair Display', serif;
+            line-height: 1.2;
         }
 
-        .kpi-label {
-            color: var(--text-secondary);
-            font-size: 0.82rem;
-            margin-top: 0.25rem;
-        }
+        .kpi-label { color: var(--text-secondary); font-size: 0.8rem; margin-top: 0.3rem; }
+        .kpi-sub   { color: var(--text-secondary); font-size: 0.72rem; margin-top: 0.15rem; }
 
-        /* ── Table ── */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
+        /* ── Data table ── */
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
 
         .data-table th {
             text-align: left;
@@ -207,88 +208,56 @@
             background: var(--bg-tertiary);
             color: var(--text-secondary);
             font-weight: 600;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             cursor: pointer;
             user-select: none;
+            white-space: nowrap;
         }
 
         .data-table th:hover { color: var(--accent); }
-
-        .data-table td {
-            padding: 0.7rem 0.75rem;
-            border-bottom: 1px solid var(--border);
-            vertical-align: middle;
-        }
-
+        .data-table td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
         .data-table tr:last-child td { border-bottom: none; }
-        .data-table tr:hover td { background: rgba(255,255,255,0.03); }
+        .data-table tr:hover td { background: rgba(255,255,255,0.025); }
+        .data-table td.clickable { cursor: pointer; }
+        .data-table td.clickable:hover { color: var(--accent); }
 
-        /* ── Progress bar inline ── */
-        .bar-wrap {
-            background: var(--bg-tertiary);
-            border-radius: 4px;
-            height: 8px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .bar-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 0.4s ease;
-        }
-
-        .bar-good    { background: var(--success); }
-        .bar-ok      { background: var(--warning); }
-        .bar-bad     { background: var(--error); }
+        /* ── Inline progress bar ── */
+        .bar-wrap { background: var(--bg-tertiary); border-radius: 4px; height: 6px; overflow: hidden; min-width: 60px; }
+        .bar-fill  { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+        .bar-good  { background: var(--success); }
+        .bar-ok    { background: var(--warning); }
+        .bar-bad   { background: var(--error); }
 
         /* ── Pill badges ── */
-        .pill {
-            display: inline-block;
-            padding: 0.15rem 0.55rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-
+        .pill { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
         .pill-green  { background: rgba(16,185,129,0.15); color: var(--success); }
         .pill-blue   { background: rgba(59,130,246,0.15); color: var(--partial); }
         .pill-red    { background: rgba(239,68,68,0.15);  color: var(--error); }
         .pill-yellow { background: rgba(251,191,36,0.15); color: var(--accent); }
+        .pill-grey   { background: rgba(148,163,184,0.15); color: var(--text-secondary); }
 
-        /* ── Search/filter bar ── */
-        .filter-bar {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-            align-items: center;
-        }
+        /* ── Filter bar ── */
+        .filter-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
 
         .filter-bar input, .filter-bar select {
-            padding: 0.6rem 0.9rem;
+            padding: 0.55rem 0.85rem;
             background: var(--bg-tertiary);
             border: 1px solid var(--border);
             border-radius: 8px;
             color: var(--text-primary);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-family: 'DM Sans', sans-serif;
         }
 
-        .filter-bar input:focus, .filter-bar select:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
+        .filter-bar input:focus, .filter-bar select:focus { outline: none; border-color: var(--accent); }
+        .filter-bar input { min-width: 180px; flex: 1; }
 
-        .filter-bar input { min-width: 200px; flex: 1; }
-
-        /* ── Loading spinner ── */
+        /* ── Loading ── */
         .spinner {
             display: inline-block;
-            width: 24px;
-            height: 24px;
+            width: 22px; height: 22px;
             border: 3px solid var(--border);
             border-top-color: var(--accent);
             border-radius: 50%;
@@ -296,20 +265,10 @@
         }
 
         @keyframes spin { to { transform: rotate(360deg); } }
-
-        .loading-msg {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-        }
+        .loading-msg { text-align: center; padding: 2.5rem; color: var(--text-secondary); }
 
         /* ── Tabs ── */
-        .tabs {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
 
         .tab-btn {
             background: var(--bg-tertiary);
@@ -317,78 +276,100 @@
             border: 1px solid var(--border);
             padding: 0.5rem 1.1rem;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
         }
 
-        .tab-btn.active {
-            background: rgba(251,191,36,0.15);
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
+        .tab-btn.active { background: rgba(251,191,36,0.15); border-color: var(--accent); color: var(--accent); }
         .tab-panel { display: none; }
         .tab-panel.active { display: block; }
 
-        /* ── Scrollable table wrapper ── */
-        .table-wrapper {
-            overflow-x: auto;
-            border-radius: 10px;
+        /* ── Table wrapper ── */
+        .table-wrapper { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+
+        /* ── SVG charts ── */
+        .chart-svg { width: 100%; overflow: visible; display: block; }
+
+        .chart-tooltip {
+            position: fixed;
+            background: var(--bg-secondary);
             border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 0.85rem;
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            pointer-events: none;
+            z-index: 500;
+            box-shadow: 0 4px 16px var(--shadow);
+            display: none;
+            max-width: 220px;
+            line-height: 1.5;
         }
 
-        /* ── Timeline chart (CSS-only simple bar chart) ── */
-        .timeline-bars {
+        /* ── Alert banner ── */
+        .alert-banner {
+            background: rgba(239,68,68,0.08);
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 10px;
+            padding: 0.85rem 1.1rem;
+            margin-bottom: 1rem;
+            font-size: 0.88rem;
             display: flex;
-            gap: 6px;
-            align-items: flex-end;
-            height: 120px;
-            padding-top: 1rem;
+            gap: 0.6rem;
+            align-items: flex-start;
         }
 
-        .timeline-bar-col {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
+        /* ── Two-col layout ── */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
+
+        /* ── Scrollable table ── */
+        .scrollable-list { max-height: 380px; overflow-y: auto; }
+        .scrollable-list::-webkit-scrollbar { width: 6px; }
+        .scrollable-list::-webkit-scrollbar-track { background: var(--bg-tertiary); border-radius: 3px; }
+        .scrollable-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        /* ── Modal ── */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 1000; padding: 1.5rem;
+            display: none;
         }
 
-        .timeline-bar-col .bar-day {
-            flex: 1;
+        .modal-overlay.open { display: flex; }
+
+        .modal-box {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            max-width: 640px;
             width: 100%;
-            background: var(--accent);
-            border-radius: 4px 4px 0 0;
-            opacity: 0.8;
-            min-height: 2px;
-            transition: opacity 0.2s;
-            cursor: default;
-            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
-        .timeline-bar-col .bar-day:hover { opacity: 1; }
+        .modal-box h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 1rem; }
 
-        .timeline-bar-col .bar-label {
-            font-size: 0.65rem;
-            color: var(--text-secondary);
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: rotate(180deg);
-            white-space: nowrap;
-        }
+        /* ── Section colour dots ── */
+        .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+        .dot-bio { background: #10b981; }
+        .dot-gen { background: #3b82f6; }
+        .dot-mol { background: #f59e0b; }
 
         /* ── Responsive ── */
         @media (max-width: 640px) {
             .container { padding: 1rem; }
             header { padding: 0.75rem 1rem; }
             .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-actions { gap: 0.35rem; }
         }
 
         /* ── Toast ── */
         #toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
+            position: fixed; bottom: 2rem; left: 50%;
             transform: translateX(-50%) translateY(4rem);
             background: var(--bg-secondary);
             border: 1px solid var(--border);
@@ -403,11 +384,26 @@
             pointer-events: none;
         }
         #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* ── Trend arrow ── */
+        .trend-up   { color: var(--success); font-size: 0.8rem; }
+        .trend-down { color: var(--error);   font-size: 0.8rem; }
+        .trend-flat { color: var(--text-secondary); font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <div id="toast"></div>
+<div class="chart-tooltip" id="tooltip"></div>
+
+<!-- ── Question detail modal ── -->
+<div class="modal-overlay" id="q-modal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+        <h3 id="modal-title">Question</h3>
+        <div id="modal-content"></div>
+        <button class="secondary" style="margin-top:1.25rem; width:100%;" onclick="closeModal()">Fermer</button>
+    </div>
+</div>
 
 <!-- ── Login ── -->
 <div id="login-screen">
@@ -430,53 +426,150 @@
     <header>
         <h1>📊 BIOENG-110 — Tableau de bord TA</h1>
         <div class="header-actions">
-            <span id="last-refresh" style="font-size:0.8rem; color:var(--text-secondary);"></span>
+            <span id="last-refresh" style="font-size:0.78rem; color:var(--text-secondary); white-space:nowrap;"></span>
             <button class="secondary small" onclick="loadAll()">🔄 Actualiser</button>
-            <button class="secondary small" onclick="exportCSV()">📥 Export CSV</button>
+            <button class="secondary small" onclick="exportCSV()">📥 CSV</button>
             <button class="secondary small" onclick="logout()">🚪 Déconnexion</button>
         </div>
     </header>
 
     <div class="container">
+
         <!-- KPIs -->
         <div class="kpi-grid" id="kpi-grid">
-            <div class="kpi-card"><div class="kpi-value" id="kpi-sessions">—</div><div class="kpi-label">Sessions actives</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpi-answers">—</div><div class="kpi-label">Réponses totales</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpi-accuracy">—</div><div class="kpi-label">Taux de réussite global</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpi-avg-score">—</div><div class="kpi-label">Score moyen / question</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpi-hint-rate">—</div><div class="kpi-label">Utilisation des indices</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpi-questions-seen">—</div><div class="kpi-label">Questions vues (≥1×)</div></div>
+            <div class="kpi-card kpi-good">
+                <div class="kpi-value" id="kpi-sessions">—</div>
+                <div class="kpi-label">Sessions actives</div>
+                <div class="kpi-sub" id="kpi-sessions-sub"></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value" id="kpi-answers">—</div>
+                <div class="kpi-label">Réponses enregistrées</div>
+                <div class="kpi-sub" id="kpi-answers-sub"></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value" id="kpi-accuracy">—</div>
+                <div class="kpi-label">Taux de réussite global</div>
+                <div class="kpi-sub" id="kpi-accuracy-sub"></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value" id="kpi-coverage">—</div>
+                <div class="kpi-label">Couverture des questions</div>
+                <div class="kpi-sub" id="kpi-coverage-sub"></div>
+            </div>
+            <div class="kpi-card kpi-alert">
+                <div class="kpi-value" id="kpi-hard">—</div>
+                <div class="kpi-label">Questions en difficulté</div>
+                <div class="kpi-sub">réussite &lt; 40%, ≥5 tentatives</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value" id="kpi-avg-per-session">—</div>
+                <div class="kpi-label">Moy. réponses / session</div>
+                <div class="kpi-sub" id="kpi-avg-sub"></div>
+            </div>
         </div>
 
         <!-- Tabs -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('tab-questions', this)">📋 Par question</button>
-            <button class="tab-btn" onclick="switchTab('tab-sections', this)">📚 Par section</button>
-            <button class="tab-btn" onclick="switchTab('tab-activity', this)">📅 Activité</button>
-            <button class="tab-btn" onclick="switchTab('tab-sessions', this)">👥 Sessions</button>
+            <button class="tab-btn active" onclick="switchTab('tab-overview',   this)">🏠 Vue d'ensemble</button>
+            <button class="tab-btn"        onclick="switchTab('tab-questions',  this)">📋 Questions</button>
+            <button class="tab-btn"        onclick="switchTab('tab-sections',   this)">📚 Sections</button>
+            <button class="tab-btn"        onclick="switchTab('tab-activity',   this)">📅 Activité</button>
+            <button class="tab-btn"        onclick="switchTab('tab-sessions',   this)">👥 Sessions</button>
         </div>
 
-        <!-- Tab: Questions -->
-        <div id="tab-questions" class="tab-panel active">
+        <!-- ════ Tab: Vue d'ensemble ════ -->
+        <div id="tab-overview" class="tab-panel active">
+
+            <!-- Alerts -->
+            <div id="overview-alerts"></div>
+
+            <div class="two-col">
+                <!-- Success rate distribution histogram -->
+                <div class="card">
+                    <div class="card-title">📊 Distribution des taux de réussite
+                        <span class="card-subtitle">par question</span>
+                    </div>
+                    <svg id="hist-svg" class="chart-svg" height="180"></svg>
+                    <div style="display:flex; gap:1rem; margin-top:0.75rem; flex-wrap:wrap;">
+                        <span><span class="dot" style="background:var(--error);"></span><span style="font-size:0.78rem; color:var(--text-secondary);">0–40% (difficile)</span></span>
+                        <span><span class="dot" style="background:var(--warning);"></span><span style="font-size:0.78rem; color:var(--text-secondary);">40–70% (moyen)</span></span>
+                        <span><span class="dot" style="background:var(--success);"></span><span style="font-size:0.78rem; color:var(--text-secondary);">70–100% (facile)</span></span>
+                    </div>
+                </div>
+
+                <!-- Section comparison bars -->
+                <div class="card">
+                    <div class="card-title">📚 Réussite par section</div>
+                    <div id="overview-sections"></div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <!-- Top 10 hardest -->
+                <div class="card">
+                    <div class="card-title">🔴 Questions les plus difficiles
+                        <span class="card-subtitle">min 5 tentatives</span>
+                    </div>
+                    <div class="scrollable-list">
+                        <table class="data-table" id="hard-table">
+                            <thead><tr><th>ID</th><th>Taux</th><th>Tentatives</th></tr></thead>
+                            <tbody id="hard-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Top 10 easiest -->
+                <div class="card">
+                    <div class="card-title">🟢 Questions les plus faciles
+                        <span class="card-subtitle">min 5 tentatives</span>
+                    </div>
+                    <div class="scrollable-list">
+                        <table class="data-table" id="easy-table">
+                            <thead><tr><th>ID</th><th>Taux</th><th>Tentatives</th></tr></thead>
+                            <tbody id="easy-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level breakdown -->
             <div class="card">
-                <h2>Performance par question</h2>
+                <div class="card-title">⭐ Performance par niveau de difficulté</div>
+                <div id="overview-levels"></div>
+            </div>
+        </div>
+
+        <!-- ════ Tab: Questions ════ -->
+        <div id="tab-questions" class="tab-panel">
+            <div class="card">
+                <div class="card-title">📋 Performance par question
+                    <span class="card-subtitle" id="q-count-label"></span>
+                </div>
                 <div class="filter-bar">
-                    <input type="text" id="q-search" placeholder="🔍 Rechercher une question…" oninput="renderQuestionTable()">
+                    <input type="text" id="q-search" placeholder="🔍 Rechercher (ID ou texte)…" oninput="renderQuestionTable()">
                     <select id="q-section" onchange="renderQuestionTable()">
                         <option value="all">Toutes les sections</option>
                         <option value="biomolecules">Biomolécules</option>
                         <option value="genetics">Génétique</option>
                         <option value="molecular">Biologie moléculaire</option>
-                        <option value="cellcycle">Cycle cellulaire</option>
                     </select>
                     <select id="q-level" onchange="renderQuestionTable()">
                         <option value="all">Tous les niveaux</option>
                         <option value="1">Niveau 1</option>
                         <option value="2">Niveau 2</option>
+                        <option value="3">Niveau 3</option>
+                    </select>
+                    <select id="q-filter" onchange="renderQuestionTable()">
+                        <option value="all">Toutes</option>
+                        <option value="hard">Difficiles (&lt;40%)</option>
+                        <option value="medium">Moyennes (40–70%)</option>
+                        <option value="easy">Faciles (&gt;70%)</option>
+                        <option value="unseen">Non tentées</option>
                     </select>
                     <select id="q-sort" onchange="renderQuestionTable()">
-                        <option value="success_asc">Taux de réussite ↑ (difficiles en premier)</option>
-                        <option value="success_desc">Taux de réussite ↓ (faciles en premier)</option>
+                        <option value="success_asc">Taux réussite ↑</option>
+                        <option value="success_desc">Taux réussite ↓</option>
                         <option value="attempts_desc">Plus tentées</option>
                         <option value="id_asc">ID croissant</option>
                     </select>
@@ -485,15 +578,15 @@
                     <table class="data-table" id="question-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th onclick="sortBy('id_asc')">ID</th>
                                 <th>Section</th>
                                 <th>Niv.</th>
                                 <th>Type</th>
-                                <th>Tentatives</th>
-                                <th>Réussite</th>
-                                <th style="min-width:120px;">Taux</th>
+                                <th onclick="sortBy('attempts_desc')">Tentatives</th>
+                                <th onclick="sortBy('success_asc')">Taux réussite</th>
                                 <th>Score moy.</th>
-                                <th>Indices %</th>
+                                <th>Indice %</th>
+                                <th>Détail</th>
                             </tr>
                         </thead>
                         <tbody id="question-tbody">
@@ -501,49 +594,100 @@
                         </tbody>
                     </table>
                 </div>
-                <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.75rem;" id="q-count-label"></p>
             </div>
         </div>
 
-        <!-- Tab: Sections -->
+        <!-- ════ Tab: Sections ════ -->
         <div id="tab-sections" class="tab-panel">
             <div class="card">
-                <h2>Performance par section</h2>
-                <div id="section-content" class="loading-msg"><div class="spinner"></div><br>Chargement…</div>
+                <div class="card-title">📚 Performance par section</div>
+                <div id="section-content" class="loading-msg"><div class="spinner"></div></div>
             </div>
+            <div class="two-col">
+                <div class="card">
+                    <div class="card-title">⭐ Par niveau de difficulté</div>
+                    <div id="level-content" class="loading-msg"><div class="spinner"></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🧩 Par type de question</div>
+                    <div id="type-content" class="loading-msg"><div class="spinner"></div></div>
+                </div>
+            </div>
+            <!-- Per-section deep dive -->
             <div class="card">
-                <h2>Performance par niveau de difficulté</h2>
-                <div id="level-content" class="loading-msg"><div class="spinner"></div><br>Chargement…</div>
+                <div class="card-title">🔍 Détail par section — questions jamais tentées</div>
+                <div id="unseen-content" class="loading-msg"><div class="spinner"></div></div>
             </div>
         </div>
 
-        <!-- Tab: Activity -->
+        <!-- ════ Tab: Activité ════ -->
         <div id="tab-activity" class="tab-panel">
             <div class="card">
-                <h2>Activité quotidienne (30 derniers jours)</h2>
-                <div id="activity-chart" class="loading-msg"><div class="spinner"></div><br>Chargement…</div>
+                <div class="card-title">📅 Activité quotidienne
+                    <span class="card-subtitle" id="activity-period-label"></span>
+                </div>
+                <div style="margin-bottom:0.75rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+                    <button class="secondary small" id="period-30" onclick="setActivityPeriod(30)" style="border-color:var(--accent); color:var(--accent);">30 jours</button>
+                    <button class="secondary small" id="period-14" onclick="setActivityPeriod(14)">14 jours</button>
+                    <button class="secondary small" id="period-7"  onclick="setActivityPeriod(7)">7 jours</button>
+                </div>
+                <!-- Legend -->
+                <div style="display:flex; gap:1.2rem; margin-bottom:0.5rem; flex-wrap:wrap;">
+                    <span style="font-size:0.78rem; color:var(--text-secondary);">
+                        <span style="display:inline-block;width:12px;height:6px;background:var(--accent);border-radius:2px;vertical-align:middle;margin-right:4px;"></span>Réponses
+                    </span>
+                    <span style="font-size:0.78rem; color:var(--text-secondary);">
+                        <span style="display:inline-block;width:12px;height:6px;background:var(--partial);border-radius:2px;vertical-align:middle;margin-right:4px;"></span>Sessions actives
+                    </span>
+                    <span style="font-size:0.78rem; color:var(--text-secondary);">
+                        <span style="display:inline-block;width:12px;height:2px;background:var(--error);border-radius:2px;vertical-align:middle;margin-right:4px;opacity:0.8;"></span>Moyenne mobile 7j
+                    </span>
+                </div>
+                <svg id="activity-svg" class="chart-svg" height="200"></svg>
+                <div id="activity-summary" style="display:flex; gap:2rem; margin-top:0.75rem; flex-wrap:wrap;"></div>
             </div>
+
+            <!-- Hourly distribution -->
             <div class="card">
-                <h2>Questions les plus difficiles (taux de réussite &lt; 40%)</h2>
-                <div id="hard-questions" class="loading-msg"><div class="spinner"></div><br>Chargement…</div>
+                <div class="card-title">🕐 Distribution horaire des réponses
+                    <span class="card-subtitle">heure locale du serveur</span>
+                </div>
+                <svg id="hourly-svg" class="chart-svg" height="140"></svg>
             </div>
+
+            <!-- Weekly heatmap -->
             <div class="card">
-                <h2>Questions les plus faciles (taux de réussite &gt; 85%)</h2>
-                <div id="easy-questions" class="loading-msg"><div class="spinner"></div><br>Chargement…</div>
+                <div class="card-title">📆 Répartition par jour de la semaine</div>
+                <div id="weekday-chart"></div>
             </div>
         </div>
 
-        <!-- Tab: Sessions -->
+        <!-- ════ Tab: Sessions ════ -->
         <div id="tab-sessions" class="tab-panel">
+
+            <!-- Session distribution histogram -->
             <div class="card">
-                <h2>Sessions étudiantes</h2>
-                <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1rem;">
-                    Les données sont anonymisées — seul l'UUID de session est affiché. Aucun nom n'est collecté.
-                </p>
+                <div class="card-title">📊 Distribution de l'engagement
+                    <span class="card-subtitle">réponses par session</span>
+                </div>
+                <svg id="session-hist-svg" class="chart-svg" height="140"></svg>
+            </div>
+
+            <div class="card">
+                <div class="card-title">👥 Détail des sessions
+                    <span class="card-subtitle">données anonymisées — UUID uniquement</span>
+                </div>
                 <div class="filter-bar">
-                    <input type="text" id="s-search" placeholder="🔍 Rechercher une session…" oninput="renderSessionTable()">
+                    <input type="text" id="s-search" placeholder="🔍 Rechercher une session (UUID)…" oninput="renderSessionTable()">
+                    <select id="s-filter" onchange="renderSessionTable()">
+                        <option value="all">Toutes les sessions</option>
+                        <option value="active">Très actives (≥20 réponses)</option>
+                        <option value="light">Légères (&lt;5 réponses)</option>
+                        <option value="good">Bon taux (≥70%)</option>
+                        <option value="poor">Faible taux (&lt;40%)</option>
+                    </select>
                     <select id="s-sort" onchange="renderSessionTable()">
-                        <option value="answers_desc">Plus actives</option>
+                        <option value="answers_desc">Plus actives d'abord</option>
                         <option value="accuracy_desc">Meilleur taux</option>
                         <option value="accuracy_asc">Pire taux</option>
                         <option value="last_desc">Activité récente</option>
@@ -555,70 +699,66 @@
                             <tr>
                                 <th>Session (UUID)</th>
                                 <th>Réponses</th>
-                                <th>Réussite</th>
+                                <th>Taux réussite</th>
                                 <th>Score moy.</th>
+                                <th>1ère activité</th>
                                 <th>Dernière activité</th>
                             </tr>
                         </thead>
                         <tbody id="session-tbody">
-                            <tr><td colspan="5" class="loading-msg"><div class="spinner"></div><br>Chargement…</td></tr>
+                            <tr><td colspan="6" class="loading-msg"><div class="spinner"></div></td></tr>
                         </tbody>
                     </table>
                 </div>
+                <p id="session-count-label" style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.75rem;"></p>
             </div>
         </div>
-    </div>
-</div>
+
+    </div><!-- /container -->
+</div><!-- /dashboard -->
 
 <script>
     // ══════════════════════════════════════════════════════════════════
-    // CONFIGURATION — adapt these values
+    // CONFIG
     // ══════════════════════════════════════════════════════════════════
-
     const SUPABASE_URL = 'https://nygrbpxqiwuuscgbmybs.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55Z3JicHhxaXd1dXNjZ2JteWJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4NjgxNTgsImV4cCI6MjA4NTQ0NDE1OH0.ateA4HeIm56Jv53_zv3bX7UCAt0UzMOb1UXT1s1jycE';
 
-    // TA password — CHANGE THIS before deploying!
-    // This is client-side only (security-by-obscurity), which is fine for
-    // a low-stakes academic tool. See notes in the README for better options.
-    const TA_PASSWORD_HASH = 'a6ffa0cf7b13cee759ddcfb65df8a201'; // MD5 of "kinderbueno2026"
-    // To generate a new hash: open browser console, run:
-    //   await crypto.subtle.digest('SHA-256', new TextEncoder().encode('yourpassword'))
-    //   then convert to hex. Or use any MD5 online tool for a quick one.
+    const TA_PASSWORD_HASH = 'a6ffa0cf7b13cee759ddcfb65df8a201';
 
     const SECTION_FILES = {
         'biomolecules': 'data/questions_biomolecules.json',
         'genetics':     'data/questions_genetics.json',
-        'molecular':    'data/questions_molecular.json',
-        'cellcycle':    'data/questions_cellcycle.json'
+        'molecular':    'data/questions_molecular.json'
     };
 
     const SECTION_LABELS = {
         'biomolecules': 'Biomolécules',
         'genetics':     'Génétique',
-        'molecular':    'Biologie moléculaire',
-        'cellcycle':    'Cycle cellulaire'
+        'molecular':    'Biologie moléculaire'
+    };
+
+    const SECTION_COLORS = {
+        'biomolecules': '#10b981',
+        'genetics':     '#3b82f6',
+        'molecular':    '#f59e0b'
     };
 
     // ══════════════════════════════════════════════════════════════════
     // STATE
     // ══════════════════════════════════════════════════════════════════
-    let allAnswers = [];
+    let allAnswers   = [];
     let allQuestions = [];
-    let questionStats = {}; // question_id → { attempts, correct, totalScore, hintUsed }
-    let sessionStats = {};  // session_id  → { answers, correct, totalScore, last }
+    let questionStats = {};
+    let sessionStats  = {};
+    let activityPeriod = 30;
 
     // ══════════════════════════════════════════════════════════════════
     // AUTH
     // ══════════════════════════════════════════════════════════════════
-
-    // Simple MD5-like hex hash for client-side password check
-    // (not cryptographically secure, but fine for this use case)
     async function hashPassword(pw) {
-        const msgBuffer = new TextEncoder().encode(pw);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 32);
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('').substring(0,32);
     }
 
     async function checkPassword() {
@@ -636,31 +776,21 @@
         }
     }
 
-    function logout() {
-        sessionStorage.removeItem('ta_auth');
-        location.reload();
-    }
+    function logout() { sessionStorage.removeItem('ta_auth'); location.reload(); }
 
-    // Auto-login if already authenticated this session
     window.addEventListener('load', () => {
         if (sessionStorage.getItem('ta_auth') === 'ok') {
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('dashboard').style.display = 'block';
             loadAll();
         }
-        document.getElementById('pw-input').addEventListener('keydown', e => {
-            if (e.key === 'Enter') checkPassword();
-        });
     });
 
     // ══════════════════════════════════════════════════════════════════
     // DATA LOADING
     // ══════════════════════════════════════════════════════════════════
-
     async function fetchAllAnswers() {
-        // Supabase returns max 1000 rows by default; paginate if needed
-        let all = [];
-        let from = 0;
+        let all = [], from = 0;
         const pageSize = 1000;
         while (true) {
             const res = await fetch(
@@ -699,7 +829,7 @@
             document.getElementById('last-refresh').textContent =
                 `Actualisé à ${new Date().toLocaleTimeString('fr-CH')}`;
         } catch (err) {
-            showToast('❌ Erreur de connexion à Supabase : ' + err.message);
+            showToast('❌ Erreur Supabase : ' + err.message);
             document.getElementById('last-refresh').textContent = 'Erreur de chargement';
         }
     }
@@ -707,7 +837,6 @@
     // ══════════════════════════════════════════════════════════════════
     // COMPUTE STATS
     // ══════════════════════════════════════════════════════════════════
-
     function computeStats() {
         questionStats = {};
         sessionStats  = {};
@@ -715,284 +844,680 @@
         allAnswers.forEach(a => {
             // Per-question
             if (!questionStats[a.question_id]) {
-                questionStats[a.question_id] = { attempts: 0, correct: 0, totalScore: 0, hintUsed: 0 };
+                questionStats[a.question_id] = {
+                    attempts: 0, correct: 0, totalScore: 0,
+                    hintEstimated: 0,  // estimated hint uses
+                    sessions: new Set()
+                };
             }
             const qs = questionStats[a.question_id];
             qs.attempts++;
             if (a.is_correct) qs.correct++;
             qs.totalScore += (a.score || 0);
-
-            // Try to detect hint from score penalty (score < 1 for correct isn't reliable; 
-            // store "hint_used" field if you add it to your DB schema, otherwise skip)
-            // For now we estimate: if score > 0 and score < 0.55 and is_correct → likely hint used
-            if (a.is_correct && a.score < 0.55) qs.hintUsed++;
+            // Hint estimation: correct answer with score < 0.6 (penalised)
+            if (a.is_correct && a.score !== null && a.score < 0.6) qs.hintEstimated++;
+            qs.sessions.add(a.session_id);
 
             // Per-session
             if (!sessionStats[a.session_id]) {
-                sessionStats[a.session_id] = { answers: 0, correct: 0, totalScore: 0, last: a.timestamp };
+                sessionStats[a.session_id] = {
+                    answers: 0, correct: 0, totalScore: 0,
+                    last: a.timestamp, first: a.timestamp,
+                    questions: new Set()
+                };
             }
             const ss = sessionStats[a.session_id];
             ss.answers++;
             if (a.is_correct) ss.correct++;
             ss.totalScore += (a.score || 0);
-            if (a.timestamp > ss.last) ss.last = a.timestamp;
+            ss.questions.add(a.question_id);
+            if (a.timestamp > ss.last)  ss.last  = a.timestamp;
+            if (a.timestamp < ss.first) ss.first = a.timestamp;
         });
     }
 
     // ══════════════════════════════════════════════════════════════════
-    // RENDER
+    // RENDER ALL
     // ══════════════════════════════════════════════════════════════════
-
     function renderAll() {
         renderKPIs();
+        renderOverview();
         renderQuestionTable();
         renderSections();
         renderActivity();
         renderSessions();
     }
 
-    // ── KPIs ──
+    // ── KPIs ──────────────────────────────────────────────────────────
     function renderKPIs() {
-        const totalAnswers   = allAnswers.length;
-        const totalSessions  = Object.keys(sessionStats).length;
-        const totalCorrect   = allAnswers.filter(a => a.is_correct).length;
-        const accuracy       = totalAnswers > 0 ? Math.round(totalCorrect / totalAnswers * 100) : 0;
-        const avgScore       = totalAnswers > 0 ? (allAnswers.reduce((s, a) => s + (a.score||0), 0) / totalAnswers) : 0;
-        const hintCount      = allAnswers.filter(a => a.is_correct && a.score < 0.55).length;
-        const hintRate       = totalAnswers > 0 ? Math.round(hintCount / totalAnswers * 100) : 0;
-        const seenQs         = Object.keys(questionStats).length;
+        const totalAnswers  = allAnswers.length;
+        const totalSessions = Object.keys(sessionStats).length;
+        const totalCorrect  = allAnswers.filter(a => a.is_correct).length;
+        const accuracy      = totalAnswers > 0 ? Math.round(totalCorrect / totalAnswers * 100) : 0;
+        const seenQs        = Object.keys(questionStats).length;
+        const totalQs       = allQuestions.length;
+        const coverage      = totalQs > 0 ? Math.round(seenQs / totalQs * 100) : 0;
+        const hardCount     = allQuestions.filter(q => {
+            const qs = questionStats[q.id];
+            return qs && qs.attempts >= 5 && (qs.correct / qs.attempts) < 0.4;
+        }).length;
+        const avgPerSession = totalSessions > 0 ? (totalAnswers / totalSessions).toFixed(1) : '—';
 
-        document.getElementById('kpi-sessions').textContent    = totalSessions;
-        document.getElementById('kpi-answers').textContent     = totalAnswers.toLocaleString('fr-CH');
-        document.getElementById('kpi-accuracy').textContent    = `${accuracy}%`;
-        document.getElementById('kpi-avg-score').textContent   = avgScore.toFixed(2);
-        document.getElementById('kpi-hint-rate').textContent   = `${hintRate}%`;
-        document.getElementById('kpi-questions-seen').textContent = `${seenQs} / ${allQuestions.length}`;
+        // Recent activity (last 7 days)
+        const cutoff7 = new Date(); cutoff7.setDate(cutoff7.getDate() - 7);
+        const recent7 = allAnswers.filter(a => a.timestamp && new Date(a.timestamp) >= cutoff7);
+        const sessions7 = new Set(recent7.map(a => a.session_id)).size;
+
+        document.getElementById('kpi-sessions').textContent     = totalSessions;
+        document.getElementById('kpi-sessions-sub').textContent = `${sessions7} actives ces 7 derniers jours`;
+        document.getElementById('kpi-answers').textContent      = totalAnswers.toLocaleString('fr-CH');
+        document.getElementById('kpi-answers-sub').textContent  = `${recent7.length} ces 7 derniers jours`;
+        document.getElementById('kpi-accuracy').textContent     = `${accuracy}%`;
+        document.getElementById('kpi-accuracy-sub').textContent = `${totalCorrect.toLocaleString()} correctes sur ${totalAnswers.toLocaleString()}`;
+        document.getElementById('kpi-coverage').textContent     = `${coverage}%`;
+        document.getElementById('kpi-coverage-sub').textContent = `${seenQs} / ${totalQs} questions tentées`;
+        document.getElementById('kpi-hard').textContent         = hardCount;
+        document.getElementById('kpi-avg-per-session').textContent = avgPerSession;
+        document.getElementById('kpi-avg-sub').textContent      = `médiane: ${sessionMedian()}`;
     }
 
-    // ── Question table ──
-    function renderQuestionTable() {
-        const search  = (document.getElementById('q-search')?.value || '').toLowerCase();
-        const section = document.getElementById('q-section')?.value || 'all';
-        const level   = document.getElementById('q-level')?.value   || 'all';
-        const sort    = document.getElementById('q-sort')?.value    || 'success_asc';
+    function sessionMedian() {
+        const counts = Object.values(sessionStats).map(s => s.answers).sort((a,b) => a-b);
+        if (!counts.length) return '—';
+        const mid = Math.floor(counts.length / 2);
+        return counts.length % 2 ? counts[mid] : Math.round((counts[mid-1]+counts[mid])/2);
+    }
 
-        let rows = allQuestions.map(q => {
-            const qs   = questionStats[q.id] || { attempts: 0, correct: 0, totalScore: 0 };
-            const rate  = qs.attempts > 0 ? qs.correct / qs.attempts : null;
-            const avg   = qs.attempts > 0 ? qs.totalScore / qs.attempts : null;
-            const hints = qs.attempts > 0 ? Math.round(qs.hintUsed / qs.attempts * 100) : 0;
-            return { q, qs, rate, avg, hints };
+    // ── Overview tab ──────────────────────────────────────────────────
+    function renderOverview() {
+        renderAlerts();
+        renderHistogram();
+        renderOverviewSections();
+        renderHardEasy();
+        renderOverviewLevels();
+    }
+
+    function renderAlerts() {
+        const hard = allQuestions.filter(q => {
+            const qs = questionStats[q.id];
+            return qs && qs.attempts >= 5 && (qs.correct / qs.attempts) < 0.4;
+        });
+        const el = document.getElementById('overview-alerts');
+        if (hard.length === 0) { el.innerHTML = ''; return; }
+        el.innerHTML = `<div class="alert-banner">
+            ⚠️ <strong>${hard.length} question${hard.length>1?'s':''} en difficulté</strong> (taux de réussite &lt; 40%, ≥ 5 tentatives) :
+            ${hard.slice(0,5).map(q => `<span class="pill pill-red" style="margin-left:4px;">${q.id}</span>`).join('')}
+            ${hard.length > 5 ? `<span style="color:var(--text-secondary); font-size:0.8rem;"> +${hard.length-5} autres — voir onglet Questions</span>` : ''}
+        </div>`;
+    }
+
+    function renderHistogram() {
+        // Bucket attempted questions by success rate into 10 bins (0-10%, 10-20%, …)
+        const bins = Array(10).fill(0);
+        allQuestions.forEach(q => {
+            const qs = questionStats[q.id];
+            if (!qs || qs.attempts === 0) return;
+            const rate = qs.correct / qs.attempts;
+            const bin = Math.min(Math.floor(rate * 10), 9);
+            bins[bin]++;
         });
 
-        // Filter
-        if (section !== 'all') rows = rows.filter(r => r.q.section === section);
-        if (level   !== 'all') rows = rows.filter(r => String(r.q.level) === level);
-        if (search)            rows = rows.filter(r =>
-            r.q.id.toLowerCase().includes(search) ||
-            r.q.question.toLowerCase().includes(search)
-        );
+        const maxBin = Math.max(...bins, 1);
+        const W = 560, H = 160, padL = 30, padB = 30, padT = 10, padR = 10;
+        const bw = (W - padL - padR) / 10;
 
-        // Sort
-        rows.sort((a, b) => {
-            switch (sort) {
-                case 'success_asc':  return (a.rate ?? 1) - (b.rate ?? 1);
-                case 'success_desc': return (b.rate ?? 0) - (a.rate ?? 0);
-                case 'attempts_desc': return b.qs.attempts - a.qs.attempts;
-                case 'id_asc': default: return a.q.id.localeCompare(b.q.id);
-            }
+        const colors = bins.map((_, i) => {
+            const mid = (i + 0.5) / 10;
+            return mid < 0.4 ? 'var(--error)' : mid < 0.7 ? 'var(--warning)' : 'var(--success)';
         });
 
-        const tbody = document.getElementById('question-tbody');
-        if (rows.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="9" style="text-align:center; padding:2rem; color:var(--text-secondary);">Aucune question trouvée.</td></tr>';
-            document.getElementById('q-count-label').textContent = '';
-            return;
-        }
-
-        tbody.innerHTML = rows.map(({ q, qs, rate, avg, hints }) => {
-            const pct = rate !== null ? Math.round(rate * 100) : null;
-            const barClass = pct === null ? '' : pct >= 70 ? 'bar-good' : pct >= 40 ? 'bar-ok' : 'bar-bad';
-            const pillClass = pct === null ? 'pill-yellow' : pct >= 70 ? 'pill-green' : pct >= 40 ? 'pill-yellow' : 'pill-red';
-            const typeLabel = q.type === 'multiple-choice' ? 'QCM' : 'QCU';
-            const typePill  = q.type === 'multiple-choice' ? 'pill-blue' : 'pill-green';
-
-            return `<tr>
-                <td><strong>${q.id}</strong></td>
-                <td>${SECTION_LABELS[q.section] || q.section}</td>
-                <td><span class="pill pill-yellow">N${q.level}</span></td>
-                <td><span class="pill ${typePill}">${typeLabel}</span></td>
-                <td>${qs.attempts > 0 ? qs.attempts : '<span style="color:var(--text-secondary)">—</span>'}</td>
-                <td>${qs.attempts > 0 ? qs.correct : '—'}</td>
-                <td>
-                    ${pct !== null ? `
-                    <div style="display:flex;align-items:center;gap:0.5rem;">
-                        <div class="bar-wrap" style="width:70px;"><div class="bar-fill ${barClass}" style="width:${pct}%"></div></div>
-                        <span class="pill ${pillClass}">${pct}%</span>
-                    </div>` : '<span style="color:var(--text-secondary);">Non tentée</span>'}
-                </td>
-                <td>${avg !== null ? avg.toFixed(2) : '—'}</td>
-                <td>${qs.attempts > 0 ? hints + '%' : '—'}</td>
-            </tr>`;
+        let bars = bins.map((count, i) => {
+            const x = padL + i * bw;
+            const bh = count === 0 ? 0 : Math.max(3, (count / maxBin) * (H - padB - padT));
+            const y = H - padB - bh;
+            const label = `${i*10}–${(i+1)*10}%`;
+            return `<rect x="${x+1}" y="${y}" width="${bw-2}" height="${bh}"
+                fill="${colors[i]}" opacity="0.85" rx="3"
+                onmouseenter="showTip(event,'${label}: ${count} question${count!==1?'s':''}')"
+                onmouseleave="hideTip()">
+                <title>${label} : ${count}</title>
+            </rect>
+            ${count > 0 ? `<text x="${x+bw/2}" y="${y-4}" text-anchor="middle" font-size="9" fill="var(--text-secondary)">${count}</text>` : ''}`;
         }).join('');
 
-        document.getElementById('q-count-label').textContent =
-            `${rows.length} question${rows.length > 1 ? 's' : ''} affichée${rows.length > 1 ? 's' : ''}`;
+        // X axis labels (every other bin)
+        let xlabels = bins.map((_, i) => {
+            if (i % 2 !== 0) return '';
+            const x = padL + i * bw + bw / 2;
+            return `<text x="${x}" y="${H - padB + 14}" text-anchor="middle" font-size="9" fill="var(--text-secondary)">${i*10}%</text>`;
+        }).join('');
+
+        // Y axis
+        let ylines = '';
+        for (let v = 0; v <= maxBin; v += Math.max(1, Math.ceil(maxBin/4))) {
+            const y = H - padB - (v / maxBin) * (H - padB - padT);
+            ylines += `<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="var(--border)" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="${padL-4}" y="${y+4}" text-anchor="end" font-size="9" fill="var(--text-secondary)">${v}</text>`;
+        }
+
+        document.getElementById('hist-svg').innerHTML = `
+            <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+                ${ylines}
+                <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="var(--border)" stroke-width="1"/>
+                <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="var(--border)" stroke-width="1"/>
+                ${bars}
+                ${xlabels}
+            </svg>`;
     }
 
-    // ── Sections ──
-    function renderSections() {
+    function renderOverviewSections() {
+        const sections = computeSectionData();
+        const el = document.getElementById('overview-sections');
+        if (!Object.keys(sections).length) { el.innerHTML = '<p style="color:var(--text-secondary);">Aucune donnée.</p>'; return; }
+
+        el.innerHTML = Object.entries(sections).map(([sec, d]) => {
+            const rate = d.attempts > 0 ? Math.round(d.correct / d.attempts * 100) : null;
+            const bc   = rate === null ? 'bar-ok' : rate >= 70 ? 'bar-good' : rate >= 40 ? 'bar-ok' : 'bar-bad';
+            const col  = SECTION_COLORS[sec] || 'var(--accent)';
+            const coverage = d.questions > 0 ? Math.round((d.seen / d.questions) * 100) : 0;
+            return `<div style="margin-bottom:1rem;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem; font-size:0.88rem;">
+                    <span><span class="dot" style="background:${col};"></span><strong>${SECTION_LABELS[sec]||sec}</strong></span>
+                    <span style="color:var(--text-secondary);">${rate !== null ? rate+'%' : '—'}</span>
+                </div>
+                <div style="background:var(--bg-tertiary); border-radius:6px; height:10px; overflow:hidden; margin-bottom:0.2rem;">
+                    <div style="height:100%; width:${rate||0}%; background:${col}; border-radius:6px; transition:width 0.5s;"></div>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-secondary);">
+                    <span>${d.attempts} tentatives · ${d.seen}/${d.questions} questions vues</span>
+                    <span>Couverture ${coverage}%</span>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    function computeSectionData() {
         const sections = {};
         allQuestions.forEach(q => {
             const s = q.section || 'unknown';
-            if (!sections[s]) sections[s] = { questions: 0, attempts: 0, correct: 0, score: 0 };
+            if (!sections[s]) sections[s] = { questions: 0, seen: 0, attempts: 0, correct: 0, score: 0 };
             sections[s].questions++;
             const qs = questionStats[q.id];
             if (qs) {
+                sections[s].seen++;
                 sections[s].attempts += qs.attempts;
                 sections[s].correct  += qs.correct;
                 sections[s].score    += qs.totalScore;
             }
         });
+        return sections;
+    }
 
-        const secEl = document.getElementById('section-content');
-        if (Object.keys(sections).length === 0) { secEl.innerHTML = '<p>Aucune donnée.</p>'; return; }
+    function renderHardEasy() {
+        const MIN_ATTEMPTS = 5;
 
-        secEl.innerHTML = `<table class="data-table"><thead><tr>
-            <th>Section</th><th>Questions</th><th>Tentatives</th><th>Taux de réussite</th><th>Score moyen</th>
-        </tr></thead><tbody>` + Object.entries(sections).map(([sec, d]) => {
-            const rate = d.attempts > 0 ? Math.round(d.correct / d.attempts * 100) : null;
-            const avg  = d.attempts > 0 ? (d.score / d.attempts).toFixed(2) : '—';
-            const barClass = rate === null ? '' : rate >= 70 ? 'bar-good' : rate >= 40 ? 'bar-ok' : 'bar-bad';
-            return `<tr>
-                <td><strong>${SECTION_LABELS[sec] || sec}</strong></td>
-                <td>${d.questions}</td>
-                <td>${d.attempts}</td>
-                <td>${rate !== null ? `<div style="display:flex;align-items:center;gap:0.5rem;"><div class="bar-wrap" style="width:80px;"><div class="bar-fill ${barClass}" style="width:${rate}%"></div></div><strong>${rate}%</strong></div>` : '—'}</td>
-                <td>${avg}</td>
-            </tr>`;
-        }).join('') + '</tbody></table>';
+        const ranked = allQuestions.map(q => {
+            const qs = questionStats[q.id];
+            if (!qs || qs.attempts < MIN_ATTEMPTS) return null;
+            return { q, rate: qs.correct / qs.attempts, attempts: qs.attempts };
+        }).filter(Boolean);
 
-        // Level breakdown
-        const levels = { 1: { q: 0, att: 0, corr: 0 }, 2: { q: 0, att: 0, corr: 0 }, 3: { q: 0, att: 0, corr: 0 } };
+        // Hard
+        const hard = [...ranked].sort((a,b) => a.rate - b.rate).slice(0, 10);
+        document.getElementById('hard-tbody').innerHTML = hard.length === 0
+            ? `<tr><td colspan="3" style="color:var(--text-secondary); padding:1rem; text-align:center;">Aucune question avec ≥${MIN_ATTEMPTS} tentatives et taux &lt;40%</td></tr>`
+            : hard.map(({q, rate, attempts}) => `<tr>
+                <td class="clickable" onclick="showQuestionDetail('${q.id}')" title="Voir détail"><strong>${q.id}</strong></td>
+                <td><span class="pill pill-red">${Math.round(rate*100)}%</span></td>
+                <td>${attempts}</td>
+            </tr>`).join('');
+
+        // Easy
+        const easy = [...ranked].filter(r => r.rate > 0.85).sort((a,b) => b.rate - a.rate).slice(0, 10);
+        document.getElementById('easy-tbody').innerHTML = easy.length === 0
+            ? `<tr><td colspan="3" style="color:var(--text-secondary); padding:1rem; text-align:center;">Aucune question avec ≥${MIN_ATTEMPTS} tentatives et taux &gt;85%</td></tr>`
+            : easy.map(({q, rate, attempts}) => `<tr>
+                <td class="clickable" onclick="showQuestionDetail('${q.id}')" title="Voir détail"><strong>${q.id}</strong></td>
+                <td><span class="pill pill-green">${Math.round(rate*100)}%</span></td>
+                <td>${attempts}</td>
+            </tr>`).join('');
+    }
+
+    function renderOverviewLevels() {
+        const levels = {};
         allQuestions.forEach(q => {
-            const lv = q.level || 1;
-            if (!levels[lv]) levels[lv] = { q: 0, att: 0, corr: 0 };
+            const lv = String(q.level || 1);
+            if (!levels[lv]) levels[lv] = { q: 0, att: 0, corr: 0, score: 0 };
             levels[lv].q++;
             const qs = questionStats[q.id];
-            if (qs) { levels[lv].att += qs.attempts; levels[lv].corr += qs.correct; }
+            if (qs) { levels[lv].att += qs.attempts; levels[lv].corr += qs.correct; levels[lv].score += qs.totalScore; }
         });
 
-        document.getElementById('level-content').innerHTML =
-            `<table class="data-table"><thead><tr><th>Niveau</th><th>Questions</th><th>Tentatives</th><th>Taux de réussite</th></tr></thead><tbody>` +
-            Object.entries(levels).map(([lv, d]) => {
+        const stars = { '1':'⭐ Niveau 1 — Facile', '2':'⭐⭐ Niveau 2 — Moyen', '3':'⭐⭐⭐ Niveau 3 — Difficile' };
+        document.getElementById('overview-levels').innerHTML =
+            `<table class="data-table"><thead><tr>
+                <th>Niveau</th><th>Questions</th><th>Tentatives</th><th>Taux réussite</th><th>Score moyen</th>
+            </tr></thead><tbody>` +
+            Object.entries(levels).sort(([a],[b])=>a-b).map(([lv, d]) => {
                 const rate = d.att > 0 ? Math.round(d.corr / d.att * 100) : null;
+                const avg  = d.att > 0 ? (d.score / d.att).toFixed(2) : '—';
                 const bc   = rate === null ? '' : rate >= 70 ? 'bar-good' : rate >= 40 ? 'bar-ok' : 'bar-bad';
-                const label = lv === '1' ? '⭐ Facile' : lv === '2' ? '⭐⭐ Moyen' : '⭐⭐⭐ Difficile';
                 return `<tr>
-                    <td>${label}</td>
+                    <td><strong>${stars[lv]||lv}</strong></td>
                     <td>${d.q}</td>
                     <td>${d.att}</td>
-                    <td>${rate !== null ? `<div style="display:flex;align-items:center;gap:0.5rem;"><div class="bar-wrap" style="width:80px;"><div class="bar-fill ${bc}" style="width:${rate}%"></div></div><strong>${rate}%</strong></div>` : '—'}</td>
+                    <td>${rate !== null ? `<div style="display:flex;align-items:center;gap:0.5rem;">
+                        <div class="bar-wrap" style="width:80px;"><div class="bar-fill ${bc}" style="width:${rate}%"></div></div>
+                        <span class="pill ${bc==='bar-good'?'pill-green':bc==='bar-ok'?'pill-yellow':'pill-red'}">${rate}%</span>
+                    </div>` : '—'}</td>
+                    <td>${avg}</td>
                 </tr>`;
             }).join('') + '</tbody></table>';
     }
 
-    // ── Activity ──
+    // ── Question table ────────────────────────────────────────────────
+    let currentSort = 'success_asc';
+
+    function sortBy(s) {
+        currentSort = s;
+        document.getElementById('q-sort').value = s;
+        renderQuestionTable();
+    }
+
+    function renderQuestionTable() {
+        const search  = (document.getElementById('q-search')?.value || '').toLowerCase();
+        const section = document.getElementById('q-section')?.value  || 'all';
+        const level   = document.getElementById('q-level')?.value    || 'all';
+        const filter  = document.getElementById('q-filter')?.value   || 'all';
+        const sort    = document.getElementById('q-sort')?.value     || currentSort;
+        currentSort = sort;
+
+        let rows = allQuestions.map(q => {
+            const qs   = questionStats[q.id] || { attempts:0, correct:0, totalScore:0, hintEstimated:0 };
+            const rate  = qs.attempts > 0 ? qs.correct / qs.attempts : null;
+            const avg   = qs.attempts > 0 ? qs.totalScore / qs.attempts : null;
+            const hints = qs.attempts > 0 ? Math.round((qs.hintEstimated||0) / qs.attempts * 100) : 0;
+            return { q, qs, rate, avg, hints };
+        });
+
+        if (section !== 'all')  rows = rows.filter(r => r.q.section === section);
+        if (level   !== 'all')  rows = rows.filter(r => String(r.q.level) === level);
+        if (search)             rows = rows.filter(r =>
+            r.q.id.toLowerCase().includes(search) || r.q.question.toLowerCase().includes(search));
+        if (filter !== 'all') {
+            if (filter === 'hard')   rows = rows.filter(r => r.rate !== null && r.rate < 0.4);
+            if (filter === 'medium') rows = rows.filter(r => r.rate !== null && r.rate >= 0.4 && r.rate < 0.7);
+            if (filter === 'easy')   rows = rows.filter(r => r.rate !== null && r.rate >= 0.7);
+            if (filter === 'unseen') rows = rows.filter(r => r.qs.attempts === 0);
+        }
+
+        rows.sort((a, b) => {
+            switch (sort) {
+                case 'success_asc':   return (a.rate ?? 1)  - (b.rate ?? 1);
+                case 'success_desc':  return (b.rate ?? 0)  - (a.rate ?? 0);
+                case 'attempts_desc': return b.qs.attempts  - a.qs.attempts;
+                default:              return a.q.id.localeCompare(b.q.id);
+            }
+        });
+
+        const tbody = document.getElementById('question-tbody');
+        document.getElementById('q-count-label').textContent =
+            `${rows.length} question${rows.length !== 1 ? 's' : ''} affichée${rows.length !== 1 ? 's' : ''}`;
+
+        if (rows.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:2rem;color:var(--text-secondary);">Aucune question trouvée.</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = rows.map(({ q, qs, rate, avg, hints }) => {
+            const pct      = rate !== null ? Math.round(rate * 100) : null;
+            const bc       = pct === null ? '' : pct >= 70 ? 'bar-good' : pct >= 40 ? 'bar-ok' : 'bar-bad';
+            const pillCls  = pct === null ? 'pill-grey' : pct >= 70 ? 'pill-green' : pct >= 40 ? 'pill-yellow' : 'pill-red';
+            const typeL    = q.type === 'multiple-choice' ? 'QCM' : 'QCU';
+            const typePill = q.type === 'multiple-choice' ? 'pill-blue' : 'pill-green';
+            const secDot   = `<span class="dot" style="background:${SECTION_COLORS[q.section]||'var(--accent)'};"></span>`;
+
+            return `<tr>
+                <td><strong class="clickable" onclick="showQuestionDetail('${q.id}')" title="Voir détail">${q.id}</strong></td>
+                <td>${secDot}${SECTION_LABELS[q.section]||q.section}</td>
+                <td><span class="pill pill-yellow">N${q.level}</span></td>
+                <td><span class="pill ${typePill}">${typeL}</span></td>
+                <td>${qs.attempts > 0 ? qs.attempts : '<span style="color:var(--text-secondary)">—</span>'}</td>
+                <td>${pct !== null ? `
+                    <div style="display:flex;align-items:center;gap:0.4rem;">
+                        <div class="bar-wrap" style="width:60px;"><div class="bar-fill ${bc}" style="width:${pct}%"></div></div>
+                        <span class="pill ${pillCls}">${pct}%</span>
+                    </div>` : '<span style="color:var(--text-secondary);font-style:italic;font-size:0.82rem;">Non tentée</span>'}
+                </td>
+                <td>${avg !== null ? avg.toFixed(2) : '—'}</td>
+                <td>${qs.attempts > 0 ? hints+'%' : '—'}</td>
+                <td><button class="secondary small" onclick="showQuestionDetail('${q.id}')">🔍</button></td>
+            </tr>`;
+        }).join('');
+    }
+
+    // ── Sections tab ──────────────────────────────────────────────────
+    function renderSections() {
+        const sections = computeSectionData();
+
+        // Section table
+        const secEl = document.getElementById('section-content');
+        secEl.innerHTML = `<table class="data-table"><thead><tr>
+            <th>Section</th><th>Questions</th><th>Vues</th><th>Couverture</th><th>Tentatives</th><th>Taux réussite</th><th>Score moyen</th>
+        </tr></thead><tbody>` + Object.entries(sections).map(([sec, d]) => {
+            const rate = d.attempts > 0 ? Math.round(d.correct / d.attempts * 100) : null;
+            const avg  = d.attempts > 0 ? (d.score / d.attempts).toFixed(2) : '—';
+            const cov  = d.questions > 0 ? Math.round(d.seen / d.questions * 100) : 0;
+            const bc   = rate === null ? '' : rate >= 70 ? 'bar-good' : rate >= 40 ? 'bar-ok' : 'bar-bad';
+            const col  = SECTION_COLORS[sec] || 'var(--accent)';
+            return `<tr>
+                <td><span class="dot" style="background:${col};"></span><strong>${SECTION_LABELS[sec]||sec}</strong></td>
+                <td>${d.questions}</td>
+                <td>${d.seen}</td>
+                <td>
+                    <div style="display:flex;align-items:center;gap:0.4rem;">
+                        <div class="bar-wrap" style="width:60px;"><div class="bar-fill bar-ok" style="width:${cov}%"></div></div>
+                        <span style="font-size:0.82rem;">${cov}%</span>
+                    </div>
+                </td>
+                <td>${d.attempts}</td>
+                <td>${rate !== null ? `<div style="display:flex;align-items:center;gap:0.4rem;">
+                    <div class="bar-wrap" style="width:60px;"><div class="bar-fill ${bc}" style="width:${rate}%"></div></div>
+                    <strong>${rate}%</strong></div>` : '—'}
+                </td>
+                <td>${avg}</td>
+            </tr>`;
+        }).join('') + '</tbody></table>';
+
+        // Levels
+        renderOverviewLevels();
+        document.getElementById('level-content').innerHTML = document.getElementById('overview-levels').innerHTML;
+
+        // Type breakdown
+        const types = { 'single-choice': { q:0, att:0, corr:0 }, 'multiple-choice': { q:0, att:0, corr:0 } };
+        allQuestions.forEach(q => {
+            const t = q.type || 'single-choice';
+            if (!types[t]) types[t] = { q:0, att:0, corr:0 };
+            types[t].q++;
+            const qs = questionStats[q.id];
+            if (qs) { types[t].att += qs.attempts; types[t].corr += qs.correct; }
+        });
+        document.getElementById('type-content').innerHTML =
+            `<table class="data-table"><thead><tr><th>Type</th><th>Questions</th><th>Tentatives</th><th>Taux réussite</th></tr></thead><tbody>` +
+            Object.entries(types).map(([t, d]) => {
+                const rate = d.att > 0 ? Math.round(d.corr / d.att * 100) : null;
+                const bc   = rate === null ? '' : rate >= 70 ? 'bar-good' : rate >= 40 ? 'bar-ok' : 'bar-bad';
+                return `<tr>
+                    <td><span class="pill ${t==='multiple-choice'?'pill-blue':'pill-green'}">${t==='multiple-choice'?'QCM':'QCU'}</span></td>
+                    <td>${d.q}</td><td>${d.att}</td>
+                    <td>${rate !== null ? `<div style="display:flex;align-items:center;gap:0.4rem;">
+                        <div class="bar-wrap" style="width:60px;"><div class="bar-fill ${bc}" style="width:${rate}%"></div></div>
+                        <strong>${rate}%</strong></div>` : '—'}</td>
+                </tr>`;
+            }).join('') + '</tbody></table>';
+
+        // Unseen per section
+        const unseen = {};
+        Object.keys(SECTION_LABELS).forEach(s => { unseen[s] = []; });
+        allQuestions.forEach(q => {
+            const qs = questionStats[q.id];
+            if (!qs || qs.attempts === 0) {
+                if (!unseen[q.section]) unseen[q.section] = [];
+                unseen[q.section].push(q);
+            }
+        });
+        const total_unseen = Object.values(unseen).reduce((s,a) => s+a.length, 0);
+        document.getElementById('unseen-content').innerHTML = total_unseen === 0
+            ? '<p style="color:var(--success);">✅ Toutes les questions ont été tentées au moins une fois !</p>'
+            : Object.entries(unseen).filter(([,qs]) => qs.length > 0).map(([sec, qs]) =>
+                `<div style="margin-bottom:0.75rem;">
+                    <strong style="font-size:0.88rem;"><span class="dot" style="background:${SECTION_COLORS[sec]||'var(--accent)'}"></span>${SECTION_LABELS[sec]||sec} — ${qs.length} question${qs.length>1?'s':''} non tentée${qs.length>1?'s':''}</strong><br>
+                    <span style="color:var(--text-secondary); font-size:0.82rem;">${qs.map(q=>q.id).join(', ')}</span>
+                </div>`
+            ).join('');
+    }
+
+    // ── Activity tab ──────────────────────────────────────────────────
+    function setActivityPeriod(n) {
+        activityPeriod = n;
+        ['7','14','30'].forEach(d => {
+            const btn = document.getElementById(`period-${d}`);
+            if (btn) { btn.style.borderColor = ''; btn.style.color = ''; }
+        });
+        const active = document.getElementById(`period-${n}`);
+        if (active) { active.style.borderColor = 'var(--accent)'; active.style.color = 'var(--accent)'; }
+        renderActivity();
+    }
+
     function renderActivity() {
-        // Daily activity chart (last 30 days)
         const days = {};
+        const sessionsByDay = {};
         const now = new Date();
-        for (let i = 29; i >= 0; i--) {
+
+        for (let i = activityPeriod - 1; i >= 0; i--) {
             const d = new Date(now);
             d.setDate(d.getDate() - i);
             const key = d.toISOString().split('T')[0];
             days[key] = 0;
+            sessionsByDay[key] = new Set();
         }
 
         allAnswers.forEach(a => {
             const day = a.timestamp ? a.timestamp.split('T')[0] : null;
-            if (day && days[day] !== undefined) days[day]++;
+            if (day && days[day] !== undefined) {
+                days[day]++;
+                sessionsByDay[day].add(a.session_id);
+            }
         });
 
-        const dayEntries = Object.entries(days);
-        const maxVal = Math.max(...dayEntries.map(([, v]) => v), 1);
+        const dayEntries    = Object.entries(days);
+        const sessionCounts = dayEntries.map(([d]) => sessionsByDay[d].size);
+        const answerCounts  = dayEntries.map(([, v]) => v);
 
-        const actEl = document.getElementById('activity-chart');
-        actEl.innerHTML = `
-            <div class="timeline-bars">
-                ${dayEntries.map(([day, count]) => {
-                    const heightPct = Math.max((count / maxVal) * 100, count > 0 ? 4 : 0);
-                    const shortDay = day.substring(5); // MM-DD
-                    return `<div class="timeline-bar-col" title="${day} : ${count} réponse${count > 1 ? 's' : ''}">
-                        <div class="bar-day" style="height:${heightPct}%"></div>
-                        <div class="bar-label">${shortDay}</div>
-                    </div>`;
-                }).join('')}
-            </div>
-            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.5rem; text-align:center;">
-                Total sur 30 jours : <strong>${dayEntries.reduce((s,[,v])=>s+v,0)}</strong> réponses
-            </p>`;
+        const maxAnswers  = Math.max(...answerCounts, 1);
+        const maxSessions = Math.max(...sessionCounts, 1);
 
-        // Hard questions
-        const hardEl = document.getElementById('hard-questions');
-        const hard = allQuestions
-            .map(q => {
-                const qs = questionStats[q.id];
-                if (!qs || qs.attempts < 3) return null;
-                return { q, rate: qs.correct / qs.attempts, attempts: qs.attempts };
-            })
-            .filter(r => r && r.rate < 0.4)
-            .sort((a, b) => a.rate - b.rate)
-            .slice(0, 10);
+        // 7-day rolling average
+        const rolling7 = answerCounts.map((_, i) => {
+            const slice = answerCounts.slice(Math.max(0, i-6), i+1);
+            return slice.reduce((a,b)=>a+b,0) / slice.length;
+        });
 
-        if (hard.length === 0) {
-            hardEl.innerHTML = '<p style="color:var(--text-secondary);">Aucune question avec taux &lt; 40% (min 3 tentatives).</p>';
-        } else {
-            hardEl.innerHTML = `<table class="data-table"><thead><tr><th>ID</th><th>Section</th><th>Question</th><th>Tentatives</th><th>Taux</th></tr></thead><tbody>` +
-                hard.map(({q, rate, attempts}) =>
-                    `<tr>
-                        <td><strong>${q.id}</strong></td>
-                        <td>${SECTION_LABELS[q.section]||q.section}</td>
-                        <td style="max-width:300px;">${q.question.substring(0, 80)}…</td>
-                        <td>${attempts}</td>
-                        <td><span class="pill pill-red">${Math.round(rate*100)}%</span></td>
-                    </tr>`
-                ).join('') + '</tbody></table>';
+        // Draw SVG activity chart
+        const W = 700, H = 190, padL = 35, padB = 32, padT = 12, padR = 10;
+        const n = dayEntries.length;
+        const barW = (W - padL - padR) / n;
+        const chartH = H - padB - padT;
+
+        // Grid lines
+        const gridCount = 4;
+        let grid = '';
+        for (let g = 0; g <= gridCount; g++) {
+            const y = padT + chartH - (g / gridCount) * chartH;
+            const val = Math.round((g / gridCount) * maxAnswers);
+            grid += `<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="var(--border)" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="${padL-4}" y="${y+4}" text-anchor="end" font-size="9" fill="var(--text-secondary)">${val}</text>`;
         }
 
-        // Easy questions
-        const easyEl = document.getElementById('easy-questions');
-        const easy = allQuestions
-            .map(q => {
-                const qs = questionStats[q.id];
-                if (!qs || qs.attempts < 3) return null;
-                return { q, rate: qs.correct / qs.attempts, attempts: qs.attempts };
-            })
-            .filter(r => r && r.rate > 0.85)
-            .sort((a, b) => b.rate - a.rate)
-            .slice(0, 10);
+        // Answer bars
+        let bars = dayEntries.map(([day, count], i) => {
+            const x   = padL + i * barW;
+            const bh  = count === 0 ? 0 : Math.max(2, (count / maxAnswers) * chartH);
+            const y   = padT + chartH - bh;
+            const dow = new Date(day).toLocaleDateString('fr-CH', { weekday:'short' });
+            const dateShort = day.substring(5);
+            const sessCount = sessionsByDay[day].size;
+            return `<rect x="${x+1}" y="${y}" width="${barW-2}" height="${bh}"
+                fill="var(--accent)" opacity="0.7" rx="2"
+                onmouseenter="showTip(event,'${dateShort} (${dow})<br>${count} réponse${count!==1?'s':''}<br>${sessCount} session${sessCount!==1?'s':''} active${sessCount!==1?'s':''}')"
+                onmouseleave="hideTip()"/>`;
+        }).join('');
 
-        if (easy.length === 0) {
-            easyEl.innerHTML = '<p style="color:var(--text-secondary);">Aucune question avec taux &gt; 85% (min 3 tentatives).</p>';
-        } else {
-            easyEl.innerHTML = `<table class="data-table"><thead><tr><th>ID</th><th>Section</th><th>Question</th><th>Tentatives</th><th>Taux</th></tr></thead><tbody>` +
-                easy.map(({q, rate, attempts}) =>
-                    `<tr>
-                        <td><strong>${q.id}</strong></td>
-                        <td>${SECTION_LABELS[q.section]||q.section}</td>
-                        <td style="max-width:300px;">${q.question.substring(0, 80)}…</td>
-                        <td>${attempts}</td>
-                        <td><span class="pill pill-green">${Math.round(rate*100)}%</span></td>
-                    </tr>`
-                ).join('') + '</tbody></table>';
-        }
+        // Session dots (secondary axis)
+        let sessionLine = dayEntries.map(([, ], i) => {
+            const x = padL + i * barW + barW / 2;
+            const sc = sessionCounts[i];
+            const y  = padT + chartH - (sc / Math.max(maxSessions, 1)) * chartH;
+            return `${i === 0 ? `M ${x} ${y}` : `L ${x} ${y}`}`;
+        }).join(' ');
+
+        let sessDots = dayEntries.map(([, ], i) => {
+            const x  = padL + i * barW + barW / 2;
+            const sc = sessionCounts[i];
+            const y  = padT + chartH - (sc / Math.max(maxSessions, 1)) * chartH;
+            if (sc === 0) return '';
+            return `<circle cx="${x}" cy="${y}" r="3" fill="var(--partial)" opacity="0.9"/>`;
+        }).join('');
+
+        // Rolling average line
+        let rollingPath = rolling7.map((v, i) => {
+            const x = padL + i * barW + barW / 2;
+            const y = padT + chartH - (v / maxAnswers) * chartH;
+            return `${i === 0 ? 'M' : 'L'} ${x} ${y}`;
+        }).join(' ');
+
+        // X-axis labels (show every N labels to avoid crowding)
+        const labelStep = Math.max(1, Math.ceil(n / 12));
+        let xlabels = dayEntries.map(([day, ], i) => {
+            if (i % labelStep !== 0) return '';
+            const x = padL + i * barW + barW / 2;
+            return `<text x="${x}" y="${H - padB + 14}" text-anchor="middle" font-size="8" fill="var(--text-secondary)">${day.substring(5)}</text>`;
+        }).join('');
+
+        document.getElementById('activity-svg').innerHTML = `
+            <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+                ${grid}
+                <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="var(--border)" stroke-width="1"/>
+                <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="var(--border)" stroke-width="1"/>
+                ${bars}
+                <path d="${sessionLine}" fill="none" stroke="var(--partial)" stroke-width="1.5" opacity="0.7"/>
+                ${sessDots}
+                <path d="${rollingPath}" fill="none" stroke="var(--error)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+                ${xlabels}
+            </svg>`;
+
+        document.getElementById('activity-period-label').textContent = `${activityPeriod} derniers jours`;
+
+        // Summary stats
+        const totalInPeriod = answerCounts.reduce((a,b)=>a+b, 0);
+        const activeDays    = answerCounts.filter(v=>v>0).length;
+        const peakDay       = dayEntries.reduce((best, [d,v]) => v > (best[1]||0) ? [d,v] : best, ['—', 0]);
+        const allSessions   = new Set(dayEntries.flatMap(([d]) => [...(sessionsByDay[d]||[])])).size;
+
+        document.getElementById('activity-summary').innerHTML = `
+            <div style="font-size:0.85rem;"><div style="color:var(--accent); font-weight:700; font-size:1.3rem;">${totalInPeriod.toLocaleString()}</div><div style="color:var(--text-secondary);">réponses sur la période</div></div>
+            <div style="font-size:0.85rem;"><div style="color:var(--accent); font-weight:700; font-size:1.3rem;">${activeDays}</div><div style="color:var(--text-secondary);">jours avec activité</div></div>
+            <div style="font-size:0.85rem;"><div style="color:var(--accent); font-weight:700; font-size:1.3rem;">${allSessions}</div><div style="color:var(--text-secondary);">sessions actives</div></div>
+            <div style="font-size:0.85rem;"><div style="color:var(--accent); font-weight:700; font-size:1.3rem;">${peakDay[1]}</div><div style="color:var(--text-secondary);">pic : ${peakDay[0]}</div></div>`;
+
+        renderHourlyChart();
+        renderWeekdayChart();
     }
 
-    // ── Sessions ──
+    function renderHourlyChart() {
+        const hours = Array(24).fill(0);
+        allAnswers.forEach(a => {
+            if (!a.timestamp) return;
+            const h = new Date(a.timestamp).getHours();
+            hours[h]++;
+        });
+
+        const W = 700, H = 130, padL = 30, padB = 28, padT = 8, padR = 8;
+        const barW = (W - padL - padR) / 24;
+        const maxH = Math.max(...hours, 1);
+        const chartH = H - padB - padT;
+
+        const bars = hours.map((count, h) => {
+            const x  = padL + h * barW;
+            const bh = count === 0 ? 0 : Math.max(2, (count / maxH) * chartH);
+            const y  = padT + chartH - bh;
+            const col = (h >= 8 && h <= 22) ? 'var(--partial)' : 'var(--border)';
+            return `<rect x="${x+1}" y="${y}" width="${barW-2}" height="${bh}"
+                fill="${col}" opacity="0.8" rx="2"
+                onmouseenter="showTip(event,'${h}h–${h+1}h : ${count} réponse${count!==1?'s':''}')"
+                onmouseleave="hideTip()"/>`;
+        }).join('');
+
+        const xlabels = [0,6,12,18,23].map(h => {
+            const x = padL + h * barW + barW / 2;
+            return `<text x="${x}" y="${H - padB + 13}" text-anchor="middle" font-size="9" fill="var(--text-secondary)">${h}h</text>`;
+        }).join('');
+
+        document.getElementById('hourly-svg').innerHTML = `
+            <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+                <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="var(--border)" stroke-width="1"/>
+                ${bars}
+                ${xlabels}
+            </svg>`;
+    }
+
+    function renderWeekdayChart() {
+        const dayNames = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+        const weekdays = Array(7).fill(0);
+        allAnswers.forEach(a => {
+            if (!a.timestamp) return;
+            weekdays[new Date(a.timestamp).getDay()]++;
+        });
+
+        const maxW = Math.max(...weekdays, 1);
+        document.getElementById('weekday-chart').innerHTML = dayNames.map((name, i) => {
+            const pct = Math.round(weekdays[i] / maxW * 100);
+            const isWeekend = i === 0 || i === 6;
+            return `<div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.6rem;">
+                <div style="width:2.5rem; font-size:0.82rem; color:${isWeekend?'var(--text-secondary)':'var(--text-primary)'}; text-align:right;">${name}</div>
+                <div style="flex:1; background:var(--bg-tertiary); border-radius:4px; height:8px; overflow:hidden;">
+                    <div style="height:100%; width:${pct}%; background:${isWeekend?'var(--border)':'var(--partial)'}; border-radius:4px; transition:width 0.5s;"></div>
+                </div>
+                <div style="width:3.5rem; font-size:0.8rem; color:var(--text-secondary);">${weekdays[i].toLocaleString()}</div>
+            </div>`;
+        }).join('');
+    }
+
+    // ── Sessions tab ──────────────────────────────────────────────────
+    function renderSessions() {
+        // Session engagement histogram
+        const buckets = [0,0,0,0,0,0]; // <5, 5-9, 10-19, 20-49, 50-99, 100+
+        const labels  = ['<5','5–9','10–19','20–49','50–99','≥100'];
+        Object.values(sessionStats).forEach(s => {
+            const n = s.answers;
+            if      (n < 5)   buckets[0]++;
+            else if (n < 10)  buckets[1]++;
+            else if (n < 20)  buckets[2]++;
+            else if (n < 50)  buckets[3]++;
+            else if (n < 100) buckets[4]++;
+            else              buckets[5]++;
+        });
+
+        const maxB = Math.max(...buckets, 1);
+        const W = 560, H = 130, padL = 30, padB = 28, padT = 8, padR = 10;
+        const bw = (W - padL - padR) / 6;
+        const chartH = H - padB - padT;
+
+        const bars = buckets.map((count, i) => {
+            const x  = padL + i * bw;
+            const bh = count === 0 ? 0 : Math.max(3, (count / maxB) * chartH);
+            const y  = padT + chartH - bh;
+            return `<rect x="${x+2}" y="${y}" width="${bw-4}" height="${bh}"
+                fill="var(--partial)" opacity="0.8" rx="3"
+                onmouseenter="showTip(event,'${labels[i]} réponses : ${count} session${count!==1?'s':''}')"
+                onmouseleave="hideTip()"/>
+                ${count > 0 ? `<text x="${x+bw/2}" y="${y-4}" text-anchor="middle" font-size="10" fill="var(--text-secondary)">${count}</text>` : ''}
+                <text x="${x+bw/2}" y="${H-padB+13}" text-anchor="middle" font-size="9" fill="var(--text-secondary)">${labels[i]}</text>`;
+        }).join('');
+
+        document.getElementById('session-hist-svg').innerHTML = `
+            <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+                <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="var(--border)" stroke-width="1"/>
+                ${bars}
+            </svg>`;
+
+        renderSessionTable();
+    }
+
     function renderSessionTable() {
         const search = (document.getElementById('s-search')?.value || '').toLowerCase();
-        const sort   = document.getElementById('s-sort')?.value || 'answers_desc';
+        const filter = document.getElementById('s-filter')?.value  || 'all';
+        const sort   = document.getElementById('s-sort')?.value    || 'answers_desc';
 
         let rows = Object.entries(sessionStats).map(([id, s]) => ({
             id, ...s,
@@ -1001,43 +1526,143 @@
         }));
 
         if (search) rows = rows.filter(r => r.id.toLowerCase().includes(search));
+        if (filter === 'active') rows = rows.filter(r => r.answers >= 20);
+        if (filter === 'light')  rows = rows.filter(r => r.answers < 5);
+        if (filter === 'good')   rows = rows.filter(r => r.rate >= 0.7);
+        if (filter === 'poor')   rows = rows.filter(r => r.rate < 0.4);
 
-        rows.sort((a, b) => {
+        rows.sort((a,b) => {
             switch (sort) {
                 case 'answers_desc':  return b.answers - a.answers;
                 case 'accuracy_desc': return b.rate - a.rate;
                 case 'accuracy_asc':  return a.rate - b.rate;
-                case 'last_desc': default: return (b.last || '').localeCompare(a.last || '');
+                default:              return (b.last||'').localeCompare(a.last||'');
             }
         });
 
+        document.getElementById('session-count-label').textContent =
+            `${rows.length} session${rows.length!==1?'s':''} affichée${rows.length!==1?'s':''}`;
+
         const tbody = document.getElementById('session-tbody');
         if (rows.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-secondary);">Aucune session trouvée.</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--text-secondary);">Aucune session trouvée.</td></tr>';
             return;
         }
 
         tbody.innerHTML = rows.map(r => {
-            const ratePct = Math.round(r.rate * 100);
-            const pillCls = ratePct >= 70 ? 'pill-green' : ratePct >= 40 ? 'pill-yellow' : 'pill-red';
-            const lastDate = r.last ? new Date(r.last).toLocaleDateString('fr-CH', { day:'2-digit', month:'2-digit', year:'2-digit', hour:'2-digit', minute:'2-digit' }) : '—';
-            const shortId  = r.id.length > 18 ? r.id.substring(0, 8) + '…' + r.id.slice(-6) : r.id;
+            const ratePct  = Math.round(r.rate * 100);
+            const pillCls  = ratePct >= 70 ? 'pill-green' : ratePct >= 40 ? 'pill-yellow' : 'pill-red';
+            const fmtDate  = ts => ts ? new Date(ts).toLocaleDateString('fr-CH', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'}) : '—';
+            const shortId  = r.id.length > 16 ? r.id.substring(0,8)+'…'+r.id.slice(-6) : r.id;
             return `<tr>
-                <td title="${r.id}" style="font-family:monospace; font-size:0.85rem;">${shortId}</td>
+                <td title="${r.id}" style="font-family:monospace; font-size:0.82rem;">${shortId}</td>
                 <td>${r.answers}</td>
                 <td><span class="pill ${pillCls}">${ratePct}%</span></td>
                 <td>${r.avg.toFixed(2)}</td>
-                <td style="font-size:0.85rem;">${lastDate}</td>
+                <td style="font-size:0.82rem;">${fmtDate(r.first)}</td>
+                <td style="font-size:0.82rem;">${fmtDate(r.last)}</td>
             </tr>`;
         }).join('');
     }
 
-    function renderSessions() { renderSessionTable(); }
+    // ── Question detail modal ─────────────────────────────────────────
+    function showQuestionDetail(qid) {
+        const q  = allQuestions.find(q => q.id === qid);
+        const qs = questionStats[qid];
+        if (!q) return;
 
-    // ══════════════════════════════════════════════════════════════════
-    // TABS
-    // ══════════════════════════════════════════════════════════════════
+        const rate     = qs && qs.attempts > 0 ? Math.round(qs.correct / qs.attempts * 100) : null;
+        const avg      = qs && qs.attempts > 0 ? (qs.totalScore / qs.attempts).toFixed(2) : '—';
+        const sessions = qs ? qs.sessions.size : 0;
+        const bc       = rate === null ? '' : rate >= 70 ? 'pill-green' : rate >= 40 ? 'pill-yellow' : 'pill-red';
 
+        document.getElementById('modal-title').textContent = `${q.id} — ${SECTION_LABELS[q.section]||q.section} · Niveau ${q.level}`;
+
+        let content = `
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.25rem; line-height:1.6;">${q.question}</p>
+
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin-bottom:1.25rem;">
+                <div style="background:var(--bg-tertiary); border-radius:8px; padding:0.75rem; text-align:center;">
+                    <div style="font-size:1.5rem; font-weight:700; color:var(--accent); font-family:'Playfair Display',serif;">${qs ? qs.attempts : 0}</div>
+                    <div style="font-size:0.75rem; color:var(--text-secondary);">Tentatives</div>
+                </div>
+                <div style="background:var(--bg-tertiary); border-radius:8px; padding:0.75rem; text-align:center;">
+                    <div style="font-size:1.5rem; font-weight:700; color:var(--accent); font-family:'Playfair Display',serif;">${rate !== null ? rate+'%' : '—'}</div>
+                    <div style="font-size:0.75rem; color:var(--text-secondary);">Taux de réussite</div>
+                </div>
+                <div style="background:var(--bg-tertiary); border-radius:8px; padding:0.75rem; text-align:center;">
+                    <div style="font-size:1.5rem; font-weight:700; color:var(--accent); font-family:'Playfair Display',serif;">${avg}</div>
+                    <div style="font-size:0.75rem; color:var(--text-secondary);">Score moyen</div>
+                </div>
+            </div>
+
+            ${rate !== null ? `<div style="margin-bottom:1rem;">
+                <div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.3rem;">
+                    <span>Taux de réussite</span><span>${rate}%</span>
+                </div>
+                <div style="background:var(--bg-tertiary); border-radius:6px; height:10px; overflow:hidden;">
+                    <div style="height:100%; width:${rate}%; background:${rate>=70?'var(--success)':rate>=40?'var(--warning)':'var(--error)'}; border-radius:6px;"></div>
+                </div>
+            </div>` : ''}
+
+            <div style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:1rem;">
+                Vues par <strong style="color:var(--text-primary);">${sessions}</strong> session${sessions!==1?'s':''} différente${sessions!==1?'s':''}
+                · Type : <span class="pill ${q.type==='multiple-choice'?'pill-blue':'pill-green'}">${q.type==='multiple-choice'?'QCM':'QCU'}</span>
+            </div>
+
+            <div style="margin-top:1rem;">
+                <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-secondary); margin-bottom:0.5rem;">Options de réponse</div>`;
+
+        q.options.forEach((opt, i) => {
+            const isCorrect = q.correct.includes(i);
+            const borderColor = isCorrect ? 'var(--success)' : 'var(--border)';
+            const icon = isCorrect ? '✅' : '○';
+            content += `<div style="display:flex; gap:0.6rem; align-items:flex-start; padding:0.5rem 0.7rem; border-radius:7px; margin-bottom:0.4rem; border:1px solid ${borderColor}; background:${isCorrect?'rgba(16,185,129,0.06)':'transparent'}; font-size:0.87rem;">
+                <span style="flex-shrink:0;">${icon}</span>
+                <span>${opt}</span>
+            </div>`;
+        });
+
+        if (q.hint) {
+            content += `<div style="margin-top:0.75rem; padding:0.65rem 0.85rem; background:rgba(251,191,36,0.08); border-left:3px solid var(--accent); border-radius:6px; font-size:0.85rem; color:var(--text-secondary);">
+                💡 <strong style="color:var(--text-primary);">Indice :</strong> ${q.hint}
+            </div>`;
+        }
+
+        if (q.explanation) {
+            const exp = Array.isArray(q.explanation) ? q.explanation.filter(Boolean).join(' / ') : q.explanation;
+            if (exp && exp !== 'Aucune explication disponible') {
+                content += `<div style="margin-top:0.75rem; padding:0.65rem 0.85rem; background:var(--bg-tertiary); border-left:3px solid var(--partial); border-radius:6px; font-size:0.85rem; color:var(--text-secondary);">
+                    📖 <strong style="color:var(--text-primary);">Explication :</strong> ${exp.substring(0, 300)}${exp.length>300?'…':''}
+                </div>`;
+            }
+        }
+
+        content += '</div>';
+
+        document.getElementById('modal-content').innerHTML = content;
+        document.getElementById('q-modal').classList.add('open');
+    }
+
+    function closeModal() { document.getElementById('q-modal').classList.remove('open'); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ── Tooltip ───────────────────────────────────────────────────────
+    const tipEl = document.getElementById('tooltip');
+    function showTip(e, html) {
+        tipEl.innerHTML = html;
+        tipEl.style.display = 'block';
+        moveTip(e);
+    }
+    function moveTip(e) {
+        const x = e.clientX + 12, y = e.clientY - 10;
+        tipEl.style.left = Math.min(x, window.innerWidth - 240) + 'px';
+        tipEl.style.top  = Math.min(y, window.innerHeight - 80) + 'px';
+    }
+    function hideTip() { tipEl.style.display = 'none'; }
+    document.addEventListener('mousemove', e => { if (tipEl.style.display !== 'none') moveTip(e); });
+
+    // ── Tabs ──────────────────────────────────────────────────────────
     function switchTab(panelId, btn) {
         document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1045,27 +1670,24 @@
         btn.classList.add('active');
     }
 
-    // ══════════════════════════════════════════════════════════════════
-    // EXPORT
-    // ══════════════════════════════════════════════════════════════════
-
+    // ── Export CSV ────────────────────────────────────────────────────
     function exportCSV() {
         if (allAnswers.length === 0) { showToast('⚠️ Aucune donnée à exporter'); return; }
 
-        // Export question stats
-        let csv = 'Question ID,Section,Niveau,Type,Tentatives,Correctes,Taux de réussite,Score moyen\n';
+        let csv = 'Question ID,Section,Niveau,Type,Tentatives,Correctes,Taux de réussite (%),Score moyen,Sessions uniques\n';
         allQuestions.forEach(q => {
-            const qs = questionStats[q.id] || { attempts: 0, correct: 0, totalScore: 0 };
+            const qs   = questionStats[q.id] || { attempts:0, correct:0, totalScore:0, sessions:new Set() };
             const rate = qs.attempts > 0 ? (qs.correct / qs.attempts * 100).toFixed(1) : '';
             const avg  = qs.attempts > 0 ? (qs.totalScore / qs.attempts).toFixed(2) : '';
-            csv += `"${q.id}","${q.section}","${q.level}","${q.type}","${qs.attempts}","${qs.correct}","${rate}","${avg}"\n`;
+            const sess = qs.sessions ? qs.sessions.size : 0;
+            csv += `"${q.id}","${q.section}","${q.level}","${q.type}","${qs.attempts}","${qs.correct}","${rate}","${avg}","${sess}"\n`;
         });
 
         const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const url  = URL.createObjectURL(blob);
+        const a    = document.createElement('a');
         a.href = url;
-        a.download = `bioeng110-stats-${new Date().toISOString().split('T')[0]}.csv`;
+        a.download = `bioeng110-dashboard-${new Date().toISOString().split('T')[0]}.csv`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -1073,10 +1695,7 @@
         showToast('📥 Export CSV téléchargé');
     }
 
-    // ══════════════════════════════════════════════════════════════════
-    // TOAST
-    // ══════════════════════════════════════════════════════════════════
-
+    // ── Toast ─────────────────────────────────────────────────────────
     let toastTimer = null;
     function showToast(msg, duration = 3500) {
         const t = document.getElementById('toast');
