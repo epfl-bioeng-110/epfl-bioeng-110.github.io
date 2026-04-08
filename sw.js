@@ -1,4 +1,4 @@
-const CACHE = 'bioeng110-v6';
+const CACHE = 'bioeng110-v7';
 const ASSETS = [
     '/',
     '/index.html',
