@@ -34,8 +34,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 
 /* ─── login ─── */
 #login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem;
-  background:radial-gradient(ellipse at 30% 40%, rgba(59,130,246,.08), transparent 60%),
-             radial-gradient(ellipse at 70% 70%, rgba(251,191,36,.05), transparent 60%);}
+  background:radial-gradient(ellipse at 30% 40%,rgba(59,130,246,.08),transparent 60%),
+             radial-gradient(ellipse at 70% 70%,rgba(251,191,36,.05),transparent 60%);}
 .login-card{background:var(--bg2);border-radius:24px;padding:3rem 2.5rem;max-width:420px;width:100%;
   border:1px solid var(--border);text-align:center;box-shadow:0 24px 64px var(--shadow);}
 .login-card h1{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;
@@ -75,8 +75,7 @@ button:hover{background:var(--accent2);transform:translateY(-1px);box-shadow:0 4
 button.sec{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
 button.sec:hover{background:var(--bg4);transform:none;box-shadow:none;}
 button.sm{padding:.35rem .75rem;font-size:.78rem;}
-button.danger{background:transparent;color:var(--bad);border:1px solid var(--bad);}
-button.danger:hover{background:rgba(239,68,68,.1);}
+button.active-tab-btn{background:rgba(251,191,36,.15);border-color:var(--accent)!important;color:var(--accent)!important;}
 
 /* ─── cards ─── */
 .card{background:var(--bg2);border-radius:var(--radius);padding:1.4rem 1.5rem;
@@ -85,8 +84,7 @@ button.danger:hover{background:rgba(239,68,68,.1);}
   margin-bottom:1.1rem;flex-wrap:wrap;}
 .card-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;
   color:var(--text);display:flex;align-items:center;gap:.5rem;}
-.card-sub{font-size:.78rem;color:var(--text3);font-family:'DM Sans',sans-serif;
-  font-weight:400;font-style:italic;}
+.card-sub{font-size:.78rem;color:var(--text3);font-family:'DM Sans',sans-serif;font-weight:400;font-style:italic;}
 
 /* ─── KPI grid ─── */
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1rem;margin-bottom:1.5rem;}
@@ -96,17 +94,15 @@ button.danger:hover{background:rgba(239,68,68,.1);}
 .kpi.kpi-ok::after{background:var(--ok);}
 .kpi.kpi-bad::after{background:var(--bad);opacity:1;}
 .kpi.kpi-blue::after{background:var(--blue);}
-.kpi.kpi-purple::after{background:var(--purple);}
 .kpi-icon{font-size:1.3rem;margin-bottom:.3rem;opacity:.85;}
-.kpi-val{font-size:2rem;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif;
-  line-height:1.1;letter-spacing:-.02em;}
-.kpi.kpi-ok   .kpi-val{color:var(--ok);}
-.kpi.kpi-bad  .kpi-val{color:var(--bad);}
+.kpi-val{font-size:2rem;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif;line-height:1.1;}
+.kpi.kpi-ok .kpi-val{color:var(--ok);}
+.kpi.kpi-bad .kpi-val{color:var(--bad);}
 .kpi.kpi-blue .kpi-val{color:var(--blue);}
 .kpi-label{color:var(--text2);font-size:.79rem;margin-top:.2rem;font-weight:500;}
 .kpi-sub{color:var(--text3);font-size:.71rem;margin-top:.15rem;}
 .kpi-trend{font-size:.75rem;font-weight:700;margin-top:.25rem;}
-.trend-up{color:var(--ok);} .trend-dn{color:var(--bad);} .trend-fl{color:var(--text3);}
+.trend-up{color:var(--ok);}.trend-dn{color:var(--bad);}.trend-fl{color:var(--text3);}
 
 /* ─── tabs ─── */
 .tabs{display:flex;gap:.4rem;margin-bottom:1.4rem;flex-wrap:wrap;
@@ -115,7 +111,7 @@ button.danger:hover{background:rgba(239,68,68,.1);}
   border-radius:9px;font-size:.87rem;font-weight:600;transition:all .15s;}
 .tab-btn:hover{background:var(--bg3);color:var(--text);transform:none;box-shadow:none;}
 .tab-btn.active{background:var(--bg4);color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.3);}
-.tab-panel{display:none;} .tab-panel.active{display:block;animation:fadeUp .2s ease;}
+.tab-panel{display:none;}.tab-panel.active{display:block;animation:fadeUp .2s ease;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
 
 /* ─── tables ─── */
@@ -132,20 +128,20 @@ td.mono{font-family:monospace;font-size:.82rem;}
 td.clk{cursor:pointer;}
 td.clk:hover{color:var(--accent);}
 
-/* ─── bars ─── */
+/* ─── inline bars ─── */
 .bw{background:var(--bg3);border-radius:3px;height:6px;overflow:hidden;min-width:50px;}
 .bf{height:100%;border-radius:3px;transition:width .5s ease;}
-.bf-ok{background:var(--ok);} .bf-warn{background:var(--warn);} .bf-bad{background:var(--bad);}
-.bf-blue{background:var(--blue);} .bf-acc{background:var(--accent);}
+.bf-ok{background:var(--ok);}.bf-warn{background:var(--warn);}.bf-bad{background:var(--bad);}
+.bf-blue{background:var(--blue);}.bf-acc{background:var(--accent);}
 
 /* ─── pills ─── */
 .pill{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.72rem;font-weight:700;}
-.p-ok  {background:rgba(16,185,129,.15);color:var(--ok);}
+.p-ok{background:rgba(16,185,129,.15);color:var(--ok);}
 .p-blue{background:rgba(59,130,246,.15);color:var(--blue);}
-.p-bad {background:rgba(239,68,68,.15); color:var(--bad);}
-.p-acc {background:rgba(251,191,36,.15);color:var(--accent);}
+.p-bad{background:rgba(239,68,68,.15);color:var(--bad);}
+.p-acc{background:rgba(251,191,36,.15);color:var(--accent);}
 .p-grey{background:rgba(100,116,139,.15);color:var(--text2);}
-.p-pur {background:rgba(139,92,246,.15);color:var(--purple);}
+.p-pur{background:rgba(139,92,246,.15);color:var(--purple);}
 
 /* ─── filters ─── */
 .fbar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center;}
@@ -164,34 +160,45 @@ td.clk:hover{color:var(--accent);}
 /* ─── SVG tooltips ─── */
 .tip{position:fixed;background:var(--bg2);border:1px solid var(--border);border-radius:9px;
   padding:.5rem .85rem;font-size:.8rem;color:var(--text);pointer-events:none;z-index:500;
-  box-shadow:0 8px 24px var(--shadow);display:none;max-width:240px;line-height:1.5;}
+  box-shadow:0 8px 24px var(--shadow);display:none;max-width:260px;line-height:1.5;}
 
-/* ─── section colour dots ─── */
+/* ─── section dots ─── */
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;flex-shrink:0;}
 
 /* ─── modal ─── */
-.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;
   justify-content:center;z-index:1000;padding:1.5rem;backdrop-filter:blur(4px);}
 .modal-bg.open{display:flex;}
 .modal-box{background:var(--bg2);border-radius:18px;border:1px solid var(--border);
-  padding:2rem;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;
+  padding:2rem;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;
   box-shadow:0 32px 80px var(--shadow);}
-.modal-box h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1.1rem;}
 
-/* ─── alert banner ─── */
+/* ─── option choice bar chart ─── */
+.opt-bar-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.55rem;font-size:.82rem;}
+.opt-bar-label{width:1.6rem;text-align:center;font-weight:700;flex-shrink:0;font-size:.8rem;}
+.opt-bar-text{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text2);font-size:.8rem;}
+.opt-bar-wrap{width:130px;flex-shrink:0;background:var(--bg3);border-radius:4px;height:16px;overflow:hidden;position:relative;}
+.opt-bar-fill{height:100%;border-radius:4px;transition:width .6s ease;}
+.opt-bar-pct{width:3rem;text-align:right;color:var(--text2);flex-shrink:0;font-size:.78rem;}
+.opt-correct-mark{width:1.2rem;text-align:center;flex-shrink:0;}
+
+/* ─── sparkline ─── */
+.sparkline-wrap{background:var(--bg3);border-radius:8px;padding:.75rem;margin-top:.75rem;}
+
+/* ─── alert ─── */
 .alert{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.25);border-radius:10px;
   padding:.85rem 1.1rem;margin-bottom:1.2rem;font-size:.86rem;display:flex;gap:.6rem;
   align-items:flex-start;line-height:1.5;}
 
-/* ─── two-col grid ─── */
+/* ─── grids ─── */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.4rem;}
 @media(max-width:840px){.g2,.g3{grid-template-columns:1fr;}}
 
-/* ─── score-dist bar ─── */
+/* ─── score-dist rows ─── */
 .sdist-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.55rem;font-size:.83rem;}
 .sdist-label{width:4.5rem;text-align:right;color:var(--text2);flex-shrink:0;}
-.sdist-bar-wrap{flex:1;background:var(--bg3);border-radius:4px;height:18px;overflow:hidden;position:relative;}
+.sdist-bar-wrap{flex:1;background:var(--bg3);border-radius:4px;height:16px;overflow:hidden;}
 .sdist-bar{height:100%;border-radius:4px;transition:width .6s ease;}
 .sdist-count{min-width:2.5rem;text-align:right;color:var(--text2);flex-shrink:0;}
 
@@ -201,17 +208,11 @@ td.clk:hover{color:var(--accent);}
 .slist::-webkit-scrollbar-track{background:var(--bg3);border-radius:3px;}
 .slist::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
 
-/* ─── progress ring (SVG) ─── */
+/* ─── ring ─── */
 .ring-wrap{display:flex;flex-direction:column;align-items:center;gap:.4rem;}
-.ring-val{font-size:1.4rem;font-weight:700;font-family:'Playfair Display',serif;}
 .ring-lbl{font-size:.75rem;color:var(--text2);text-align:center;}
 
-/* ─── heatmap ─── */
-.heatmap-grid{display:flex;flex-wrap:wrap;gap:3px;}
-.hm-cell{width:14px;height:14px;border-radius:3px;transition:opacity .2s;cursor:default;}
-.hm-cell:hover{outline:1px solid var(--accent);}
-
-/* ─── period btns ─── */
+/* ─── period buttons ─── */
 .period-grp{display:flex;gap:.35rem;margin-bottom:.85rem;}
 .period-grp button{background:var(--bg3);color:var(--text2);border:1px solid var(--border);
   padding:.3rem .75rem;font-size:.78rem;border-radius:6px;}
@@ -222,11 +223,15 @@ td.clk:hover{color:var(--accent);}
 .leg-item{display:flex;align-items:center;gap:.35rem;font-size:.78rem;color:var(--text2);}
 .leg-swatch{width:14px;height:6px;border-radius:2px;flex-shrink:0;}
 
-/* ─── inline stat row ─── */
+/* ─── stat row ─── */
 .stat-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:.85rem;}
 .stat-mini{text-align:center;}
 .stat-mini-val{font-size:1.35rem;font-weight:700;font-family:'Playfair Display',serif;color:var(--accent);}
 .stat-mini-lbl{font-size:.72rem;color:var(--text2);}
+
+/* ─── modal section divider ─── */
+.m-section{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);
+  margin:1.25rem 0 .6rem;padding-bottom:.35rem;border-bottom:1px solid var(--border);}
 
 /* ─── toast ─── */
 #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(4rem);
@@ -242,6 +247,7 @@ td.clk:hover{color:var(--accent);}
   header{padding:.65rem 1rem;}
   .kpi-grid{grid-template-columns:repeat(2,1fr);}
   .header-right{gap:.3rem;}
+  .modal-box{padding:1.25rem;}
 }
 </style>
 </head>
@@ -254,10 +260,18 @@ td.clk:hover{color:var(--accent);}
 <div class="modal-bg" id="q-modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;">
-      <h3 id="m-title" style="margin-bottom:0;"></h3>
-      <button class="sec sm" onclick="closeModal()">✕</button>
+      <div id="m-title" style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;"></div>
+      <button class="sec sm" onclick="closeModal()" style="flex-shrink:0;">✕ Fermer</button>
     </div>
-    <div id="m-body"></div>
+    <!-- Sub-tabs inside modal -->
+    <div style="display:flex;gap:.35rem;margin-bottom:1.25rem;background:var(--bg3);border-radius:9px;padding:.3rem;" id="modal-tabs">
+      <button class="sec sm active-tab-btn" onclick="showModalTab('mt-stats',this)" style="flex:1;border:1px solid transparent;">📊 Stats</button>
+      <button class="sec sm" onclick="showModalTab('mt-choices',this)" style="flex:1;border:1px solid transparent;">🗳️ Choix des réponses</button>
+      <button class="sec sm" onclick="showModalTab('mt-question',this)" style="flex:1;border:1px solid transparent;">📄 Question</button>
+    </div>
+    <div id="mt-stats"    class="modal-tab-pane"></div>
+    <div id="mt-choices"  class="modal-tab-pane" style="display:none;"></div>
+    <div id="mt-question" class="modal-tab-pane" style="display:none;"></div>
   </div>
 </div>
 
@@ -270,8 +284,8 @@ td.clk:hover{color:var(--accent);}
     <input type="password" id="pw-input" placeholder="Mot de passe TA">
     <p class="login-error" id="login-error">❌ Mot de passe incorrect.</p>
     <button onclick="checkPassword()" style="width:100%;">Accéder au tableau de bord</button>
-    <p class="login-note">Ce tableau de bord est réservé aux assistants du cours.<br>
-      Les données sont anonymisées — aucun nom d'étudiant n'est collecté.</p>
+    <p class="login-note">Tableau de bord réservé aux assistants du cours.<br>
+      Données anonymisées — aucun nom d'étudiant collecté.</p>
   </div>
 </div>
 
@@ -345,10 +359,7 @@ td.clk:hover{color:var(--accent);}
 
     <!-- ══════ TAB: VUE D'ENSEMBLE ══════ -->
     <div id="tab-overview" class="tab-panel active">
-
       <div id="alert-box"></div>
-
-      <!-- Mini score rings + section bars -->
       <div class="g3" style="margin-bottom:1.4rem;">
         <div class="card" style="margin-bottom:0;">
           <div class="card-hd"><div class="card-title">🎯 Réussite globale</div></div>
@@ -359,8 +370,6 @@ td.clk:hover{color:var(--accent);}
           <div id="ov-sections"></div>
         </div>
       </div>
-
-      <!-- Difficulty histogram + level bars -->
       <div class="g2">
         <div class="card" style="margin-bottom:0;">
           <div class="card-hd">
@@ -369,9 +378,9 @@ td.clk:hover{color:var(--accent);}
           </div>
           <svg id="hist-svg" style="width:100%;display:block;" height="170"></svg>
           <div class="legend" style="margin-top:.75rem;">
-            <span class="leg-item"><span class="leg-swatch" style="background:var(--bad);"></span>0–40 % (difficile)</span>
-            <span class="leg-item"><span class="leg-swatch" style="background:var(--warn);"></span>40–70 % (moyen)</span>
-            <span class="leg-item"><span class="leg-swatch" style="background:var(--ok);"></span>70–100 % (facile)</span>
+            <span class="leg-item"><span class="leg-swatch" style="background:var(--bad);"></span>0–40 % difficile</span>
+            <span class="leg-item"><span class="leg-swatch" style="background:var(--warn);"></span>40–70 % moyen</span>
+            <span class="leg-item"><span class="leg-swatch" style="background:var(--ok);"></span>70–100 % facile</span>
           </div>
         </div>
         <div class="card" style="margin-bottom:0;">
@@ -379,8 +388,6 @@ td.clk:hover{color:var(--accent);}
           <div id="ov-levels"></div>
         </div>
       </div>
-
-      <!-- Hard / easy top lists -->
       <div class="g2" style="margin-top:1.4rem;">
         <div class="card" style="margin-bottom:0;">
           <div class="card-hd">
@@ -388,7 +395,7 @@ td.clk:hover{color:var(--accent);}
             <span class="card-sub">min 5 tentatives</span>
           </div>
           <div class="slist">
-            <table><thead><tr><th>ID</th><th>Section</th><th>Taux</th><th>Moy. score</th><th>Essais</th></tr></thead>
+            <table><thead><tr><th>ID</th><th>Section</th><th>Taux</th><th>Score moy.</th><th>Essais</th></tr></thead>
             <tbody id="hard-tbody"></tbody></table>
           </div>
         </div>
@@ -398,13 +405,12 @@ td.clk:hover{color:var(--accent);}
             <span class="card-sub">min 5 tentatives</span>
           </div>
           <div class="slist">
-            <table><thead><tr><th>ID</th><th>Section</th><th>Taux</th><th>Moy. score</th><th>Essais</th></tr></thead>
+            <table><thead><tr><th>ID</th><th>Section</th><th>Taux</th><th>Score moy.</th><th>Essais</th></tr></thead>
             <tbody id="easy-tbody"></tbody></table>
           </div>
         </div>
       </div>
-
-    </div><!-- /overview -->
+    </div>
 
     <!-- ══════ TAB: QUESTIONS ══════ -->
     <div id="tab-questions" class="tab-panel">
@@ -433,12 +439,14 @@ td.clk:hover{color:var(--accent);}
             <option value="hard">Difficiles (&lt;40 %)</option>
             <option value="med">Moyennes (40–70 %)</option>
             <option value="easy">Faciles (&gt;70 %)</option>
+            <option value="distract">Distracteurs fréquents</option>
             <option value="unseen">Jamais tentées</option>
           </select>
           <select id="q-sort" onchange="renderQTable()">
             <option value="rate_asc">Taux ↑ (difficiles d'abord)</option>
             <option value="rate_desc">Taux ↓</option>
             <option value="att_desc">Plus tentées</option>
+            <option value="distract_desc">Distracteur le plus sélectionné</option>
             <option value="score_asc">Score moy. ↑</option>
             <option value="id">ID croissant</option>
           </select>
@@ -448,9 +456,10 @@ td.clk:hover{color:var(--accent);}
             <thead><tr>
               <th>ID</th><th>Section</th><th>Niv.</th><th>Type</th>
               <th>Essais</th><th>Taux réussite</th><th>Score moy.</th>
-              <th>Score max (%)</th><th>Indice est.</th><th>Sessions</th><th>Détail</th>
+              <th title="Option incorrecte la plus choisie">Distracteur principal</th>
+              <th>Sessions</th><th>Détail</th>
             </tr></thead>
-            <tbody id="q-tbody"><tr><td colspan="11" class="loading"><div class="spin"></div></td></tr></tbody>
+            <tbody id="q-tbody"><tr><td colspan="10" class="loading"><div class="spin"></div></td></tr></tbody>
           </table>
         </div>
       </div>
@@ -473,10 +482,9 @@ td.clk:hover{color:var(--accent);}
         </div>
       </div>
       <div class="card" style="margin-top:1.4rem;">
-        <div class="card-hd"><div class="card-title">🗺️ Questions jamais tentées par section</div></div>
+        <div class="card-hd"><div class="card-title">🗺️ Questions jamais tentées</div></div>
         <div id="sec-unseen"></div>
       </div>
-      <!-- Score distribution per section -->
       <div class="card">
         <div class="card-hd"><div class="card-title">📊 Distribution des scores moyens par question</div>
           <span class="card-sub">groupé par section</span>
@@ -505,36 +513,31 @@ td.clk:hover{color:var(--accent);}
         <svg id="act-svg" style="width:100%;display:block;" height="200"></svg>
         <div class="stat-row" id="act-stats"></div>
       </div>
-
       <div class="g2">
-        <!-- Hourly -->
         <div class="card" style="margin-bottom:0;">
           <div class="card-hd">
             <div class="card-title">🕐 Activité par heure</div>
-            <span class="card-sub">sur toutes les données</span>
+            <span class="card-sub">toutes les données</span>
           </div>
           <svg id="hour-svg" style="width:100%;display:block;" height="130"></svg>
           <div id="peak-hours" style="font-size:.78rem;color:var(--text2);margin-top:.6rem;"></div>
         </div>
-        <!-- Weekday -->
         <div class="card" style="margin-bottom:0;">
           <div class="card-hd"><div class="card-title">📆 Jour de la semaine</div></div>
           <div id="weekday-bars"></div>
         </div>
       </div>
-
-      <!-- GitHub-style heatmap (last 12 weeks) -->
       <div class="card">
         <div class="card-hd">
           <div class="card-title">🗓️ Carte d'activité — 12 dernières semaines</div>
           <div style="display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--text2);">
             Moins
             <span style="display:flex;gap:2px;">
-              <span style="width:12px;height:12px;border-radius:3px;background:var(--bg3);"></span>
-              <span style="width:12px;height:12px;border-radius:3px;background:rgba(251,191,36,.2);"></span>
-              <span style="width:12px;height:12px;border-radius:3px;background:rgba(251,191,36,.45);"></span>
-              <span style="width:12px;height:12px;border-radius:3px;background:rgba(251,191,36,.7);"></span>
-              <span style="width:12px;height:12px;border-radius:3px;background:var(--accent);"></span>
+              <span style="width:11px;height:11px;border-radius:2px;background:var(--bg3);"></span>
+              <span style="width:11px;height:11px;border-radius:2px;background:rgba(251,191,36,.2);"></span>
+              <span style="width:11px;height:11px;border-radius:2px;background:rgba(251,191,36,.45);"></span>
+              <span style="width:11px;height:11px;border-radius:2px;background:rgba(251,191,36,.7);"></span>
+              <span style="width:11px;height:11px;border-radius:2px;background:var(--accent);"></span>
             </span>
             Plus
           </div>
@@ -545,8 +548,6 @@ td.clk:hover{color:var(--accent);}
 
     <!-- ══════ TAB: SESSIONS ══════ -->
     <div id="tab-sessions" class="tab-panel">
-
-      <!-- Engagement histogram -->
       <div class="card">
         <div class="card-hd">
           <div class="card-title">📊 Distribution de l'engagement</div>
@@ -554,8 +555,6 @@ td.clk:hover{color:var(--accent);}
         </div>
         <svg id="sess-hist-svg" style="width:100%;display:block;" height="130"></svg>
       </div>
-
-      <!-- Score distribution per session -->
       <div class="card">
         <div class="card-hd">
           <div class="card-title">🎯 Distribution du taux de réussite par session</div>
@@ -563,12 +562,10 @@ td.clk:hover{color:var(--accent);}
         </div>
         <div id="sess-acc-dist"></div>
       </div>
-
-      <!-- Session table -->
       <div class="card">
         <div class="card-hd">
           <div class="card-title">👥 Détail des sessions</div>
-          <span class="card-sub">données anonymisées — UUID uniquement</span>
+          <span class="card-sub">anonymisées — UUID uniquement</span>
         </div>
         <div class="fbar">
           <input type="text" id="s-search" placeholder="🔍 Rechercher UUID…" oninput="renderSTable()">
@@ -600,8 +597,8 @@ td.clk:hover{color:var(--accent);}
       </div>
     </div>
 
-  </div><!-- /container -->
-</div><!-- /dashboard -->
+  </div>
+</div>
 
 <script>
 // ═══════════════════════════════════════════════════════════
@@ -609,23 +606,23 @@ td.clk:hover{color:var(--accent);}
 // ═══════════════════════════════════════════════════════════
 const SUPA_URL = 'https://nygrbpxqiwuuscgbmybs.supabase.co';
 const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55Z3JicHhxaXd1dXNjZ2JteWJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4NjgxNTgsImV4cCI6MjA4NTQ0NDE1OH0.ateA4HeIm56Jv53_zv3bX7UCAt0UzMOb1UXT1s1jycE';
-const PW_HASH  = 'a6ffa0cf7b13cee759ddcfb65df8a201'; // SHA256[:32] of "kinderbueno2026"
+const PW_HASH  = 'a6ffa0cf7b13cee759ddcfb65df8a201';
 
 const Q_FILES = {
-  biomolecules: 'data/questions_biomolecules.json',
-  genetics:     'data/questions_genetics.json',
-  molecular:    'data/questions_molecular.json',
-  cellcycle:    'data/questions_cellcycle.json'
+  biomolecules:'data/questions_biomolecules.json',
+  genetics:    'data/questions_genetics.json',
+  molecular:   'data/questions_molecular.json',
+  cellcycle:   'data/questions_cellcycle.json'
 };
-const SEC_LBL = { biomolecules:'Biomolécules', genetics:'Génétique', molecular:'Biologie moléculaire', cellcycle:'Cycle cellulaire' };
-const SEC_COL = { biomolecules:'#10b981', genetics:'#3b82f6', molecular:'#f59e0b', cellcycle:'#0bd7f5' };
+const SEC_LBL = {biomolecules:'Biomolécules',genetics:'Génétique',molecular:'Bio. moléculaire',cellcycle:'Cycle cellulaire'};
+const SEC_COL = {biomolecules:'#10b981',genetics:'#3b82f6',molecular:'#f59e0b',cellcycle:'#0bd7f5'};
 
 // ═══════════════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════════════
 let allAnswers = [], allQuestions = [];
-let qStats = {};   // id → {att,corr,score,scoreMax,hintEst,sessions,scoreList}
-let sStats = {};   // id → {ans,corr,score,first,last,qSet}
+let qStats = {};  // id → {att,corr,score,scoreMax,hintEst,sessions,scoreList,optionCounts}
+let sStats = {};  // id → {ans,corr,score,first,last,qSet}
 let actPeriod = 30;
 
 // ═══════════════════════════════════════════════════════════
@@ -636,7 +633,7 @@ async function sha32(s){
   return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('').slice(0,32);
 }
 async function checkPassword(){
-  const pw=document.getElementById('pw-input').value; if(!pw)return;
+  const pw=document.getElementById('pw-input').value; if(!pw) return;
   if(await sha32(pw)===PW_HASH){
     sessionStorage.setItem('ta','1');
     document.getElementById('login-screen').style.display='none';
@@ -674,7 +671,10 @@ async function fetchAnswers(){
 async function loadQs(){
   if(allQuestions.length) return;
   for(const[sec,f] of Object.entries(Q_FILES)){
-    try{const r=await fetch(f);if(r.ok){const qs=await r.json();qs.forEach(q=>{q.section=q.section||sec;});allQuestions=allQuestions.concat(qs);}}catch(_){}
+    try{
+      const r=await fetch(f);
+      if(r.ok){const qs=await r.json();qs.forEach(q=>{q.section=q.section||sec;});allQuestions=allQuestions.concat(qs);}
+    }catch(_){}
   }
 }
 async function loadAll(){
@@ -691,24 +691,67 @@ async function loadAll(){
 // ═══════════════════════════════════════════════════════════
 function computeStats(){
   qStats={}; sStats={};
+
+  // Build a lookup from question id → question object for option count array sizing
+  const qLookup={};
+  allQuestions.forEach(q=>qLookup[q.id]=q);
+
   allAnswers.forEach(a=>{
-    // per-question
-    if(!qStats[a.question_id]) qStats[a.question_id]={att:0,corr:0,score:0,scoreMax:0,hintEst:0,sessions:new Set(),scoreList:[]};
-    const q=qStats[a.question_id];
-    q.att++; if(a.is_correct) q.corr++;
-    const sc=a.score||0; q.score+=sc; q.scoreList.push(sc);
-    // scoreMax: theoretical max if no penalty (we track best score seen per session+question)
-    q.scoreMax=Math.max(q.scoreMax,sc);
-    // hint estimate: correct but score<0.6 → penalty applied
-    if(a.is_correct && sc>0 && sc<0.6) q.hintEst++;
-    q.sessions.add(a.session_id);
-    // per-session
+    // ── per-question ──────────────────────────────────────
+    if(!qStats[a.question_id]){
+      const q=qLookup[a.question_id];
+      const nOpts=q?q.options.length:8; // fallback to 8 slots
+      qStats[a.question_id]={
+        att:0,corr:0,score:0,scoreMax:0,
+        hintEst:0,    // answered correctly with a score penalty (score<0.55 AND is_correct)
+        sessions:new Set(),scoreList:[],
+        optionCounts:new Array(nOpts).fill(0)  // how many times each option was selected
+      };
+    }
+    const qs=qStats[a.question_id];
+    qs.att++;
+    if(a.is_correct) qs.corr++;
+    const sc=a.score||0; qs.score+=sc; qs.scoreList.push(sc);
+    qs.scoreMax=Math.max(qs.scoreMax,sc);
+    // Hint estimate: correct answer that received a penalty (score strictly below 0.55)
+    // This is more conservative than the old heuristic — avoids flagging genuine partial scores
+    if(a.is_correct && sc>0 && sc<0.55) qs.hintEst++;
+    qs.sessions.add(a.session_id);
+
+    // Parse selected option indices from the `answer` field
+    // The field contains JSON like "[0]", "[0,2]", or "[]"
+    if(a.answer){
+      try{
+        const selected=JSON.parse(a.answer);
+        if(Array.isArray(selected)){
+          selected.forEach(idx=>{
+            if(typeof idx==='number' && idx>=0 && idx<qs.optionCounts.length){
+              qs.optionCounts[idx]++;
+            }
+          });
+        }
+      }catch(_){}
+    }
+
+    // ── per-session ───────────────────────────────────────
     if(!sStats[a.session_id]) sStats[a.session_id]={ans:0,corr:0,score:0,first:a.timestamp,last:a.timestamp,qSet:new Set()};
     const s=sStats[a.session_id];
     s.ans++; if(a.is_correct) s.corr++; s.score+=sc; s.qSet.add(a.question_id);
     if(a.timestamp>s.last) s.last=a.timestamp;
     if(a.timestamp<s.first) s.first=a.timestamp;
   });
+}
+
+// Helper: find the most-selected wrong option index for a question
+function topDistractor(qid){
+  const qs=qStats[qid]; const q=allQuestions.find(x=>x.id===qid);
+  if(!qs||!q||!qs.att) return null;
+  let maxCount=-1,maxIdx=-1;
+  qs.optionCounts.forEach((c,i)=>{
+    if(!q.correct.includes(i) && c>maxCount){maxCount=c;maxIdx=i;}
+  });
+  if(maxIdx===-1||maxCount===0) return null;
+  return {idx:maxIdx,count:maxCount,pct:Math.round(maxCount/qs.att*100),text:q.options[maxIdx]};
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -732,8 +775,6 @@ function renderKPIs(){
   const now7=new Date(); now7.setDate(now7.getDate()-7);
   const a7=allAnswers.filter(a=>a.timestamp&&new Date(a.timestamp)>=now7);
   const s7=new Set(a7.map(a=>a.session_id)).size;
-
-  // 14-day comparison for trend
   const now14=new Date(); now14.setDate(now14.getDate()-14);
   const prev7=allAnswers.filter(a=>{const t=new Date(a.timestamp);return t>=now14&&t<now7;});
   const trendAns=a7.length-prev7.length;
@@ -743,28 +784,25 @@ function renderKPIs(){
   $('kpi-sess-sub').textContent=`${s7} actives (7 derniers jours)`;
   $('kpi-sess-trend').innerHTML=trend(trendSess,'sessions vs sem. préc.');
   $('kpi-ans').textContent=tot.toLocaleString('fr-CH');
-  $('kpi-ans-sub').textContent=`${a7.length.toLocaleString()} ce s 7 derniers jours`;
+  $('kpi-ans-sub').textContent=`${a7.length.toLocaleString()} ces 7 derniers jours`;
   $('kpi-ans-trend').innerHTML=trend(trendAns,'réponses vs sem. préc.');
   $('kpi-acc').textContent=`${acc}%`;
   $('kpi-acc-sub').textContent=`${corr.toLocaleString()} / ${tot.toLocaleString()} correctes`;
   $('kpi-score').textContent=avgSc.toFixed(2);
-  $('kpi-score-sub').textContent=`sur 1.00 pt max`;
+  $('kpi-score-sub').textContent='sur 1.00 pt max';
   $('kpi-cov').textContent=`${cov}%`;
   $('kpi-cov-sub').textContent=`${seenQ} / ${totQ} questions tentées`;
   $('kpi-hard').textContent=hardN;
 }
 
-function trend(delta, label){
+function trend(delta,label){
   if(delta===0) return `<span class="trend-fl">→ stable ${label}</span>`;
-  const sign=delta>0?'+':''; const cls=delta>0?'trend-up':'trend-dn'; const arrow=delta>0?'↑':'↓';
+  const sign=delta>0?'+':'',cls=delta>0?'trend-up':'trend-dn',arrow=delta>0?'↑':'↓';
   return `<span class="${cls}">${arrow} ${sign}${delta} ${label}</span>`;
 }
 
 // ── Overview ──────────────────────────────────────────────
-function renderOverview(){
-  renderAlerts(); renderRings(); renderOvSections(); renderHistogram();
-  renderOvLevels(); renderHardEasy();
-}
+function renderOverview(){renderAlerts();renderRings();renderOvSections();renderHistogram();renderOvLevels();renderHardEasy();}
 
 function renderAlerts(){
   const hard=allQuestions.filter(q=>{const s=qStats[q.id];return s&&s.att>=5&&(s.corr/s.att)<.4;});
@@ -783,11 +821,10 @@ function renderRings(){
   const avgSc=tot>0?(allAnswers.reduce((s,a)=>s+(a.score||0),0)/tot):0;
   const seenQ=Object.keys(qStats).length,totQ=allQuestions.length;
   const cov=totQ>0?Math.round(seenQ/totQ*100):0;
-
   $('ov-rings').innerHTML=[
-    {val:acc,max:100,lbl:'Taux réussite',col:'var(--ok)',unit:'%'},
-    {val:Math.round(avgSc*100),max:100,lbl:'Score moyen',col:'var(--accent)',unit:'%'},
-    {val:cov,max:100,lbl:'Couverture',col:'var(--blue)',unit:'%'}
+    {val:acc,lbl:'Taux réussite',col:'var(--ok)',unit:'%'},
+    {val:Math.round(avgSc*100),lbl:'Score moyen',col:'var(--accent)',unit:'%'},
+    {val:cov,lbl:'Couverture',col:'var(--blue)',unit:'%'}
   ].map(({val,lbl,col,unit})=>{
     const r=36,c=2*Math.PI*r,dash=c*(val/100);
     return `<div class="ring-wrap">
@@ -812,7 +849,7 @@ function renderOvSections(){
     return `<div style="margin-bottom:.85rem;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem;font-size:.85rem;">
         <span><span class="dot" style="background:${col};"></span><strong>${SEC_LBL[sec]||sec}</strong></span>
-        <span style="color:var(--text2);">${rate!==null?rate+'%':'—'} &nbsp;·&nbsp; ${d.att} essais &nbsp;·&nbsp; cov. ${cov}%</span>
+        <span style="color:var(--text2);">${rate!==null?rate+'%':'—'} · ${d.att} essais · cov. ${cov}%</span>
       </div>
       <div style="background:var(--bg3);border-radius:5px;height:10px;overflow:hidden;">
         <div style="height:100%;width:${rate||0}%;background:${col};border-radius:5px;transition:width .6s;"></div>
@@ -824,8 +861,7 @@ function renderOvSections(){
 function computeSecData(){
   const s={};
   allQuestions.forEach(q=>{
-    const k=q.section||'?';
-    if(!s[k]) s[k]={q:0,seen:0,att:0,corr:0,score:0};
+    const k=q.section||'?'; if(!s[k]) s[k]={q:0,seen:0,att:0,corr:0,score:0};
     s[k].q++;
     const qs=qStats[q.id];
     if(qs){s[k].seen++;s[k].att+=qs.att;s[k].corr+=qs.corr;s[k].score+=qs.score;}
@@ -834,26 +870,22 @@ function computeSecData(){
 }
 
 function renderHistogram(){
-  const bins=Array(10).fill(0);
-  let counted=0;
+  const bins=Array(10).fill(0); let counted=0;
   allQuestions.forEach(q=>{
     const qs=qStats[q.id]; if(!qs||qs.att===0) return;
     bins[Math.min(Math.floor(qs.corr/qs.att*10),9)]++; counted++;
   });
   $('hist-sub').textContent=`${counted} questions tentées`;
-
-  const W=480,H=160,pL=28,pB=28,pT=10,pR=8;
-  const bw=(W-pL-pR)/10, ch=H-pB-pT, maxB=Math.max(...bins,1);
+  const W=480,H=160,pL=28,pB=28,pT=10,pR=8,bw=(W-pL-pR)/10,ch=H-pB-pT,maxB=Math.max(...bins,1);
   const col=(_,i)=>i<4?'var(--bad)':i<7?'var(--warn)':'var(--ok)';
-
-  let rects='', labels='', grid='';
+  let rects='',labels='',grid='';
   for(let g=0;g<=4;g++){
     const y=pT+ch-(g/4)*ch;
     grid+=`<line x1="${pL}" y1="${y}" x2="${W-pR}" y2="${y}" stroke="var(--border)" stroke-width="1" stroke-dasharray="3,3"/>
       <text x="${pL-4}" y="${y+4}" text-anchor="end" font-size="9" fill="var(--text2)">${Math.round(g/4*maxB)}</text>`;
   }
   bins.forEach((n,i)=>{
-    const x=pL+i*bw, bh=n>0?Math.max(3,(n/maxB)*ch):0, y=pT+ch-bh;
+    const x=pL+i*bw,bh=n>0?Math.max(3,(n/maxB)*ch):0,y=pT+ch-bh;
     rects+=`<rect x="${x+1}" y="${y}" width="${bw-2}" height="${bh}" fill="${col(n,i)}" opacity=".8" rx="3"
       onmouseenter="tip(event,'${i*10}–${(i+1)*10}% : ${n} question${n!==1?'s':''}')" onmouseleave="hideTip()"/>
       ${n>0?`<text x="${x+bw/2}" y="${y-4}" text-anchor="middle" font-size="9" fill="var(--text2)">${n}</text>`:''}`;
@@ -869,8 +901,7 @@ function renderHistogram(){
 function renderOvLevels(){
   const lvs={};
   allQuestions.forEach(q=>{
-    const lv=String(q.level||1);
-    if(!lvs[lv]) lvs[lv]={q:0,att:0,corr:0,score:0};
+    const lv=String(q.level||1); if(!lvs[lv]) lvs[lv]={q:0,att:0,corr:0,score:0};
     lvs[lv].q++;
     const qs=qStats[q.id];
     if(qs){lvs[lv].att+=qs.att;lvs[lv].corr+=qs.corr;lvs[lv].score+=qs.score;}
@@ -900,21 +931,16 @@ function renderHardEasy(){
     const qs=qStats[q.id]; if(!qs||qs.att<MIN) return null;
     return {q,rate:qs.corr/qs.att,avg:qs.score/qs.att,att:qs.att};
   }).filter(Boolean);
-
   const row=({q,rate,avg,att},cls)=>
     `<tr><td class="clk" onclick="openQModal('${q.id}')"><strong>${q.id}</strong></td>
     <td><span class="dot" style="background:${SEC_COL[q.section]||'#888'};"></span>${SEC_LBL[q.section]||q.section}</td>
     <td><span class="pill ${cls}">${Math.round(rate*100)}%</span></td>
     <td>${avg.toFixed(2)}</td><td>${att}</td></tr>`;
-
   const hard=[...ranked].sort((a,b)=>a.rate-b.rate).slice(0,10);
-  $('hard-tbody').innerHTML=hard.length
-    ?hard.map(r=>row(r,'p-bad')).join('')
+  $('hard-tbody').innerHTML=hard.length?hard.map(r=>row(r,'p-bad')).join('')
     :`<tr><td colspan="5" style="color:var(--text2);padding:1rem;text-align:center;">Aucune (min ${MIN} essais)</td></tr>`;
-
   const easy=[...ranked].filter(r=>r.rate>.85).sort((a,b)=>b.rate-a.rate).slice(0,10);
-  $('easy-tbody').innerHTML=easy.length
-    ?easy.map(r=>row(r,'p-ok')).join('')
+  $('easy-tbody').innerHTML=easy.length?easy.map(r=>row(r,'p-ok')).join('')
     :`<tr><td colspan="5" style="color:var(--text2);padding:1rem;text-align:center;">Aucune (min ${MIN} essais)</td></tr>`;
 }
 
@@ -927,41 +953,50 @@ function renderQTable(){
   const srt=document.getElementById('q-sort')?.value||'rate_asc';
 
   let rows=allQuestions.map(q=>{
-    const qs=qStats[q.id]||{att:0,corr:0,score:0,scoreMax:0,hintEst:0,sessions:new Set(),scoreList:[]};
+    const qs=qStats[q.id]||{att:0,corr:0,score:0,scoreMax:0,hintEst:0,sessions:new Set(),scoreList:[],optionCounts:[]};
     const rate=qs.att>0?qs.corr/qs.att:null;
     const avg=qs.att>0?qs.score/qs.att:null;
-    const maxPct=qs.att>0?Math.round(qs.scoreMax*100):null;
-    return {q,qs,rate,avg,maxPct};
+    const dist=topDistractor(q.id);
+    return {q,qs,rate,avg,dist};
   });
 
-  if(sec!=='all') rows=rows.filter(r=>r.q.section===sec);
-  if(lv!=='all')  rows=rows.filter(r=>String(r.q.level)===lv);
-  if(srch)        rows=rows.filter(r=>r.q.id.toLowerCase().includes(srch)||r.q.question.toLowerCase().includes(srch));
-  if(flt==='hard')   rows=rows.filter(r=>r.rate!==null&&r.rate<.4);
-  if(flt==='med')    rows=rows.filter(r=>r.rate!==null&&r.rate>=.4&&r.rate<.7);
-  if(flt==='easy')   rows=rows.filter(r=>r.rate!==null&&r.rate>.7);
-  if(flt==='unseen') rows=rows.filter(r=>r.qs.att===0);
+  if(sec!=='all')       rows=rows.filter(r=>r.q.section===sec);
+  if(lv!=='all')        rows=rows.filter(r=>String(r.q.level)===lv);
+  if(srch)              rows=rows.filter(r=>r.q.id.toLowerCase().includes(srch)||r.q.question.toLowerCase().includes(srch));
+  if(flt==='hard')      rows=rows.filter(r=>r.rate!==null&&r.rate<.4);
+  if(flt==='med')       rows=rows.filter(r=>r.rate!==null&&r.rate>=.4&&r.rate<.7);
+  if(flt==='easy')      rows=rows.filter(r=>r.rate!==null&&r.rate>.7);
+  if(flt==='distract')  rows=rows.filter(r=>r.dist&&r.dist.pct>=20);
+  if(flt==='unseen')    rows=rows.filter(r=>r.qs.att===0);
 
   rows.sort((a,b)=>{
     switch(srt){
-      case 'rate_asc':   return (a.rate??1)-(b.rate??1);
-      case 'rate_desc':  return (b.rate??0)-(a.rate??0);
-      case 'att_desc':   return b.qs.att-a.qs.att;
-      case 'score_asc':  return (a.avg??1)-(b.avg??1);
-      default:           return a.q.id.localeCompare(b.q.id);
+      case 'rate_asc':      return (a.rate??1)-(b.rate??1);
+      case 'rate_desc':     return (b.rate??0)-(a.rate??0);
+      case 'att_desc':      return b.qs.att-a.qs.att;
+      case 'distract_desc': return (b.dist?.pct||0)-(a.dist?.pct||0);
+      case 'score_asc':     return (a.avg??1)-(b.avg??1);
+      default:              return a.q.id.localeCompare(b.q.id);
     }
   });
 
   $('q-count').textContent=`${rows.length} question${rows.length!==1?'s':''} affichée${rows.length!==1?'s':''}`;
 
-  $('q-tbody').innerHTML=rows.map(({q,qs,rate,avg,maxPct})=>{
+  $('q-tbody').innerHTML=rows.map(({q,qs,rate,avg,dist})=>{
     const pct=rate!==null?Math.round(rate*100):null;
     const bc=pct===null?'':pct>=70?'bf-ok':pct>=40?'bf-warn':'bf-bad';
     const pill=pct===null?'p-grey':pct>=70?'p-ok':pct>=40?'p-acc':'p-bad';
     const typeP=q.type==='multiple-choice'?'p-blue':'p-ok';
     const typeL=q.type==='multiple-choice'?'QCM':'QCU';
-    const hintPct=qs.att>0?Math.round(qs.hintEst/qs.att*100):null;
     const col=SEC_COL[q.section]||'#888';
+    // Distractor cell
+    const distCell=dist
+      ? `<div style="display:flex;align-items:center;gap:.4rem;">
+          <span style="font-weight:700;color:var(--bad);font-size:.8rem;">${String.fromCharCode(65+dist.idx)}</span>
+          <div class="bw" style="width:45px;height:5px;"><div class="bf bf-bad" style="width:${dist.pct}%;"></div></div>
+          <span style="font-size:.78rem;color:var(--text2);">${dist.pct}%</span>
+         </div>`
+      : '<span style="color:var(--text3);font-size:.8rem;">—</span>';
     return `<tr>
       <td class="clk" onclick="openQModal('${q.id}')"><strong style="color:var(--accent);">${q.id}</strong></td>
       <td><span class="dot" style="background:${col};"></span>${SEC_LBL[q.section]||q.section}</td>
@@ -973,22 +1008,18 @@ function renderQTable(){
         <span class="pill ${pill}">${pct}%</span></div>`
         :'<span style="color:var(--text3);font-style:italic;font-size:.8rem;">Non tentée</span>'}</td>
       <td>${avg!==null?avg.toFixed(2):'—'}</td>
-      <td>${maxPct!==null?`${maxPct}%`:'—'}</td>
-      <td>${hintPct!==null?`${hintPct}%`:'—'}</td>
+      <td>${distCell}</td>
       <td>${qs.sessions?qs.sessions.size:'—'}</td>
       <td><button class="sec sm" onclick="openQModal('${q.id}')">🔍</button></td>
     </tr>`;
-  }).join('')||'<tr><td colspan="11" style="text-align:center;padding:2rem;color:var(--text2);">Aucune question.</td></tr>';
+  }).join('')||'<tr><td colspan="10" style="text-align:center;padding:2rem;color:var(--text2);">Aucune question.</td></tr>';
 }
 
 // ── Sections ───────────────────────────────────────────────
 function renderSections(){
   const secs=computeSecData();
-
-  // Main table
   $('sec-overview').innerHTML=`<table><thead><tr>
-    <th>Section</th><th>Questions</th><th>Vues</th><th>Couverture</th>
-    <th>Tentatives</th><th>Taux réussite</th><th>Score moy.</th>
+    <th>Section</th><th>Questions</th><th>Vues</th><th>Couverture</th><th>Tentatives</th><th>Taux réussite</th><th>Score moy.</th>
   </tr></thead><tbody>`+Object.entries(secs).map(([sec,d])=>{
     const rate=d.att>0?Math.round(d.corr/d.att*100):null;
     const avg=d.att>0?(d.score/d.att).toFixed(2):'—';
@@ -999,8 +1030,7 @@ function renderSections(){
       <td><span class="dot" style="background:${col};"></span><strong>${SEC_LBL[sec]||sec}</strong></td>
       <td>${d.q}</td><td>${d.seen}</td>
       <td><div style="display:flex;align-items:center;gap:.4rem;">
-        <div class="bw" style="width:55px;"><div class="bf bf-blue" style="width:${cov}%;"></div></div>
-        ${cov}%</div></td>
+        <div class="bw" style="width:55px;"><div class="bf bf-blue" style="width:${cov}%;"></div></div>${cov}%</div></td>
       <td>${d.att}</td>
       <td>${rate!==null?`<div style="display:flex;align-items:center;gap:.4rem;">
         <div class="bw" style="width:55px;"><div class="bf ${bc}" style="width:${rate}%;"></div></div>
@@ -1009,11 +1039,9 @@ function renderSections(){
     </tr>`;
   }).join('')+'</tbody></table>';
 
-  // Levels
   renderOvLevels();
   $('sec-levels').innerHTML=$('ov-levels').innerHTML;
 
-  // Types
   const types={};
   allQuestions.forEach(q=>{
     const t=q.type||'single-choice'; if(!types[t]) types[t]={q:0,att:0,corr:0,score:0};
@@ -1031,10 +1059,9 @@ function renderSections(){
         <td>${avg}</td></tr>`;
     }).join('')+'</tbody></table>';
 
-  // Unseen
   const unseen={};
   Object.keys(SEC_LBL).forEach(s=>unseen[s]=[]);
-  allQuestions.forEach(q=>{ if(!qStats[q.id]||qStats[q.id].att===0){if(!unseen[q.section])unseen[q.section]=[];unseen[q.section].push(q);}});
+  allQuestions.forEach(q=>{if(!qStats[q.id]||qStats[q.id].att===0){if(!unseen[q.section])unseen[q.section]=[];unseen[q.section].push(q);}});
   const totalUnseen=Object.values(unseen).reduce((s,a)=>s+a.length,0);
   $('sec-unseen').innerHTML=totalUnseen===0
     ?'<p style="color:var(--ok);">✅ Toutes les questions ont été tentées au moins une fois !</p>'
@@ -1045,13 +1072,12 @@ function renderSections(){
       </div>`
     ).join('');
 
-  // Score distribution per section
   $('sec-score-dist').innerHTML=Object.entries(secs).map(([sec,d])=>{
     if(!d.seen) return '';
     const qs=allQuestions.filter(q=>q.section===sec&&qStats[q.id]&&qStats[q.id].att>0)
       .map(q=>qStats[q.id].score/qStats[q.id].att);
     if(!qs.length) return '';
-    const buckets=[0,0,0,0,0]; // 0-.2, .2-.4, .4-.6, .6-.8, .8-1
+    const buckets=[0,0,0,0,0];
     qs.forEach(s=>buckets[Math.min(Math.floor(s*5),4)]++);
     const maxB=Math.max(...buckets,1);
     const lbls=['0.0–0.2','0.2–0.4','0.4–0.6','0.6–0.8','0.8–1.0'];
@@ -1076,7 +1102,7 @@ function setPeriod(n,btn){
 }
 
 function renderActivity(){
-  const days={}, sessByDay={}, now=new Date();
+  const days={},sessByDay={},now=new Date();
   for(let i=actPeriod-1;i>=0;i--){
     const d=new Date(now); d.setDate(d.getDate()-i);
     const k=d.toISOString().split('T')[0]; days[k]=0; sessByDay[k]=new Set();
@@ -1085,17 +1111,12 @@ function renderActivity(){
     const day=a.timestamp?a.timestamp.split('T')[0]:null;
     if(day&&days[day]!==undefined){days[day]++;sessByDay[day].add(a.session_id);}
   });
-
   const entries=Object.entries(days);
   const aCounts=entries.map(([,v])=>v);
   const sCounts=entries.map(([d])=>sessByDay[d].size);
-  const maxA=Math.max(...aCounts,1), maxS=Math.max(...sCounts,1);
-
-  // 7-day rolling avg
+  const maxA=Math.max(...aCounts,1),maxS=Math.max(...sCounts,1);
   const roll=aCounts.map((_,i)=>{const sl=aCounts.slice(Math.max(0,i-6),i+1);return sl.reduce((a,b)=>a+b,0)/sl.length;});
-
   const W=680,H=195,pL=36,pB=32,pT=12,pR=10,bw=(W-pL-pR)/entries.length,ch=H-pB-pT;
-
   let grid='',bars='',sLine='',sDots='',rLine='',xLbls='';
   for(let g=0;g<=4;g++){
     const y=pT+ch-(g/4)*ch;
@@ -1104,19 +1125,17 @@ function renderActivity(){
   }
   const step=Math.max(1,Math.ceil(entries.length/12));
   entries.forEach(([day,cnt],i)=>{
-    const x=pL+i*bw, bh=cnt>0?Math.max(2,(cnt/maxA)*ch):0, y=pT+ch-bh;
-    const sc=sCounts[i], sy=pT+ch-(sc/maxS)*ch;
+    const x=pL+i*bw,bh=cnt>0?Math.max(2,(cnt/maxA)*ch):0,y=pT+ch-bh;
+    const sc=sCounts[i],sy=pT+ch-(sc/maxS)*ch;
     const dow=new Date(day).toLocaleDateString('fr-CH',{weekday:'short'});
     bars+=`<rect x="${x+1}" y="${y}" width="${bw-2}" height="${bh}" fill="var(--accent)" opacity=".7" rx="2"
-      onmouseenter="tip(event,'${day} (${dow})<br>${cnt} réponse${cnt!==1?'s':''}<br>${sc} session${sc!==1?'s':''} active${sc!==1?'s':''}')"
-      onmouseleave="hideTip()"/>`;
+      onmouseenter="tip(event,'${day} (${dow})<br>${cnt} réponse${cnt!==1?'s':''}<br>${sc} session${sc!==1?'s':''} active${sc!==1?'s':''}')" onmouseleave="hideTip()"/>`;
     sLine+=(i===0?`M ${x+bw/2} ${sy}`:`L ${x+bw/2} ${sy}`);
     if(sc>0) sDots+=`<circle cx="${x+bw/2}" cy="${sy}" r="3" fill="var(--blue)" opacity=".9"/>`;
     const ry=pT+ch-(roll[i]/maxA)*ch;
     rLine+=(i===0?`M ${x+bw/2} ${ry}`:`L ${x+bw/2} ${ry}`);
     if(i%step===0) xLbls+=`<text x="${x+bw/2}" y="${H-pB+13}" text-anchor="middle" font-size="8" fill="var(--text2)">${day.slice(5)}</text>`;
   });
-
   document.getElementById('act-svg').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
     ${grid}
     <line x1="${pL}" y1="${pT}" x2="${pL}" y2="${H-pB}" stroke="var(--border)" stroke-width="1"/>
@@ -1127,18 +1146,16 @@ function renderActivity(){
     <path d="${rLine}" fill="none" stroke="var(--bad)" stroke-width="1.5" stroke-dasharray="4,3" opacity=".75"/>
     ${xLbls}
   </svg>`;
-
   $('act-period-lbl').textContent=`${actPeriod} derniers jours`;
-  const totP=aCounts.reduce((a,b)=>a+b,0), activeDays=aCounts.filter(v=>v>0).length;
+  const totP=aCounts.reduce((a,b)=>a+b,0),activeDays=aCounts.filter(v=>v>0).length;
   const peak=entries.reduce((b,[d,v])=>v>b[1]?[d,v]:b,['—',0]);
   const allSessInP=new Set(entries.flatMap(([d])=>[...(sessByDay[d]||[])])).size;
   $('act-stats').innerHTML=`
-    <div class="stat-mini"><div class="stat-mini-val">${totP.toLocaleString()}</div><div class="stat-mini-lbl">réponses sur la période</div></div>
+    <div class="stat-mini"><div class="stat-mini-val">${totP.toLocaleString()}</div><div class="stat-mini-lbl">réponses</div></div>
     <div class="stat-mini"><div class="stat-mini-val">${activeDays}</div><div class="stat-mini-lbl">jours actifs</div></div>
-    <div class="stat-mini"><div class="stat-mini-val">${allSessInP}</div><div class="stat-mini-lbl">sessions actives</div></div>
+    <div class="stat-mini"><div class="stat-mini-val">${allSessInP}</div><div class="stat-mini-lbl">sessions</div></div>
     <div class="stat-mini"><div class="stat-mini-val">${peak[1]}</div><div class="stat-mini-lbl">pic · ${peak[0]}</div></div>
-    <div class="stat-mini"><div class="stat-mini-val">${activeDays>0?(totP/activeDays).toFixed(1):'—'}</div><div class="stat-mini-lbl">moy. / jour actif</div></div>`;
-
+    <div class="stat-mini"><div class="stat-mini-val">${activeDays>0?(totP/activeDays).toFixed(1):'—'}</div><div class="stat-mini-lbl">moy./jour actif</div></div>`;
   renderHourly(); renderWeekday(); renderHeatmap();
 }
 
@@ -1149,9 +1166,8 @@ function renderHourly(){
   let bars='',xlbls='';
   hours.forEach((n,h)=>{
     const x=pL+h*bw,bh=n>0?Math.max(2,(n/maxH)*ch):0,y=pT+ch-bh;
-    const isDay=h>=8&&h<=22;
     bars+=`<rect x="${x+1}" y="${y}" width="${bw-2}" height="${bh}"
-      fill="${isDay?'var(--blue)':'var(--bg4)'}" opacity=".85" rx="2"
+      fill="${h>=8&&h<=22?'var(--blue)':'var(--bg4)'}" opacity=".85" rx="2"
       onmouseenter="tip(event,'${h}h–${h+1}h : ${n} réponse${n!==1?'s':''}')" onmouseleave="hideTip()"/>`;
   });
   [0,6,9,12,17,22].forEach(h=>{
@@ -1160,10 +1176,8 @@ function renderHourly(){
   document.getElementById('hour-svg').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
     <line x1="${pL}" y1="${H-pB}" x2="${W-pR}" y2="${H-pB}" stroke="var(--border)" stroke-width="1"/>
     ${bars}${xlbls}</svg>`;
-
-  // Peak hours
   const sorted=[...hours.map((n,h)=>({h,n}))].filter(x=>x.n>0).sort((a,b)=>b.n-a.n).slice(0,3);
-  $('peak-hours').textContent=sorted.length?`Heures de pointe : ${sorted.map(x=>`${x.h}h (${x.n})`).join(' · ')}`:'';
+  $('peak-hours').textContent=sorted.length?`Heures de pointe : ${sorted.map(x=>`${x.h}h (${x.n})`).join(' · ')}`:'' ;
 }
 
 function renderWeekday(){
@@ -1172,8 +1186,7 @@ function renderWeekday(){
   allAnswers.forEach(a=>{if(a.timestamp)wds[new Date(a.timestamp).getDay()]++;});
   const maxW=Math.max(...wds,1);
   $('weekday-bars').innerHTML=jrs.map((n,i)=>{
-    const pct=Math.round(wds[i]/maxW*100);
-    const isWE=i===0||i===6;
+    const pct=Math.round(wds[i]/maxW*100),isWE=i===0||i===6;
     return `<div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem;">
       <div style="width:2.5rem;text-align:right;font-size:.82rem;color:${isWE?'var(--text3)':'var(--text2)'};">${n}</div>
       <div style="flex:1;background:var(--bg3);border-radius:4px;height:10px;overflow:hidden;">
@@ -1185,55 +1198,36 @@ function renderWeekday(){
 }
 
 function renderHeatmap(){
-  const weeks=12, cellW=14, cellH=14, gap=3, labelW=22;
+  const weeks=12,cellW=14,cellH=14,gap=3,labelW=22;
   const dayData={};
-  allAnswers.forEach(a=>{
-    if(!a.timestamp) return;
-    const d=a.timestamp.split('T')[0]; dayData[d]=(dayData[d]||0)+1;
-  });
+  allAnswers.forEach(a=>{if(!a.timestamp)return;const d=a.timestamp.split('T')[0];dayData[d]=(dayData[d]||0)+1;});
   const maxDay=Math.max(...Object.values(dayData),1);
-  const now=new Date(); now.setHours(0,0,0,0);
-  const startDow=now.getDay(); // 0=Sun
-  const endDate=new Date(now);
-  const startDate=new Date(now); startDate.setDate(startDate.getDate()-(weeks*7-1+startDow));
-
-  // Build grid: columns = weeks (Sun→Sat)
-  let cols=[]; let cur=new Date(startDate);
-  while(cur<=endDate){
+  const now=new Date();now.setHours(0,0,0,0);
+  const startDate=new Date(now);startDate.setDate(startDate.getDate()-(weeks*7-1+now.getDay()));
+  const cols=[];
+  let cur=new Date(startDate);
+  while(cur<=now){
     const key=cur.toISOString().split('T')[0];
-    const cnt=dayData[key]||0;
-    const opacity=cnt===0?0:Math.max(.15,cnt/maxDay);
-    const dow=cur.getDay();
-    if(!cols[Math.floor((cur-startDate)/(7*86400000))+( cur.getDay()<startDate.getDay()?0:0)]) cols.push([]);
-    // Build column by week index
     const wIdx=Math.floor((cur-startDate)/86400000/7);
     if(!cols[wIdx]) cols[wIdx]=[];
-    cols[wIdx][dow]={key,cnt,opacity};
-    cur=new Date(cur); cur.setDate(cur.getDate()+1);
+    const cnt=dayData[key]||0;
+    cols[wIdx][cur.getDay()]={key,cnt,opacity:cnt===0?0:Math.max(.15,cnt/maxDay)};
+    cur=new Date(cur);cur.setDate(cur.getDate()+1);
   }
-
   const dayNames=['D','L','M','M','J','V','S'];
-  const W=labelW+(weeks)*(cellW+gap), H=7*(cellH+gap)+20;
-
-  let cells='',xlbels='';
-  // Month labels along top
-  let lastMonth=-1;
+  const W=labelW+weeks*(cellW+gap),H=7*(cellH+gap)+20;
+  let cells='',xlabels='';let lastMonth=-1;
   for(let w=0;w<cols.length;w++){
-    const colData=cols[w];
-    if(!colData) continue;
+    const col=cols[w]; if(!col) continue;
     for(let d=0;d<7;d++){
-      const cell=colData[d];
-      if(!cell) continue;
-      const x=labelW+w*(cellW+gap), y=20+d*(cellH+gap);
+      const cell=col[d]; if(!cell) continue;
+      const x=labelW+w*(cellW+gap),y=20+d*(cellH+gap);
       cells+=`<rect x="${x}" y="${y}" width="${cellW}" height="${cellH}" rx="3"
         fill="${cell.cnt>0?`rgba(251,191,36,${cell.opacity})`:'var(--bg3)'}"
-        onmouseenter="tip(event,'${cell.key} : ${cell.cnt} réponse${cell.cnt!==1?'s':''}')"
-        onmouseleave="hideTip()"/>`;
+        onmouseenter="tip(event,'${cell.key} : ${cell.cnt} réponse${cell.cnt!==1?'s':''}')" onmouseleave="hideTip()"/>`;
     }
-    // Month label
-    const firstCell=colData.find(c=>c);
-    if(firstCell){
-      const m=new Date(firstCell.key).getMonth();
+    const fc=col.find(c=>c);
+    if(fc){const m=new Date(fc.key).getMonth();
       if(m!==lastMonth){
         const mn=['Jan','Fév','Mar','Avr','Mai','Jui','Jul','Aoû','Sep','Oct','Nov','Déc'];
         xlabels+=`<text x="${labelW+w*(cellW+gap)}" y="12" font-size="9" fill="var(--text2)">${mn[m]}</text>`;
@@ -1241,19 +1235,14 @@ function renderHeatmap(){
       }
     }
   }
-  // Day labels
-  const dayLbls=dayNames.map((n,i)=>
-    `<text x="${labelW-4}" y="${20+i*(cellH+gap)+cellH/2+4}" text-anchor="end" font-size="9" fill="var(--text3)">${n}</text>`
-  ).join('');
-
+  const dayLbls=dayNames.map((n,i)=>`<text x="${labelW-4}" y="${20+i*(cellH+gap)+cellH/2+4}" text-anchor="end" font-size="9" fill="var(--text3)">${n}</text>`).join('');
   $('heatmap-wrap').innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:max(100%,${W}px);display:block;" xmlns="http://www.w3.org/2000/svg">
-    ${xlabels||''}${dayLbls}${cells}</svg>`;
+    ${xlabels}${dayLbls}${cells}</svg>`;
 }
 
 // ── Sessions ───────────────────────────────────────────────
 function renderSessions(){
-  // Engagement histogram
-  const buckets=[0,0,0,0,0,0]; const blbls=['<5','5–9','10–19','20–49','50–99','≥100'];
+  const buckets=[0,0,0,0,0,0];const blbls=['<5','5–9','10–19','20–49','50–99','≥100'];
   Object.values(sStats).forEach(s=>{
     const n=s.ans;
     if(n<5)buckets[0]++;else if(n<10)buckets[1]++;else if(n<20)buckets[2]++;
@@ -1273,24 +1262,19 @@ function renderSessions(){
     <line x1="${pL}" y1="${H-pB}" x2="${W-pR}" y2="${H-pB}" stroke="var(--border)" stroke-width="1"/>
     ${bars}</svg>`;
 
-  // Accuracy distribution
   const accBins=['0–20%','20–40%','40–60%','60–80%','80–100%'];
   const accCounts=Array(5).fill(0);
-  Object.values(sStats).forEach(s=>{
-    if(!s.ans) return;
-    accCounts[Math.min(Math.floor(s.corr/s.ans*5),4)]++;
-  });
+  Object.values(sStats).forEach(s=>{if(!s.ans)return;accCounts[Math.min(Math.floor(s.corr/s.ans*5),4)]++;});
   const maxAcc=Math.max(...accCounts,1);
   $('sess-acc-dist').innerHTML=accBins.map((lbl,i)=>{
     const pct=Math.round(accCounts[i]/maxAcc*100);
-    const col=i<2?'var(--bad)':i<3?'var(--warn)':i<4?'var(--ok)':'var(--ok)';
+    const col=i<2?'var(--bad)':i<3?'var(--warn)':'var(--ok)';
     return `<div class="sdist-row">
       <span class="sdist-label">${lbl}</span>
       <div class="sdist-bar-wrap"><div class="sdist-bar" style="width:${pct}%;background:${col};opacity:.8;"></div></div>
       <span class="sdist-count">${accCounts[i]}</span>
     </div>`;
   }).join('');
-
   renderSTable();
 }
 
@@ -1298,10 +1282,7 @@ function renderSTable(){
   const srch=(document.getElementById('s-search')?.value||'').toLowerCase();
   const flt=document.getElementById('s-flt')?.value||'all';
   const srt=document.getElementById('s-sort')?.value||'ans_d';
-
-  let rows=Object.entries(sStats).map(([id,s])=>({
-    id,...s,rate:s.ans>0?s.corr/s.ans:0,avg:s.ans>0?s.score/s.ans:0
-  }));
+  let rows=Object.entries(sStats).map(([id,s])=>({id,...s,rate:s.ans>0?s.corr/s.ans:0,avg:s.ans>0?s.score/s.ans:0}));
   if(srch) rows=rows.filter(r=>r.id.toLowerCase().includes(srch));
   if(flt==='active') rows=rows.filter(r=>r.ans>=20);
   if(flt==='light')  rows=rows.filter(r=>r.ans<5);
@@ -1316,12 +1297,10 @@ function renderSTable(){
       default:        return (b.last||'').localeCompare(a.last||'');
     }
   });
-
   $('s-count').textContent=`${rows.length} session${rows.length!==1?'s':''} affichée${rows.length!==1?'s':''}`;
-
   const fmt=ts=>ts?new Date(ts).toLocaleDateString('fr-CH',{day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';
   $('s-tbody').innerHTML=rows.map(r=>{
-    const pct=Math.round(r.rate*100), pill=pct>=70?'p-ok':pct>=40?'p-acc':'p-bad';
+    const pct=Math.round(r.rate*100),pill=pct>=70?'p-ok':pct>=40?'p-acc':'p-bad';
     const sid=r.id.length>16?r.id.slice(0,8)+'…'+r.id.slice(-6):r.id;
     return `<tr>
       <td class="mono" title="${r.id}">${sid}</td>
@@ -1335,10 +1314,23 @@ function renderSTable(){
   }).join('')||'<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text2);">Aucune session.</td></tr>';
 }
 
-// ── Question modal ─────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════
+// QUESTION MODAL — three-tab design
+// ═══════════════════════════════════════════════════════════
+function showModalTab(id,btn){
+  document.querySelectorAll('.modal-tab-pane').forEach(p=>p.style.display='none');
+  document.querySelectorAll('#modal-tabs button').forEach(b=>{
+    b.classList.remove('active-tab-btn');
+    b.style.borderColor='transparent';b.style.color='';
+  });
+  document.getElementById(id).style.display='block';
+  btn.classList.add('active-tab-btn');
+}
+
 function openQModal(qid){
   const q=allQuestions.find(x=>x.id===qid), qs=qStats[qid];
   if(!q) return;
+
   const rate=qs&&qs.att>0?Math.round(qs.corr/qs.att*100):null;
   const avg=qs&&qs.att>0?(qs.score/qs.att).toFixed(2):'—';
   const maxSc=qs?Math.round(qs.scoreMax*100):null;
@@ -1346,36 +1338,41 @@ function openQModal(qid){
   const col=SEC_COL[q.section]||'#888';
   const pill=rate===null?'p-grey':rate>=70?'p-ok':rate>=40?'p-acc':'p-bad';
 
-  $('m-title').innerHTML=`<span class="dot" style="background:${col};width:10px;height:10px;"></span>${q.id} <span style="font-size:.85rem;font-weight:400;color:var(--text2);">· ${SEC_LBL[q.section]||q.section} · Niv. ${q.level}</span>`;
+  $('m-title').innerHTML=`<span class="dot" style="background:${col};width:10px;height:10px;"></span>
+    <strong>${q.id}</strong>
+    <span style="font-size:.85rem;font-weight:400;color:var(--text2);"> · ${SEC_LBL[q.section]||q.section} · Niv. ${q.level} ·
+      <span class="pill ${q.type==='multiple-choice'?'p-blue':'p-ok'}">${q.type==='multiple-choice'?'QCM':'QCU'}</span>
+    </span>`;
 
-  // Score sparkline from scoreList
+  // ── Tab 1: Stats ──────────────────────────────────────────
   let sparkline='';
   if(qs&&qs.scoreList&&qs.scoreList.length>1){
-    const sl=qs.scoreList.slice(-30); // last 30
-    const W2=180,H2=36;
-    const pts=sl.map((v,i)=>`${Math.round(i/(sl.length-1)*(W2-4)+2)},${Math.round((1-v)*(H2-4)+2)}`).join(' ');
-    sparkline=`<div style="margin-top:.6rem;">
-      <div style="font-size:.75rem;color:var(--text2);margin-bottom:.2rem;">Scores récents (${sl.length} derniers)</div>
-      <svg viewBox="0 0 ${W2} ${H2}" width="${W2}" height="${H2}">
-        <polyline points="${pts}" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/>
-      </svg></div>`;
+    const sl=qs.scoreList.slice(-40);
+    const W2=240,H2=48,pL2=2,pR2=2,pT2=4,pB2=4;
+    const xScale=(W2-pL2-pR2)/(sl.length-1);
+    const pts=sl.map((v,i)=>`${pL2+i*xScale},${pT2+(1-v)*(H2-pT2-pB2)}`).join(' ');
+    const avgLine=pT2+(1-(qs.score/qs.att))*(H2-pT2-pB2);
+    sparkline=`<div class="sparkline-wrap">
+      <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--text2);margin-bottom:.35rem;">
+        <span>Évolution des scores <span style="color:var(--text3);">(${sl.length} dernières réponses)</span></span>
+        <span style="color:var(--accent);">moy. ${avg}</span>
+      </div>
+      <svg viewBox="0 0 ${W2} ${H2}" width="100%" height="${H2}" preserveAspectRatio="none">
+        <line x1="${pL2}" y1="${avgLine}" x2="${W2-pR2}" y2="${avgLine}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+        <polyline points="${pts}" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linejoin="round"/>
+        ${sl.map((v,i)=>`<circle cx="${pL2+i*xScale}" cy="${pT2+(1-v)*(H2-pT2-pB2)}" r="2.5" fill="var(--blue)" opacity=".7"/>`).join('')}
+      </svg>
+    </div>`;
   }
 
-  $('m-body').innerHTML=`
-    <p style="color:var(--text2);font-size:.9rem;margin-bottom:1.25rem;line-height:1.6;">${q.question}</p>
-
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-bottom:1.25rem;">
-      ${[
-        {v:qs?qs.att:0,l:'Tentatives'},
-        {v:rate!==null?rate+'%':'—',l:'Taux réussite'},
-        {v:avg,l:'Score moyen'},
-        {v:maxSc!==null?maxSc+'%':'—',l:'Meilleur score'},
-      ].map(({v,l})=>`<div style="background:var(--bg3);border-radius:9px;padding:.75rem;text-align:center;">
-        <div style="font-size:1.3rem;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif;">${v}</div>
-        <div style="font-size:.72rem;color:var(--text2);">${l}</div>
-      </div>`).join('')}
+  $('mt-stats').innerHTML=`
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-bottom:1.1rem;">
+      ${[{v:qs?qs.att:0,l:'Tentatives'},{v:rate!==null?rate+'%':'—',l:'Taux réussite'},{v:avg,l:'Score moyen'},{v:maxSc!==null?maxSc+'%':'—',l:'Meilleur score'}]
+        .map(({v,l})=>`<div style="background:var(--bg3);border-radius:9px;padding:.75rem;text-align:center;">
+          <div style="font-size:1.3rem;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif;">${v}</div>
+          <div style="font-size:.72rem;color:var(--text2);">${l}</div>
+        </div>`).join('')}
     </div>
-
     ${rate!==null?`<div style="margin-bottom:1rem;">
       <div style="display:flex;justify-content:space-between;font-size:.8rem;color:var(--text2);margin-bottom:.3rem;">
         <span>Taux de réussite</span><span class="pill ${pill}">${rate}%</span>
@@ -1384,47 +1381,99 @@ function openQModal(qid){
         <div style="height:100%;width:${rate}%;background:${rate>=70?'var(--ok)':rate>=40?'var(--warn)':'var(--bad)'};border-radius:5px;"></div>
       </div>
     </div>`:''}
-
-    <div style="font-size:.8rem;color:var(--text2);margin-bottom:1.1rem;">
+    <div style="font-size:.8rem;color:var(--text2);margin-bottom:.75rem;">
       Vue par <strong style="color:var(--text);">${sess}</strong> session${sess!==1?'s':''} différente${sess!==1?'s':''}
-      · <span class="pill ${q.type==='multiple-choice'?'p-blue':'p-ok'}">${q.type==='multiple-choice'?'QCM':'QCU'}</span>
-      · Niveau <span class="pill p-acc">N${q.level}</span>
     </div>
+    ${sparkline}`;
 
-    ${sparkline}
+  // ── Tab 2: Choice distribution bar chart ──────────────────
+  let choicesHtml='';
+  if(!qs||qs.att===0){
+    choicesHtml='<p style="color:var(--text2);padding:1rem 0;">Aucune réponse enregistrée pour cette question.</p>';
+  } else {
+    const totalSelections=qs.optionCounts.reduce((a,b)=>a+b,0);
+    // Sort by selection count descending for display order, but keep original index for labelling
+    const optData=q.options.map((text,i)=>({
+      i, text,
+      count:qs.optionCounts[i]||0,
+      isCorrect:q.correct.includes(i)
+    })).sort((a,b)=>b.count-a.count);
+    const maxCount=Math.max(...optData.map(d=>d.count),1);
 
-    <div style="margin-top:1rem;">
-      <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:.5rem;">Options de réponse</div>
-      ${q.options.map((opt,i)=>{
-        const ok=q.correct.includes(i);
-        return `<div style="display:flex;gap:.6rem;align-items:flex-start;padding:.5rem .7rem;border-radius:8px;
-          border:1px solid ${ok?'var(--ok)':'var(--border)'};
-          background:${ok?'rgba(16,185,129,.06)':'transparent'};margin-bottom:.35rem;font-size:.86rem;">
-          <span style="flex-shrink:0;">${ok?'✅':'○'}</span><span>${opt}</span>
-        </div>`;
-      }).join('')}
-    </div>
+    choicesHtml=`<p style="font-size:.8rem;color:var(--text2);margin-bottom:1rem;">
+      ${totalSelections} sélection${totalSelections!==1?'s':''} au total sur ${qs.att} tentative${qs.att!==1?'s':''}
+      ${q.type==='multiple-choice'?' (QCM — plusieurs options par réponse possible)':''}.
+      Les options sont triées par fréquence de sélection.
+    </p>`;
 
-    ${q.hint?`<div style="margin-top:.85rem;padding:.6rem .85rem;background:rgba(251,191,36,.07);border-left:3px solid var(--accent);border-radius:7px;font-size:.84rem;">
-      💡 <strong style="color:var(--text);">Indice :</strong> <span style="color:var(--text2);">${q.hint}</span>
-    </div>`:''}
+    choicesHtml+=optData.map(({i,text,count,isCorrect})=>{
+      const pct=qs.att>0?Math.round(count/qs.att*100):0;
+      const barColor=isCorrect?'var(--ok)':count>0?'var(--bad)':'var(--border)';
+      const letter=String.fromCharCode(65+i);
+      const truncText=text.length>60?text.slice(0,60)+'…':text;
+      return `<div class="opt-bar-row" title="${text}">
+        <div class="opt-bar-label" style="color:${isCorrect?'var(--ok)':count>0?'var(--bad)':'var(--text3)'};">${letter}</div>
+        <div class="opt-bar-text" style="color:${isCorrect?'var(--ok)':count>0?'var(--text)':'var(--text3)'};">${truncText}</div>
+        <div class="opt-bar-wrap">
+          <div class="opt-bar-fill" style="width:${Math.round(count/maxCount*100)}%;background:${barColor};opacity:${count>0?.85:.3};"></div>
+        </div>
+        <div class="opt-bar-pct" style="color:${isCorrect?'var(--ok)':count>0?'var(--bad)':'var(--text3)'};">${pct}%</div>
+        <div class="opt-correct-mark">${isCorrect?'✅':count>0?'❌':''}</div>
+      </div>`;
+    }).join('');
 
-    ${(()=>{const e=Array.isArray(q.explanation)?q.explanation.filter(Boolean).join(' / '):q.explanation;
-      return e&&e!=='Aucune explication disponible'?
-        `<div style="margin-top:.75rem;padding:.6rem .85rem;background:var(--bg3);border-left:3px solid var(--blue);border-radius:7px;font-size:.84rem;">
-          📖 <strong style="color:var(--text);">Explication :</strong> <span style="color:var(--text2);">${String(e).slice(0,350)}${String(e).length>350?'…':''}</span>
-        </div>`:'';
-    })()}`;
+    // Add a note about the most-selected wrong option if problematic
+    const dist=topDistractor(q.id);
+    if(dist&&dist.pct>=25){
+      choicesHtml+=`<div style="margin-top:1rem;padding:.65rem .9rem;background:rgba(239,68,68,.07);border-left:3px solid var(--bad);border-radius:7px;font-size:.83rem;">
+        ⚠️ L'option <strong>${String.fromCharCode(65+dist.idx)}</strong> est sélectionnée par <strong>${dist.pct}%</strong> des étudiants alors qu'elle est incorrecte — c'est un distracteur fort.
+      </div>`;
+    }
+  }
+  $('mt-choices').innerHTML=choicesHtml;
 
+  // ── Tab 3: Question text + options ───────────────────────
+  const expArr=Array.isArray(q.explanation)?q.explanation:null;
+  const expStr=!expArr&&q.explanation&&q.explanation!=='Aucune explication disponible'?q.explanation:null;
+
+  $('mt-question').innerHTML=`
+    <p style="color:var(--text2);font-size:.92rem;line-height:1.7;margin-bottom:1.25rem;">${q.question}</p>
+    <div class="m-section">Options de réponse</div>
+    ${q.options.map((opt,i)=>{
+      const ok=q.correct.includes(i);
+      const exp=expArr&&expArr[i]?expArr[i]:null;
+      return `<div style="display:flex;gap:.6rem;align-items:flex-start;padding:.6rem .75rem;border-radius:9px;
+        border:1px solid ${ok?'var(--ok)':'var(--border)'};
+        background:${ok?'rgba(16,185,129,.06)':'transparent'};margin-bottom:.4rem;">
+        <span style="flex-shrink:0;font-weight:700;width:1.4rem;color:${ok?'var(--ok)':'var(--text3)'};">${String.fromCharCode(65+i)}.</span>
+        <div style="flex:1;">
+          <span style="font-size:.88rem;">${opt}</span>
+          ${exp?`<div style="margin-top:.3rem;font-size:.8rem;color:var(--text2);font-style:italic;">${exp}</div>`:''}
+        </div>
+        <span style="flex-shrink:0;">${ok?'✅':''}</span>
+      </div>`;
+    }).join('')}
+    ${q.hint?`<div class="m-section">Indice</div>
+      <div style="padding:.6rem .85rem;background:rgba(251,191,36,.07);border-left:3px solid var(--accent);border-radius:7px;font-size:.85rem;color:var(--text2);">
+        💡 ${q.hint}
+      </div>`:''}
+    ${expStr?`<div class="m-section">Explication globale</div>
+      <div style="padding:.6rem .85rem;background:var(--bg3);border-left:3px solid var(--blue);border-radius:7px;font-size:.85rem;color:var(--text2);">
+        📖 ${expStr.slice(0,500)}${expStr.length>500?'…':''}
+      </div>`:''}`;
+
+  // Reset to first tab
+  showModalTab('mt-stats', document.querySelector('#modal-tabs button'));
   $('q-modal').classList.add('open');
 }
+
 function closeModal(){$('q-modal').classList.remove('open');}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 
 // ── Tooltip ────────────────────────────────────────────────
 const tipEl=document.getElementById('tip');
 function tip(e,html){tipEl.innerHTML=html;tipEl.style.display='block';moveTip(e);}
-function moveTip(e){const x=e.clientX+14,y=e.clientY-8;tipEl.style.left=Math.min(x,innerWidth-250)+'px';tipEl.style.top=Math.min(y,innerHeight-80)+'px';}
+function moveTip(e){const x=e.clientX+14,y=e.clientY-8;tipEl.style.left=Math.min(x,innerWidth-270)+'px';tipEl.style.top=Math.min(y,innerHeight-80)+'px';}
 function hideTip(){tipEl.style.display='none';}
 document.addEventListener('mousemove',e=>{if(tipEl.style.display!=='none')moveTip(e);});
 
@@ -1432,18 +1481,21 @@ document.addEventListener('mousemove',e=>{if(tipEl.style.display!=='none')moveTi
 function tab(id,btn){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active'); btn.classList.add('active');
+  document.getElementById(id).classList.add('active');btn.classList.add('active');
 }
 
 // ── Export ─────────────────────────────────────────────────
 function exportCSV(){
   if(!allAnswers.length){toast('⚠️ Aucune donnée');return;}
-  let csv='Question ID,Section,Niveau,Type,Tentatives,Correctes,Taux (%),Score moy.,Score max,Sessions uniques\n';
+  let csv='Question ID,Section,Niveau,Type,Tentatives,Correctes,Taux (%),Score moy.,Score max,Sessions uniques,Distracteur principal,Freq. distracteur (%)\n';
   allQuestions.forEach(q=>{
     const qs=qStats[q.id]||{att:0,corr:0,score:0,scoreMax:0,sessions:new Set()};
     const rate=qs.att>0?(qs.corr/qs.att*100).toFixed(1):'';
     const avg=qs.att>0?(qs.score/qs.att).toFixed(2):'';
-    csv+=`"${q.id}","${q.section}","${q.level}","${q.type}","${qs.att}","${qs.corr}","${rate}","${avg}","${Math.round(qs.scoreMax*100)/100}","${qs.sessions?qs.sessions.size:0}"\n`;
+    const dist=topDistractor(q.id);
+    const distLetter=dist?String.fromCharCode(65+dist.idx):'';
+    const distPct=dist?dist.pct:'';
+    csv+=`"${q.id}","${q.section}","${q.level}","${q.type}","${qs.att}","${qs.corr}","${rate}","${avg}","${Math.round(qs.scoreMax*100)/100}","${qs.sessions?qs.sessions.size:0}","${distLetter}","${distPct}"\n`;
   });
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'}));
@@ -1457,9 +1509,6 @@ function $(id){return document.getElementById(id);}
 let toastT=null;
 function toast(msg,dur=3500){const t=$('toast');t.textContent=msg;t.classList.add('show');
   if(toastT)clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),dur);}
-
-// Fix undefined variable in heatmap
-let xlabels='';
 </script>
 </body>
 </html>
