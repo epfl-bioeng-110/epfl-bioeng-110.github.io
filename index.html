@@ -3011,8 +3011,8 @@
             } else {
                 msg = `Tu as répondu à <strong>${answered}</strong> question(s) sur <strong>${total}</strong> au total.`;
             }
-            if (answered < total) {
-                msg += `<br><span style="font-size:0.9rem; color:var(--text-secondary);">Les ${total - answered} question(s) non répondues compteront 0 point en mode examen.</span>`;
+            if (answered < total && quizConfig.feedbackMode === 'final') {
+                msg += `<br><span style="font-size:0.9rem; color:var(--text-secondary);">Les ${total - answered} question(s) non répondues compteront 0 point.</span>`;
             }
             document.getElementById('end-confirm-msg').innerHTML = msg;
             document.getElementById('end-confirm-modal').classList.add('active');
@@ -3049,7 +3049,7 @@
             document.getElementById('summary-score').textContent = totalScoreAnswered.toFixed(2);
             const pctEl = document.getElementById('summary-percent');
 
-            if (unansweredCount > 0 && quizConfig.order === 'random') {
+            if (unansweredCount > 0 && quizConfig.feedbackMode === 'final') {
                 // Show dual score panel
                 document.getElementById('summary-dual-score').classList.remove('hidden');
                 document.getElementById('dual-score-answered').textContent = `${pctAnswered}%`;
