@@ -516,5 +516,1146 @@
     ],
     "correct": [0, 1, 2],
     "explanation": "Les cellules NK sont des lymphocytes du système immunitaire inné qui peuvent notamment tuer les cellules qui n'expriment pas le CMH I, comme certaines cellules cancéreuses ou infectées par des virus."
+  },
+  {
+    "id": "F030",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles cellules sont capables de sécréter des anticorps ?",
+    "options": [
+      "Lymphocytes B",
+      "Lymphocytes T",
+      "Cellules NK",
+      "Macrophages",
+      "Cellules dendritiques"
+    ],
+    "correct": [0],
+    "explanation": "Les anticorps sont uniquement produits par les plasmocytes, une forme différentiée de lymphocytes B."
+  },
+  {
+    "id": "F031",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelles sont les cellules repsonsables de l'immunité humorale ?",
+    "options": [
+      "Lymphocytes B",
+      "Lymphocytes T",
+      "Cellules NK",
+      "Macrophages",
+      "Cellules dendritiques"
+    ],
+    "correct": [0],
+    "hint": "L'immunité humorale repose sur la production d'anticorps.",
+    "explanation": "L'immunité humorale repose sur la production d'anticorps par les lymphocytes B. L'immunité à médiation cellulaire repose sur l'activité des lymphocytes T."
+  },
+  {
+    "id": "F032",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Parmi les organes suivants, lesquels sont des organes lymphoïdes périphériques (secondaires) ?",
+    "options": [
+      "Rate",
+      "Amygdales",
+      "Ganglions lymphatiques",
+      "Plaques de Peyer",
+      "Thymus",
+      "Moelle osseuse",
+      "Ilots de Langerhans",
+      "Bourse de Fabricius"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Les lymphocyts B et T se développent dans les organes lymphoïdes primaires (moelle osseuse, thymus), puis migrent vers les organes lymphoïdes périphériques (notamment rate, ganglions lymphatiques, plaques de Peyer, amygdales)."
+  },
+  {
+    "id": "F033",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Dans quel organe se développent les lymphocytes B ?",
+    "options": [
+      "Moelle osseuse",
+      "Thymus",
+      "Ganglions lymphatiques",
+      "Plaques de Peyer",
+      "Centres germinatifs"
+    ],
+    "correct": [0],
+    "explanation": "Les lymphocytes B se développent dans la moelle osseuse, tandis que les lymphocytes T se développent dans le thymus."
+  },
+  {
+    "id": "F034",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Le cytoplasme de la cellule ci-contre est majoritairement composé de réticulum endoplasmique (RE). De quelle cellule s'agit-il ?",
+    "image": "f034_cell.png",
+    "options": [
+      "Lymphocyte B effecteur",
+      "Lymphocyte B au repos",
+      "Lymphocyte T effecteur",
+      "Lymphocyte T au repos"
+    ],
+    "correct": [0],
+    "hint": "Les ribosomes attachés au RE rugueux sont impliqués dans la synthèse des protéines, notamment des protéines sécrétées. Un grand RE indique donc qu'une cellule est spécialisée dans la synthèse de protéines.",
+    "explanation": "Les lymphocytes B effecteurs sont reconnaissables à leur grand RE. Il leur permet de produire les nombreux anticorps qu'ils sécrètent."
+  },
+  {
+    "id": "F035",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Qu'est-ce qu'une réponse immunitaire polyclonale ?",
+    "options": [
+      "Une réponse au cours de laquelle de nombreux clones de lymphocytes B différents (avec des spécificités différentes) produisent des anticorps contre un même antigène.",
+      "Une réponse au cours de laquelle quelques clones de lymphocytes B différents (avec des spécificités différentes) produisent des anticorps contre un même antigène.",
+      "Une réponse au cours de laquelle un seul clone de lymphocyte B produit des anticorps contre un antigène."
+    ],
+    "correct": [0],
+    "explanation": [
+      "Il s'agit de la définition d'une réponse immunitaire polyclonale.",
+      "Il s'agit de la définition d'une réponse immunitaire oligoclonale.",
+      "Il s'agit de la définition d'une réponse immunitaire monoclonale."
+    ]
+  },
+  {
+    "id": "F036",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Vrai ou faux : Les taux d'anticorps diminuent avec le temps après chaque immunisation.",
+    "options": [
+      "Vrai",
+      "Faux"
+    ],
+    "correct": [0],
+    "explanation": "Lors d'une immunisation, le taux d'anticorps augmente rapidement. Après l'immunisation, le taux d'anticorps diminue au fil du temps."
+  },
+  {
+    "id": "F037",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Combien de molécules d'anticorps différentes peut compter le répertoire primaire d'anticorps (IgM, IgD) ?",
+    "options": [
+      "1e12",
+      "1e10",
+      "1e8",
+      "1e6",
+      "1e4"
+    ],
+    "correct": [0],
+    "explanation": "Vous avez vu dans le cours que les lymphocytes B d'un être humain peuvent produire ~1e12 molécules d'anticorps différentes. De nouvelles estimations parlent même de 1e18 (pas à savoir)."
+  },
+  {
+    "id": "F038",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Quelle fraction de la population totale de chaque classe de lymphocytes peut reconnaître un antigène microbien particulier dans un organe lymphoïde périphérique ?",
+    "options": [
+      "1 / 10'000",
+      "1 / 1000",
+      "1 / 100",
+      "1 / 10",
+      "> 1 / 10"
+    ],
+    "correct": [0],
+    "explanation": "Entre 1 / 10'000 et 1 / 100'000 lymphocyte de chaque classe peut reconnaître un antigène microbien particulier dans un organe lymphoïde périphérique."
+  },
+  {
+    "id": "F039",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Dans quelle structure des ganglions lymphatiques sont principalement regroupés les lymphocytes B ?",
+    "options": [
+      "Follicules lymphoïdes",
+      "Paracortex",
+      "Veinule post-capillaire",
+      "Sinus médullaire",
+      "Zone médullaire"
+    ],
+    "correct": [0],
+    "explanation": "Les lymphocytes B se trouvent principalement dans les follicules lymphoïdes. Les lymphocytes T se trouvent principalement dans le paracortex."
+  },
+  {
+    "id": "F040",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Combien de récepteurs d'antigènes sont situés à la surface d'un lymphocyte B ?",
+    "options": [
+      "100'000",
+      "10'000",
+      "1000",
+      "100",
+      "10",
+      "1"
+    ],
+    "correct": [0],
+    "explanation": "Chaque lymphocyte B possède environ 100'000 récepteurs d'antigènes à sa membrane plasmique."
+  },
+  {
+    "id": "F041",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Combien d'anticorps peuvent être sécrétés chaque seconde par un grand plasmocyte (lymphocyte B effecteur) ?",
+    "options": [
+      "5000",
+      "50'000",
+      "1000",
+      "100",
+      "10"
+    ],
+    "correct": [0],
+    "explanation": "Les plasmocytes sont spécialisés dans la production et sécrétion d'anticorps et possèdent un grand réticulum endoplasmique."
+  },
+  {
+    "id": "F042",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle région d'un anticorps lui confère de la flexibilité, améliorant ainsi l'efficacité de sa liaison à un antigène ?",
+    "options": [
+      "Région charnière",
+      "Fragment Fc",
+      "Chaîne légère",
+      "Région variable des chaînes lourde et légère",
+      "Site de liaison de l'antigène"
+    ],
+    "correct": [0],
+    "explanation": "La région charnière (hinge region) est une courte séquence des chaînes lourdes qui confère une grande flexibilité aux anticorps."
+  },
+  {
+    "id": "F043",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Combien de sites de liaison à l'antigène comporte un anticorps standard et quelle est leur nature ?",
+    "options": [
+      "2 sites identiques",
+      "2 sites différents",
+      "3 sites identiques",
+      "3 sites différents",
+      "1 site"
+    ],
+    "correct": [0],
+    "explanation": "Les anticorps possèdent 2 sites identiques de liaison à l'antigène, chacun situé à l'extrémité d'un bras de l'anticorps (forme de Y)."
+  },
+  {
+    "id": "F044",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Vrai ou faux : Les anticorps ne peuvent pas activer le système du complément, car ils font partie de l'immunité adaptative alors que le système du complément fait partie de l'immunité innée.",
+    "options": [
+      "Faux",
+      "Vrai"
+    ],
+    "correct": [0],
+    "hint": "Il existe 3 voies principales d'activation du système du complément : la voie classique, la voie alterne et la voie des lectines.",
+    "explanation": "Les anticorps peuvent créer des complexes immuns, qui peuvent activer la voie classique du complément."
+  },
+  {
+    "id": "F045",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les fonctions siuvantes, lesquelles font partie des fonctions des anticorps ?",
+    "options": [
+      "Activation du système du complément",
+      "Opsonisation",
+      "Sensibilisation",
+      "Phagocytose"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "Les anticorps peuvent activer la voie classique du système du complément.",
+      "Les anticorps qui recouvrent des pathogènes facilitent leur phagocytose.",
+      "Les anticorps liés aux récepteurs Fc sensibilisent certaines cellules afin qu'elles puissent reconnaître un antigène. La cellule est activée si l'antigène se lie à l'anticorps de surface.",
+      "Les anticorps peuvent opsoniser des agents pathogènes pour les rendre plus sensibles à la phagocytose, mais ils ne peuvent pas les phagocyter (seules des cellules, les phagocytes, peuvent phagocyter des pathogènes)."
+    ]
+  },
+  {
+    "id": "F046",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles chaînes lourdes d'anticorps existent-elles ?",
+    "options": [
+      "δ (delta)",
+      "μ (mu)",
+      "λ (lambda)",
+      "κ (kappa)",
+      "IgA"
+    ],
+    "correct": [0, 1],
+    "explanation": [
+      "Il s'agit de la chaîne lourde des IgD.",
+      "Il s'agit de la chaîne lourde des IgM.",
+      "Il s'agit d'une chaîne légère.",
+      "Il s'agit d'une chaîne légère.",
+      "IgA désigne une classe d'anticorps. La chaîne lourde associée est la chaîne α (alpha)."
+    ]
+  },
+  {
+    "id": "F047",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle est la première classe d'anticorps à apparaître à la surface des lymphocytes B en développement ?",
+    "options": [
+      "IgM",
+      "IgD",
+      "IgA",
+      "IgE",
+      "IgG"
+    ],
+    "correct": [0],
+    "hint": "Ces anticorps possèdent des chaînes lourdes μ (mu).",
+    "explanation": "Les lymphocytes B en développement expriment d'abord des IgM, puis coexpriment des IgM et IgD."
+  },
+  {
+    "id": "F048",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Combien de sous-unités possède une IgM sécrétée dans la circulation sanguine ?",
+    "options": [
+      "5 (pentamère)",
+      "4 (tétramère)",
+      "3 (trimère)",
+      "2 (dimère)",
+      "1 (monomère)"
+    ],
+    "correct": [0],
+    "explanation": "Les IgM sécrétées possèdent 5 sous-unités, liées entre elles par des ponts disulfures. Les IgM représentent env. 10 % de tous les anticorps dans le sang."
+  },
+  {
+    "id": "F049",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle est la principale classe d'anticorps dans le sang ?",
+    "options": [
+      "IgG",
+      "IgA",
+      "IgD",
+      "IgE",
+      "IgM"
+    ],
+    "correct": [0],
+    "explanation": "Les IgG constituent 70-75 % des anticorps dans le sang."
+  },
+  {
+    "id": "F050",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle est la principale classe d'anticorps dans les sécrétions séro-muqueuses ?",
+    "options": [
+      "IgA",
+      "IgD",
+      "IgE",
+      "IgG",
+      "IgM"
+    ],
+    "correct": [0],
+    "explanation": "Les IgA constituent 15 % des anticorps et sont principalement présentes dans la salive, les larmes, le lait, et les sécrétions respiratoires et intestinales."
+  },
+  {
+    "id": "F051",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "L'image ci-contre représente une IgA sous forme dimérique. La partie blanche représente ___, tandis que la partie bordeaux représente ___.",
+    "image": "f051_iga.png",
+    "options": [
+      "Le composant sécrétoire / la chaîne J",
+      "La chaîne J / le composant sécrétoire",
+      "La chaîne A / le composant fixe",
+      "Le composant fixe / la chaîne A",
+      "La chaîne A / la chaîne J"
+    ],
+    "correct": [0],
+    "explanation": "Le composant sécrétoire empêche les IgA d'être dégradées. La chaîne J lies les deux monomères ensemble pour former un dimère."
+  },
+  {
+    "id": "F052",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle immunoglobuline se lie aux mastocytes (et basophiles) et joue un rôle important dans le développement des réactions allergiques ?",
+    "options": [
+      "IgE",
+      "IgA",
+      "IgD",
+      "IgG",
+      "IgM"
+    ],
+    "correct": [0],
+    "explanation": "Les IgE se lient aux récepteurs Fc des mastocytes (et basophiles). Lorsqu'elles se lient à un antigène, elles provoquent la libération d'histamine et d'autres médiateurs."
+  },
+  {
+    "id": "F053",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles immunoglobulines sont capables de traverser le placenta et offrent ainsi une immunité au fœtus ?",
+    "options": [
+      "IgG",
+      "IgA",
+      "IgD",
+      "IgE",
+      "IgM"
+    ],
+    "correct": [0],
+    "hint": "Il s'agit des immunoglobulines les plus abondantes dans le sang.",
+    "explanation": "Les IgG sont les seules immunoglobulines à pouvoir traverser le placenta."
+  },
+  {
+    "id": "F054",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les anticorps sont constitués de régions constantes et variables. Quelle est la taille de la région variable des chaînes légères et lourdes ?",
+    "options": [
+      "110 acides aminés",
+      "50 acides aminés",
+      "1000 acides aminés",
+      "10 nucléotides",
+      "100 nucléotides"
+    ],
+    "correct": [0],
+    "hint": "Les anticorps sont des protéines, pas des acides aminés.",
+    "explanation": "Les régions variables sont composées d'environ 110 acides aminés, mais seuls quelques acides aminés constituent le site réel de liaison à un antigène."
+  },
+  {
+    "id": "F055",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Seule une petite région de chaque chaîne légère ou lourde d'anticorps forme réellement le site de liaison à un antigène. Quelle est la taille de cette région ?",
+    "options": [
+      "5-10 acides aminés",
+      "1-2 acides aminés",
+      "100-110 acides aminés",
+      "250-300 acides aminés",
+      "1000-1500 acides aminés"
+    ],
+    "correct": [0],
+    "explanation": "Les régions variables sont composées d'environ 110 acides aminés, mais seuls 5-10 acides aminés constituent le site réel de liaison à un antigène."
+  },
+  {
+    "id": "F056",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Combien de domaines constants CH possèdent les chaînes lourdes des IgM et IgE ?",
+    "options": [
+      "4",
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "correct": [0],
+    "hint": "Les IgA, IgD et IgG possèdent 3 domaines constants.",
+    "explanation": "Les IgM et IgE possèdent 4 domaines constants. En revanche, les IgA, IgD et IgG n'en possèdent que 3."
+  },
+  {
+    "id": "F057",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'image ci-contre représente schématiquement un anticorps. Que représentent les liaisons jaunes ?",
+    "image": "f057_antibody.png",
+    "options": [
+      "Ponts disulfures",
+      "Liaisons hydrogène",
+      "Liaisons phosphodiester",
+      "Liaisons peptidiques",
+      "Liaisons glycosidiques"
+    ],
+    "correct": [0],
+    "explanation": "Les chaînes des anticorps sont reliées par des liaisons (ou ponts) disulfures."
+  },
+  {
+    "id": "F058",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel processus est représenté sur l'image ci-contre ?",
+    "image": "f058_antibodies.png",
+    "options": [
+      "Commutation de classe",
+      "Recombinaison V(D)J",
+      "Maturation d'affinité"
+    ],
+    "correct": [0],
+    "hint": "Le premier anticorps est une IgM (pentamère), tandis que le deuxième est une IgA (dimère).",
+    "explanation": "Le premier anticorps est une IgM (pentamère), tandis que le deuxième anticorps est une IgA (dimère) : il s'agit donc du processus de commutation de classe (dans ce cas, IgM → IgA)."
+  },
+  {
+    "id": "F059",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les gènes d'anticorps, y compris le locus de la chaîne lourde, sont assemblés à partir de segments génétiques distincts au cours du développement des lymphocytes B. Parmi les événements suivants impliqués dans ce processus, lequel a lieu en premier ?",
+    "options": [
+      "Réarrangement DJ",
+      "Réarrangement VDJ",
+      "Transcription",
+      "Épissage",
+      "Traduction"
+    ],
+    "correct": [0],
+    "explanation": "Les réarrangements ont lieu au niveau de l'ADN et donc avant la transcription, l'épissage et la traduction. Le réarrangement DJ a lieu en premier, avant le réarrangement VDJ."
+  },
+  {
+    "id": "F060",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Lors du développement des lymphocytes B, les chaînes lourdes subissent un réarrangement VDJ. Sachant qu'il existe 40 segments V, 25 segments D et 6 segments J, combien de chaînes lourdes différentes peuvent être produites ?",
+    "options": [
+      "6000",
+      "150",
+      "240",
+      "1000",
+      "60'000"
+    ],
+    "correct": [0],
+    "explanation": "Les choix des segments V, D et J sont indépendants l'un de l'autre. Il y a donc 40 x 25 x 6 = 6000 possibilités différentes."
+  },
+  {
+    "id": "F061",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle protéine est responsable de l'initiation de la recombinaison V(D)J, en coupant l'ADN aux sites de recombinaison ?",
+    "options": [
+      "Protéine RAG",
+      "Protéine V(D)J",
+      "ADN primase",
+      "ADN ligase",
+      "Ku70"
+    ],
+    "correct": [0],
+    "explanation": "Les protéines RAG (recombination-activating genes) initient la recombinaison V(D)J."
+  },
+  {
+    "id": "F062",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "La jonction imprécise des segments de gènes augmente considérablement la diversité des régions variables des anticorps, un processus connu sous le nom de \"diversité jonctionnelle\". Quel processus de réparation de l'ADN est responsable de la diversité jonctionnelle ?",
+    "options": [
+      "NHEJ (jonction d'extrémités non homologues)",
+      "HR (recombinaison homologue)",
+      "Mismatch repair",
+      "NER (réparation par excision de nucléotides)",
+      "BER (réparation par excision de bases)"
+    ],
+    "correct": [0],
+    "hint": "La diversité jonctionnelle est rendue possible par un mécanisme qui répare l'ADN de manière imprécise.",
+    "explanation": "Le mécanisme NHEJ permet de réparer les cassures double brin mais est imprécis. Pour réparer l'ADN, il s'agit généralement d'une faiblesse ; dans le cas de la diversité jonctionnelle, cela permet d'augmenter la diversité d'anticorps et est donc bénéfique."
+  },
+  {
+    "id": "F063",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Lors de son développement, un lymphocyte B \"choisit\" entre ses loci maternels et paternels. Quel est le nom de ce processus ?",
+    "options": [
+      "Exclusion allélique",
+      "Recombinaison V(D)J",
+      "Diversité jonctionnelle",
+      "Hypermutation somatique",
+      "Maturation d'affinité"
+    ],
+    "correct": [0],
+    "explanation": "Les cellules humaines sont diploïdes et les lymphocytes B doivent donc \"choisir\" entre leurs loci maternels et paternels pour les chaînes légères et lourdes des anticorps. En choisissant un allèle, un lymphocyte B exclut l'autre allèle : ce phénomène s'appelle donc \"exclusion allélique\"."
+  },
+  {
+    "id": "F064",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Les anticorps produits lors d'une réponse primaire à un antigène ont généralement une faible affinité. Au cours de la réponse immunitaire, l'affinité moyenne des anticorps augmente (maturation d'affinité). Ce processus implique une hympermutation somatique : quel type de mutation a principalement lieu lors de l'hypermutation somatique ?",
+    "options": [
+      "Désamination de cytosines en uraciles",
+      "Désamination d'uraciles en guanines",
+      "Désamination de thymines en uraciles",
+      "Désamination de guanines en uraciles",
+      "Désamination de cystéines en uraciles"
+    ],
+    "correct": [0],
+    "explanation": "Les désaminations de C en U sont généralement détectées comme des erreurs et sont réparées, mais certaines ne sont pas détectées et contribuent au processus d'hypermutation somatique."
+  },
+  {
+    "id": "F065",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle enzyme est principalement responsable de l'hypermutation somatique ?",
+    "options": [
+      "AID",
+      "RAG",
+      "Ku70",
+      "Ku80",
+      "Rad50"
+    ],
+    "correct": [0],
+    "explanation": "L'enzyme AID (activation-induced deaminase) désamine des cytosines en uraciles."
+  },
+  {
+    "id": "F066",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Où a lieu le processus d'hypermutation somatique, impliqué dans la maturation d'affinité ?",
+    "options": [
+      "Centres germinatifs",
+      "Thymus",
+      "Moelle osseuse",
+      "Bourse de Fabricius",
+      "Sang"
+    ],
+    "correct": [0],
+    "explanation": "L'hypermutation somatique a lieu dans les centres germinatifs des organes lymphoïdes périphériques (secondaires), principalement les ganglions lymphatiques."
+  },
+  {
+    "id": "F067",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Où a lieu le processus de commutation de classe, lors duquel un lymphocyte B change la classe des anticorps qu'il produit ?",
+    "options": [
+      "Centres germinatifs",
+      "Thymus",
+      "Moelle osseuse",
+      "Bourse de Fabricius",
+      "Sang"
+    ],
+    "correct": [0],
+    "explanation": "La commutation de classe a lieu dans les centres germinatifs des organes lymphoïdes périphériques (secondaires), principalement les ganglions lymphatiques."
+  },
+  {
+    "id": "F068",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Le processus de commutation de classe, au cours duquel un lymphocyte B change la classe des anticorps qu'il produit, est généralement considéré ___.",
+    "options": [
+      "Irréversible",
+      "Réversible"
+    ],
+    "correct": [0],
+    "explanation": "La commutation de classe est généralement considérée irréversible, c'est-à-dire qu'un lymphocyte B qui passe p. ex. de la production d'IgM à IgA ne peut pas revenir à la production d'IgM."
+  },
+  {
+    "id": "F069",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Vrai ou faux : Lors du processus de commutation de classe, la région variable de la chaîne lourde reste inchangée.",
+    "options": [
+      "Vrai",
+      "Faux"
+    ],
+    "correct": [0],
+    "explanation": "Seule la région constante, qui détermine la classe d'anticorps, change. La région variable VDJ reste inchangée."
+  },
+  {
+    "id": "F070",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Vrai ou faux : Le processus de commutation de classe implique l'enzyme AID, qui joue aussi un rôle dans l'hypermutation somatique.",
+    "options": [
+      "Vrai",
+      "Faux"
+    ],
+    "correct": [0],
+    "explanation": "L'enzyme AID (activation-induced deaminase) est impliquée à la fois dans l'hypermutation somatique est dans la commutation de classe."
+  },
+  {
+    "id": "F071",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'image ci-contre montre le récepteur d'une cellule du système immunitaire. De quelle cellule s'agit-il ?",
+    "image": "f071_receptor.png",
+    "options": [
+      "Lymphocyte T",
+      "Lymphocyte B",
+      "Cellule NK",
+      "Macrophage",
+      "Phagocyte"
+    ],
+    "correct": [0],
+    "explanation": "Il s'agit d'un TCR (T-cell receptor), présent à la surface des lymphocytes T. Les récepteurs des lymphocytes B sont en forme d'Y, comme les anticorps."
+  },
+  {
+    "id": "F072",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Quelles sont les principales classes de lymphocytes T ?",
+    "options": [
+      "CD4",
+      "CD8",
+      "Régulateurs",
+      "γδ (gamma delta)",
+      "ε (epsilon)"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Les lymphocytes T CD4 (auxiliaires, helper) aident lors de l'activation des lymphocytes B et T ; les lymphocytes T CD8 (cytotoxiques) tuent les cellules cibles ; les lymphocytes T régulateurs freinent la réponse immunitaire ; les lymphocytes T γδ (gamma delta) protègent la surface des muqueuses et sont à l'intersection de l'immunité innée et adaptative."
+  },
+  {
+    "id": "F073",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles protéines exprimées par les cellules dendritiques sont impliquées dans l'activation des lymphocytes T ?",
+    "options": [
+      "Protéines du CMH",
+      "Protéines costimulatrices",
+      "Protéines d'adhésion",
+      "TCR",
+      "Récepteurs des protéines costimulatrices"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Lors de l'activation d'un lymphocyte T naïf par une cellule dendritique, les protéines du CMH, protéines costimulatrices et protéines d'adhésion des cellules dendritiques se lient au TCR, récepteur des protéines costimulatrices et protéines d'adhésion des lymphocytes T, respectivement."
+  },
+  {
+    "id": "F074",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel est le rôle principal des lymphocytes T CD8 ?",
+    "options": [
+      "Inciter les cellules infectées à s'autodétruire",
+      "Aider à activer d'autres cellules des systèmes immunitaires inné et adaptatif",
+      "Participer à la réponse humorale",
+      "Sécréter des anticorps pour combattre les infections pathogènes",
+      "Réguler l'activité des autres lymphocytes T"
+    ],
+    "correct": [0],
+    "explanation": [
+      "Les lymphocytes T CD8 sont aussi appelés lymphocytes T cytotoxiques.",
+      "Il s'agit du rôle des lymphocytes T CD4 (auxiliaires).",
+      "Il s'agit du rôle des lymphocytes B.",
+      "Il s'agit du rôle des lymphocytes B.",
+      "Il s'agit du rôle des lymphocytes T régulateurs."
+    ]
+  },
+  {
+    "id": "F075",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les événements suivants impliqués dans la destruction des cellules cibles par les lymphocytes T, lequel a lieu en premier ?",
+    "options": [
+      "Exocytose de perforine et de granzyme B",
+      "Formation d'un pore dans la membrane des cellules cibles",
+      "Clivage de la protéine Bid en tBid",
+      "Cascade de caspases",
+      "Apoptose"
+    ],
+    "correct": [0],
+    "explanation": "La destruction des cellules cibles par les lymphocytes T commence par l'exocytose de perforine et de granzyme B. La perforine forme ensuite un pore dans la membrane des cellules cibles. Le granzyme B entre dans la cellule cible et clive la protéine Bid en tBid, ce qui mène à une cascade de caspases et l'apoptose de la cellule cible."
+  },
+  {
+    "id": "F076",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Les cellules T auxiliaires TH1 sont impliquées dans la défense contre ___, alors que les cellules T auxiliaires TH2 sont impliquées dans la défense contre ___.",
+    "options": [
+      "Les microbes intracellulaires / les pathogènes extracellulaires",
+      "Les pathogènes extracellulaires / les microbes intracellulaires",
+      "Les antigènes étrangers / les allergènes",
+      "Les protéines de surface / les toxines",
+      "Les toxines / les protéines de surface"
+    ],
+    "correct": [0],
+    "hint": "Les cellules TH1 activent principalement les macrophages et les lymphocytes T CD8. Les cellules TH2 activent principalement les lymphocytes B.",
+    "explanation": "Les cellules TH1 activent principalement les macrophages et les lymphocytes T CD8 pour éliminer les cellules infectées par des microbes intracellulaires. Les cellules TH2 activent principalement les lymphocytes B pour produire des anticorps et cibler les pathogènes extracellulaires."
+  },
+  {
+    "id": "F077",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle molécule est désignée par la flèche rose sur le schéma ci-contre et à quoi sert-elle ?",
+    "image": "f077_apc.png",
+    "options": [
+      "Protéine CD4, qui sert à stabiliser l'interaction cellulaire",
+      "Protéine CD4, qui sert à reconnaître l'antigène présenté sur le CMH II",
+      "Protéine CD8, qui sert à stabiliser l'interaction cellulaire",
+      "Protéine CD8, qui sert à reconnaître l'antigène présenté sur le CMH II"
+    ],
+    "correct": [0],
+    "explanation": "Les corécepteurs CD4 (lymphocytes T auxiliaires) et CD8 (lymphocytes T cytotoxiques) servent à stabiliser l'interaction intercellulaire entre les lymphocytes T et les cellules cibles (p. ex. cellule dendritique)."
+  },
+  {
+    "id": "F078",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelles cellules sont principalement responsables de l'activation des lymphocytes B dans le cadre de la réponse immunitaire humorale ?",
+    "options": [
+      "Lymphocytes T CD4",
+      "Lymphocytes T CD8",
+      "Cellules NK",
+      "Mastocytes",
+      "Macrophages"
+    ],
+    "correct": [0],
+    "explanation": "L'activation des lymphocytes B implique les lymphocytes T CD4 (auxiliaires)."
+  },
+  {
+    "id": "F079",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle fraction de l'ensemble des lymphocytes T représentent les lymphocytes T régulateurs ?",
+    "options": [
+      "< 10 %",
+      "25 %",
+      "50 %",
+      "75 %",
+      "> 90 %"
+    ],
+    "correct": [0],
+    "explanation": "Les lymphocytes T régulateurs ne représentent qu'une petite fraction (< 10 %) de tous les lymphocytes T."
+  },
+  {
+    "id": "F080",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'un des mécanismes par lesquels les lymphocytes T régulateurs peuvent exercer leur fonction est la consommation d'une cytokine importante pour la fonction des autres lymphocytes T. De quelle cytokine s'agit-il ?",
+    "options": [
+      "IL-2",
+      "IL-10",
+      "IL-35",
+      "TGF-β (bêta)",
+      "Kynurénine"
+    ],
+    "correct": [0],
+    "explanation": [
+      "En exprimant le récepteur à IL-2, les lymphocytes T régulateurs privent les autres lymphocytes T d'IL-2 et freinent ainsi la réponse immunitaire.",
+      "IL-10 est une cytokine immunosuppressive sécrétée par les lymphocytes T régulateurs, qui a pour effet d'inhiber les autres lymphocytes T effecteurs.",
+      "IL-35 est une cytokine immunosuppressive sécrétée par les lymphocytes T régulateurs, qui a pour effet d'inhiber les autres lymphocytes T effecteurs.",
+      "TGF-β (bêta) est une cytokine immunosuppressive sécrétée par les lymphocytes T régulateurs, qui a pour effet d'inhiber les autres lymphocytes T effecteurs.",
+      "Les lymphocytes T régulateurs peuvent moduler la fonction des cellules dendritiques pour les inciter à produire de la kinurénine, une molécule qui inhibe les autres lymphocytes T effecteurs."
+    ]
+  },
+  {
+    "id": "F081",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'un des mécanismes par lesquels les lymphocytes T régulateurs peuvent freiner une réponse immunitaire implique la production de kynurénine par l'enzyme IDO, une molécule qui inhibe les autres lymphocytes T effecteurs. Quelles cellules sont principalement responsables de la production de kynurénine ?",
+    "options": [
+      "Cellules dendritiques",
+      "Lymphocytes T régulateurs",
+      "Lymphocytes T CD4",
+      "Lymphocytes T CD8",
+      "Lymphocytes B"
+    ],
+    "correct": [0],
+    "explanation": "Les lymphocytes T régulateurs ne produisent pas directement de kynurénine : ils incitent les cellules dendritiques à en produire."
+  },
+  {
+    "id": "F082",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Un chercheur étudie des souris déficientes en lymphocytes T. Il décide de transférer une suspension de lymphocytes T appauvrie en lymphocytes T régulateurs à l'une de ces souris. Quels phénotypes phénotypes peut-il s'attendre à observer ?",
+    "options": [
+      "Maladie auto-immune",
+      "Maladie inflammatoire de l'intestin",
+      "Rejet de cellules tumorales",
+      "Phénotype normal",
+      "Acceptation d'une greffe"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Les cellules T régulatrices sont responsables de freiner les réponses immunitaires. En absence de cellules T régulatrices, les réponses immunitaires ne sont donc pas régulées, ce qui mène généralement à des inflammations, des maladies auto-immunes et une reconnaissance accrue de cellules anormales ou étrangères (tumeurs, greffes, etc.)."
+  },
+  {
+    "id": "F083",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Les patients atteints du syndrome IPEX présentent souvent des allergies et une maladie inflammatoire de l'intestin. À quoi sont dues ces maladies ?",
+    "options": [
+      "Déficit en lymphocytes T régulateurs",
+      "Déficit en phagocytes",
+      "Déficit en lymphocytes T CD4",
+      "Déficit en lymphocytes T CD8",
+      "Enrichissement en lymphocytes T CD4"
+    ],
+    "correct": [0],
+    "explanation": "Ces maladies sont dues à un manque de lymphocytes T régulateurs, qui ne peuvent plus freiner les réponses immunitaires."
+  },
+  {
+    "id": "F084",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Le CMH I présente des peptides aux lymphocytes T ___, tandis que le CMH II présente des peptides aux lymphocytes T ___.",
+    "options": [
+      "CD8 / CD4 et régulateurs",
+      "CD4 / CD8 et régulateurs",
+      "CD4 et CD8 / régulateurs",
+      "Régulateurs / CD4 et CD8",
+      "CD4 et régulateurs / CD8",
+      "CD8 et régulateurs / CD4"
+    ],
+    "correct": [0],
+    "explanation": "Les lymphocytes T CD8 (cytotoxiques) reconnaissent les peptides présentés par le CMH I, tandis que les lymphocytes T CD4 (auxiliaires, helper) et régulateurs reconnaissent les peptides présentés par le CMH II."
+  },
+  {
+    "id": "F085",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Quelle molécule est représentée ci-contre ?",
+    "image": "f085_structure.png",
+    "options": [
+      "CMH II",
+      "CMH I",
+      "TCR",
+      "Anticorps",
+      "Antigène"
+    ],
+    "correct": [0],
+    "explanation": "Il s'agit du CMH II, qui présente des peptides aux lymphocytes T CD4 et régulateurs."
+  },
+  {
+    "id": "F086",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les gènes représentés sur l'image ci-contre codent pour des protéines du CMH I (HLA-A, HLA-B, HLA-C). Combien de types de protéines du CMH I peut fabriquer un humain ?",
+    "options": [
+      "6",
+      "1",
+      "2",
+      "3",
+      "12"
+    ],
+    "correct": [0],
+    "hint": "Les cellules humaines sont diploïdes et possèdent donc 2 copies de chaque gène.",
+    "explanation": "Un humain peut fabriquer 6 types de protéines du CMH I : 3 encodées par les gènes maternels (A, B, C) et 3 encodées par les gènes paternels (A, B, C)."
+  },
+  {
+    "id": "F087",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les corécepteurs CD4 et CD8 permettent de stabiliser l'interaction entre un lymphocyte T et une cellule cible. À quelle partie des protéines du CMH se lient ces corécepteurs ?",
+    "options": [
+      "Partie invariante",
+      "Partie variable"
+    ],
+    "correct": [0],
+    "explanation": "Pour stabiliser l'interaction entre un lymphocyte T et une cellule cible, les corécepteurs CD4 et CD8 doivent être capables de se lier à une molécule du CMH, peu importe sa partie variable. Ces corécepteurs se lient donc à la partie invariante."
+  },
+  {
+    "id": "F088",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Le CMH I présente des antigènes provenant du cytosol. Ces antigènes sont généralement des protéines virales dégradées par un complexe enzymatique. Quel est le nom de ce complexe ?",
+    "options": [
+      "Protéasome",
+      "Protéine chaperon",
+      "Complexe endocytaire",
+      "Complexe ABC",
+      "β2-Microglobuline"
+    ],
+    "correct": [0],
+    "explanation": "Le protéasome est un complexe dont le rôle principal est de dégrader des protéines (protéines virales, protéines mal repliées, etc.)."
+  },
+  {
+    "id": "F089",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Le schéma ci-contre montre les effets d'une molécule (ronds verts) sur les cellules infectées par un virus. Ces effets incluent notamment la stimulation de l'expression des protéines du CMH et facilitent la reconnaissance et la destruction des cellules infectées par les lymphocytes T. De quelle molécule s'agit-il ?",
+    "image": "f089_molecule.png",
+    "options": [
+      "IFN-γ (interféron gamma)",
+      "IFN-α (interféron alpha)",
+      "IFN-β (interféron bêta)",
+      "IL-2 (interleukine 2)",
+      "IL-35 (interleukine 35)"
+    ],
+    "correct": [0],
+    "explanation": "IFN-γ est une cytokine qui module la réponse immunitaire de cellules cibles, p. ex. infectées par un virus."
+  },
+  {
+    "id": "F090",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "D'où proviennent les antigènes présentés par les protéines du CMH II ?",
+    "options": [
+      "Endosome",
+      "Cytosol",
+      "Réticulum endoplasmique",
+      "Appareil de Golgi",
+      "Vacuole d'exocytose"
+    ],
+    "correct": [0],
+    "hint": "Les protéines du CMH I présentent des antigènes provenant du cytosol.",
+    "explanation": "Les protéines du CMH I présentent des antigènes provenant du cytosol, tandis que les protéines du CMH II présentent des antigènes provenant du compartiment endocytaire (endosome)."
+  },
+  {
+    "id": "F091",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 2,
+    "question": "L'activation des lymphocytes T est contrôlée par une boucle de rétroaction (feedback) positive, impliquant ___, et une boucle de rétroaction négative, impliquant ___.",
+    "options": [
+      "IL-2 / CTLA-4",
+      "B7 / IL-2",
+      "CTLA-4 / B7",
+      "CTLA-4 / CD28",
+      "IL-35 / CTLA-4"
+    ],
+    "correct": [0],
+    "explanation": "Une fois activés, les lymphocytes T produisent de l'IL-2 dans le cadre d'une boucle de rétroaction positive, qui promeut l'activation des lymphocytes T. Les lymphocytes T activés expriment ensuite CTLA-4, qui peut se lier à B7 et désactive et inhibe alors les lymphocytes T."
+  },
+  {
+    "id": "F092",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 2,
+    "question": "Parmi les molécules et récepteurs suivants, lesquels peuvent être ciblés par des anticorps dans le cas d'un traitement d'immunothérapie anti-cancéreuse ?",
+    "options": [
+      "CTLA-4",
+      "PD-1",
+      "PD-L1",
+      "TCR",
+      "CD28"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "CTLA-4 est exprimé à la surface des lymphocytes T et est impliqué dans une boucle de rétroaction négative, qui inhibe les lymphocytes T (lorsque CTLA-4 se lie à B7). Les anticorps qui ciblent CTLA-4 permettent d'éviter cette boucle de rétroaction négative et participent donc à maintenir l'activité des lymphocytes T, qui peuvent combattre les cellules cancéreuses.",
+      "PD-1 est exprimé à la surface des lymphocytes T et est impliqué dans une boucle de rétroaction négative, qui inhibe les lymphocytes T (lorsque PD-1 se lie à PD-L1). Les anticorps qui ciblent PD-1 permettent d'éviter cette boucle de rétroaction négative et participent donc à maintenir l'activité des lymphocytes T, qui peuvent combattre les cellules cancéreuses.",
+      "PD-L1 est exprimé à la surface des cellules présentatrices d'antigènes ou des cellules cancéreuses et est impliqué dans une boucle de rétroaction négative, qui inhibe les lymphocytes T (lorsque PD-L1 se lie à PD-1). Les anticorps qui ciblent PD-L1 permettent d'éviter cette boucle de rétroaction négative et participent donc à maintenir l'activité des lymphocytes T, qui peuvent combattre les cellules cancéreuses.",
+      "Le TCR (T cell receptor) est essentiel pour que les lymphocytes T puissent reconnaître le CMH et les antigènes.",
+      "Le rôle de CD28 est d'activer les lymphocytes T. Le principe de l'immunothérapie est aussi d'activer les lymphocytes T, en inhibant des boucles de rétroaction négatives."
+    ]
+  },
+  {
+    "id": "F093",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "La maturation des lymphocytes T dans le thymus implique un processus de sélection. Quelles cellules sont éliminées au cours de ce processus ?",
+    "options": [
+      "Cellules qui n'expriment pas de TCR",
+      "Cellules incapables de reconnaître le CMH",
+      "Cellules avec une trop grande affinité pour les complexes CMH + auto-antigène",
+      "Cellules qui reconnaissent mieux le CMH II que le CMH I",
+      "Cellules qui reconnaissent mieux le CMH I que le CMH II",
+      "Cellules avec une trop grande affinité pour les complexes CMH + antigènes étrangers",
+      "Cellules incapables de produire des anticorps"
+    ],
+    "correct": [0, 1, 2],
+    "hint": "Pour chaque option, est-ce que ces cellules pourraient être utiles pour le système immunitaire ?",
+    "explanation": [
+      "Ces cellules meurent \"par défaut\", car elles ne servent à rien.",
+      "Ces cellules meurent \"par défaut\", car elles ne servent à rien.",
+      "Il s'agit de la sélection négative. Ces cellules ne sont pas gardées, car elles risqueraient de s'attaquer aux cellules du corps et d'induire une maladie auto-immune.",
+      "Ces cellules sont sélectionnées positivement et deviennent des lymphocytes T CD4.",
+      "Ces cellules sont sélectionnées positivement et deviennent des lymphocytes T CD8.",
+      "La sélection des lymphocytes T dans le thymus n'implique pas d'antigènes étrangers.",
+      "Les lymphocytes T ne produisent pas d'anticorps ; ce sont les lymphocytes B."
+    ]
+  },
+  {
+    "id": "F094",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les mécanismes de tolérance immunologique incluent la tolérance centrale dans ___ et la tolérance périphérique dans ___.",
+    "options": [
+      "Les organes lymphïdes primaires / les organes lymphoïdes secondaires",
+      "Les organes lymphïdes secondaires / les organes lymphoïdes primaires",
+      "Les organes lymphoïdes périphériques / le thymus",
+      "Le thymus / les organes lymphoïdes primaires",
+      "Le thymus et la moelle osseuse / le sang"
+    ],
+    "correct": [0],
+    "explanation": "La tolérance centrale fait référence à l'élimination des lymphocytes auto-réactifs dans les organes lymphoïdes primaires (centraux) lors de leur développement. La tolérance périphérique fait référence à l'élimination des lymphocytes auto-réactifs ayant échappé aux mécanismes de tolérance centrale et a lieu dans les organes lymphoïdes secondaires (périphériques)."
+  },
+  {
+    "id": "F095",
+    "section": "immunology",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Lorsque les mécanismes de tolérance immunologique ne fonctionnent pas correctement, des maladies auto-immunes peuvent se développer. Parmi les maladies suivantes, lesquelles sont des maladies auto-immunes ?",
+    "options": [
+      "Myasthénie",
+      "Diabète de type I",
+      "Sclérose en plaques",
+      "Maladie inflammatoire chronique de l'intestin (MICI)",
+      "Maladie de Crohn",
+      "Colite ulcéreuse"
+    ],
+    "correct": [0, 1, 2, 3, 4, 5],
+    "explanation": [
+      "Les personnes atteintes fabriquent des anticorps contre les récepteurs d'acétylcholine présents sur leurs propres cellules musculaires squelettiques.",
+      "Une réaction immunitaire contre les cellules sécrétrices d'insuline du pancréas tue ces cellules (cellules bêta productrices d'insuline dans les îlots de Langerhans), ce qui entraîne une grave carence en insuline.",
+      "Le système immunitaire attaque les cellules nerveuses, provoquant des symptômes qui peuvent inclure la douleur, la cécité, la faiblesse, une mauvaise coordination, et des spasmes musculaires.",
+      "Le système immunitaire attaque la muqueuse des intestins, provoquant des épisodes de diarrhée, des saignements rectaux, des selles urgentes, des douleurs abdominales, une diminution et une perte de poids. La colite ulcéreuse et la maladie de Crohn sont les deux principales formes de MICI.",
+      "Exemple de maladie inflammatoire chronique de l'intestin.",
+      "Exemple de maladie inflammatoire chronique de l'intestin."
+    ]
+  },
+  {
+    "id": "F096",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Lors d'une infection, les cellules immunocompétentes des tissus agressés produisent des cytokines. Ces molécules agissent sur la structure responsable du contrôle de la température corporelle et mènent à une augmentation de la température corporelle (fièvre). Quelle structure est le \"thermostat\" du corps et assure le contrôle de la température corporelle ?",
+    "options": [
+      "Hypothalamus",
+      "Cervelet",
+      "Système sanguin",
+      "Pancréas",
+      "Thymus"
+    ],
+    "correct": [0],
+    "hint": "Il s'agit d'une structure du système nerveux.",
+    "explanation": "L'hypothalamus réagit à des signaux internes et externes pour assurer le maintien de la température corporelle."
+  },
+  {
+    "id": "F097",
+    "section": "immunology",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quel est le principal déterminant de l'infectivité cellulaire d'un virus ?",
+    "options": [
+      "L'interaction des protéines de surface du virus avec les molécules de surface des cellules hôtes",
+      "L'interaction des protéines de surface du virus avec l'acide sialique présent à la surface des cellules hôtes",
+      "L'interaction des glycolipides de surface du virus avec les molécules de surface des cellules hôtes",
+      "L'interaction de l'ADN/ARN du virus avec les molécules de surface des cellules hôtes",
+      "La taille du virus"
+    ],
+    "correct": [0],
+    "explanation": "Les virus utilisent leurs protéines de surface pour se lier à des récepteurs spécifiques présents sur les cellules hôtes. Cette interaction conditionne la capacité du virus à infecter une cellule."
   }
 ]
