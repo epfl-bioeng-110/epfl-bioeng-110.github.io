@@ -1,4 +1,4 @@
-const CACHE = 'bioeng110-v11';
+const CACHE = 'bioeng110-v12';
 const ASSETS = [
     '/',
     '/index.html',
@@ -9,12 +9,18 @@ const ASSETS = [
     '/data/questions_immunology.json',
     '/data/questions_signalling.json',
     '/favicon.png',
-    '/manifest.json'
+    '/manifest.json',
+    '/data/images/manifest.json'
 ];
 
 self.addEventListener('install', e => {
     e.waitUntil(
-        caches.open(CACHE).then(cache => cache.addAll(ASSETS))
+        caches.open(CACHE).then(async cache => {
+            await cache.addAll(ASSETS);
+            const res = await fetch('/data/images/manifest.json');
+            const images = await res.json();
+            await cache.addAll(images);
+        })
     );
     self.skipWaiting();
 });
