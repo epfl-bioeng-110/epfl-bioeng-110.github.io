@@ -1,0 +1,312 @@
+[
+  {
+    "id": "G001",
+    "section": "signalling",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quelles affirmations concernant la communication cellulaire sont fausses ?",
+    "options": [
+      "Il existe 3 principaux modes de communication locale : les jonctions cellulaires, la reconnaissance intercellulaire et la communication hormonale.",
+      "La communication cellulaire comprend 2 phases : la réception du signal et la réponse cellulaire.",
+      "Les molécules hydrosolubles se lient généralement à des récepteurs nucléaires.",
+      "Une voie de transduction est un processus par lequel un signal est converti en réponse cellulaire.",
+      "Certains récepteurs sont situés à la membrane plasmique, tandis que d'autres sont situés à l'intérieur de la cellule."
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "Les 3 principaux modes de communication locale sont les jonctions cellulaires, la reconnaissance intercellulaire, et la communication paracrine.",
+      "La communication cellulaire comprend trois phases, théorisées par E. W. Sutherland : la réception du signal, la transduction, et la réponse cellulaire.",
+      "Les molécules hydrosolubles ne peuvent pas traverser la membrane plasmique et se lient donc généralement à des récepteurs (trans)membranaires.",
+      "Il s'agit de la définition d'une voie de transduction.",
+      "Les cellules comportent à la fois des récepteurs (trans)membranaires et des récepteurs intracellulaires (nucléaires)."
+    ]
+  },
+  {
+    "id": "G002",
+    "section": "signalling",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quels sont les principaux types de récepteurs transmembranaires ?",
+    "options": [
+      "Récepteurs couplés à une protéine G",
+      "Récepteurs à activité tyrosine kinase",
+      "RTKs",
+      "Récepteurs couplés à un canal ionique",
+      "Récepteurs couplés à une protéine K"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Les principaux types de récepteurs transmembranaires sont les récepteurs couplés à une protéine G (GPCRs, G-protein coupled receptors), les récepteurs à activité tyrosine kinase (RTKs) et les récepteurs couplés à un canal ionique (LGICs, ligand-gated ion channels)."
+  },
+  {
+    "id": "G003",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant les récepteurs couplés à une protéine G (GPCRs), laquelle est correcte ?",
+    "options": [
+      "Lorsqu'un ligand se lie à un GPCR, le récepteur favorise l'activation de la protéine G associée, qui se lie au GTP.",
+      "Lorsqu'un ligand se lie à un GPCR, les 2 sous-unités du GPCR s'homodimérisent.",
+      "Les GPCRs sont des récepteurs nucléaires.",
+      "Les GPCRs se lient à des protéines G monomériques.",
+      "Il n'existe que très peu de médicaments qui ciblent les GPCRs."
+    ],
+    "correct": [0],
+    "explanation": [
+      "Il s'agit du mécanisme d'action des GPCRs.",
+      "L'homodimérisation du récepteur caractérise les récepteurs à activité tyrosine kinase (RTKs).",
+      "Les GPCRs sont des récepteurs transmembranaires, composés de 7 segments transmembranaires.",
+      "Les GPCRs se lient à des protéines G hétérotrimériques, c'est-à-dire composés de trois sous-unités différentes (alpha, beta, gamma). Les protéines G monomériques, p. ex. Ras, font partie de la famille des \"small GTP-binding proteins\".",
+      "Presque 50 % de tous les médicaments ciblent des GPCRs."
+    ]
+  },
+  {
+    "id": "G004",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes à propos des récepteurs à activité tyrosine kinase (RTKs), laquelle est fausse ?",
+    "options": [
+      "Comme les GPCRs, les RTKs ne peuvent pas activer plusieurs voies de signalisation simultanément.",
+      "Les RTKs sont des récepteurs transmembranaires.",
+      "Des mutations des RTKs sont régulièrement impliquées dans les cancers.",
+      "Des anticorps peuvent être utilisés pour bloquer la signalisation des RTKs surexprimés dans certains cancers.",
+      "Le récepteur à l'insuline est un RTK."
+    ],
+    "correct": [0],
+    "explanation": [
+      "Les RTKs peuvent activer plusieurs voies de signalisation simultanément, contrairement aux GPCRs.",
+      "Les RTKs sont situés à la membrane plasmique.",
+      "Ces mutations rendent généralement les RTKs actifs même en l'absence de ligand, de sorte que la signalisation est constamment activée.",
+      "La plupart des mutations de RTKs impliquées dans des cancers rendent les RTKs hyperactifs. Certains anticorps peuvent s'y lier pour éviter qu'ils signalent en continu. De nombreuses thérapies anti-tumorales sont basées sur ce principe.",
+      "Les RTKs comportent de nombreux récepteurs, p. ex. le récepteur à l'insuline, EGFR, VEGFR, etc."
+    ]
+  },
+  {
+    "id": "G005",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Quelle affirmation concernant les récepteurs nucléaires est fausse ?",
+    "options": [
+      "Les GPCRs et les RTKs peuvent fonctionner comme des senseurs métaboliques, contrairement aux récepteurs nucléaires.",
+      "Les récepteurs nucléaires sont généralement activés par des molécules hydrophobes.",
+      "Les récepteurs nucléaires ne sont généralement pas activés par des molécules hydrosolubles.",
+      "Un récepteur nucléaire activé peut fonctionner comme un facteur de transcription, régulant ainsi la transcription de gènes cibles.",
+      "Le récepteur aux androgènes est un récepteur nucléaire."
+    ],
+    "correct": [0],
+    "explanation": [
+      "Les récepteurs nucléaires sont les principaux senseurs métaboliques.",
+      "Pour activer un récepteur nucléaire, un ligand doit traverser la membrane plasmique et doit donc être hydrophobe.",
+      "Les molécules hydrosolubles ne peuvent généralement pas traverser la membrane plasmique et activent des récepteurs transmembranaires.",
+      "Il s'agit du mode de fonctionnement des récepteurs nucléaires.",
+      "Le récepteur aux androgènes fait partie de la famille des récepteur stéroïdiens, qui sont des récepteurs nucléaires."
+    ]
+  },
+  {
+    "id": "G006",
+    "section": "signalling",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quels éléments sont caractéristiques de la transduction d'un signal ?",
+    "options": [
+      "Présence de plusieurs étapes",
+      "Amplification du signal",
+      "Changements de conformation de protéines",
+      "Intermédiaires protéiques",
+      "Faible régulation de la réponse cellulaire"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": [
+      "Les voies de transduction comportent généralement de nombreuses étapes.",
+      "La multiplication des étapes permet l'amplification du signal.",
+      "Le signal se transmet généralement sou forme de changement de conformation d'une protéine.",
+      "Les molécules qui transmettent le signal sont généralement des protéines.",
+      "Au contraire, la transduction du signal et la multiplication des étapes permet un meilleur contrôle de la réponse cellulaire."
+    ]
+  },
+  {
+    "id": "G007",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Quelle affirmation concernant la phosphorylation des protéines est fausse ?",
+    "options": [
+      "L'enzyme PTEN est une protéine kinase.",
+      "La déphosphorylation est catalysée par des protéines phosphatases.",
+      "Le groupe phosphate ajouté à un substrat lors de la phosphorylation provient de l'ATP.",
+      "Les phosphorylations ont généralement lieu sur des résidus S, T ou Y.",
+      "Les phosphorylations et déphosphorylations peuvent agir comme des interrupteurs moléculaires pour activer et désactiver certaines protéines."
+    ],
+    "correct": [0],
+    "explanation": "L'enzyme PTEN est une protéine phosphatase."
+  },
+  {
+    "id": "G008",
+    "section": "signalling",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Parmi les affirmations suivantes concernant les seconds messagers, lesquelles sont correctes ?",
+    "options": [
+      "L'AMP cyclique est un exemple de second messager, qui est produit par l'adénylyl cyclase et dégradé par la phosphodiestérase.",
+      "Certaines protéines G activent l'adénylyl cyclase, tandis que d'autres l'inhibent.",
+      "L'AMP cyclique active généralement la protéines kinase A.",
+      "Les seconds messagers participent à la transduction des signaux des GPCRs, des RTKs et des récepteurs nucléaires.",
+      "Les seconds messagers sont nécessairement des ions.",
+      "Le second messager désigne la molécule de signalisation extracellulaire qui se lie à un récepteur membranaire."
+    ],
+    "correct": [0, 1, 2],
+    "explanation": [
+      "L'AMP cyclique est produit à partir d'ATP par l'adénylyl cyclase et est dégradé en AMP par la phosphodiestérase.",
+      "Les protéines Gs stimulent l'adénylyl cyclase, alors que les protéines Gi l'inhibent.",
+      "L'activation de la protéine kinase A est la principale conséquence de la production d'AMP cyclique.",
+      "Les seconds messagers participent à la transduction des signaux des GPCRs et des RTKs.",
+      "Certains seconds messagers sont des ions, mais pas tous.",
+      "Il s'agit du premier messager."
+    ]
+  },
+  {
+    "id": "G009",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Les ions calcium Ca2+ sont des seconds messagers utilisés dans de nombreuses voies de transduction et dont la concentration est précisément régulée par les cellules. Où est-ce que la concentration en ions Ca2+ est la plus élevée ?",
+    "options": [
+      "Liquide extracellulaire",
+      "Cytosol"
+    ],
+    "correct": [0],
+    "explanation": "La concentration d'ions calcium dans le cytosol est faible, alors qu'elle est élevée dans le liquide extracellulaire et dans certains compartiments intracellulaires, p. ex. le réticulum endoplasmique."
+  },
+  {
+    "id": "G010",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'inositol triphosphate (IP3) est un second messager utilisé dans de nombreuses voies de transduction. L'IP3 peut notamment réguler l'ouverture de canaux calciques. Quelle enzyme produit l'IP3 à partir de phosphatidylinositol bisphosphate (PIP2) ?",
+    "options": [
+      "Phospholipase C",
+      "GPCR",
+      "Phospholipase A2",
+      "Diacylglycérol",
+      "Protéine G"
+    ],
+    "correct": [0],
+    "explanation": "Le GPCR active la protéine G associée, qui active ensuite la phospholipase C, qui clive le PIP2 en IP3 et diacylglycérol (DAG)."
+  },
+  {
+    "id": "G011",
+    "section": "signalling",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "La réponse cellulaire peut avoir lieu dans le noyau ou le cytoplasme de la cellule. Quels types de réponse ont généralement lieu dans le cytoplasme ?",
+    "options": [
+      "Transformation structurelles",
+      "Modifications de l'activité enzymatique",
+      "Régulation transcriptionnelle"
+    ],
+    "correct": [0, 1],
+    "explanation": "La régulation transcriptionnelle a lieu dans le noyau."
+  },
+  {
+    "id": "G012",
+    "section": "signalling",
+    "type": "multiple-choice",
+    "level": 1,
+    "question": "Quels sont les avantages d'une voie de transduction à plusieurs étapes ?",
+    "options": [
+      "Amplification du signal",
+      "Efficacité",
+      "Spécificité",
+      "Cessation du signal"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": [
+      "À chaque étape, le nombre de molécules activées augmente.",
+      "Les protéines adaptatrices facilitent la transduction du signal.",
+      "La multiplication des étapes permet de réguler plus précisément la réponse cellulaire, ce qui la rend plus spécifique.",
+      "La cessation du signal peut être mieux régulée."
+    ]
+  },
+  {
+    "id": "G013",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "L'efficacité d'une voie de transduction est essentielle pour assurer le bon fonctionnement de la communication cellulaire. Certaines protéines permettent d'augmenter l'efficacité de la transduction en regroupant plusieurs protéines participant à une même voie de transduction. Comment s'appellent ces protéines ?",
+    "options": [
+      "Protéines adaptatrices",
+      "Récepteurs adrénergiques",
+      "Protéines kinases",
+      "Récepteurs pluripotents"
+    ],
+    "correct": [0],
+    "explanation": [
+      "Il s'agit d'intermédiaires de grande taille, qui rassemblent plusieurs autres intermédiaires protéiques.",
+      "Les récepteurs adrénergiques sont une classe de récepteurs couplés à une protéine G (GPCRs).",
+      "Les protéines kinases phosphorylent leurs substrats.",
+      "Ce terme n'existe pas."
+    ]
+  },
+  {
+    "id": "G014",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 2,
+    "question": "Un même signal peut déclencher des réponses différentes dans différentes cellules. Par exemple, l'adrénaline déclenche ___ dans les cellules du tissu adipeux brun et ___ dans le foie.",
+    "options": [
+      "La thermogenèse / la glycogénolyse",
+      "La gluconéogenèse / la glycogénolyse",
+      "La glycogénolyse / la thermogenèse",
+      "La glycogénolyse / la gluconéogenèse"
+    ],
+    "correct": [0],
+    "explanation": "Cela illustre la spécificité de la réponse cellulaire."
+  },
+  {
+    "id": "G015",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Comment se nomme le phénomène illustré ci-dessous, qui participe à la spécificité de la communication cellulaire ?",
+    "image": "g015_specificity.png",
+    "options": [
+      "Convergence",
+      "Bifurcation"
+    ],
+    "correct": [0],
+    "explanation": "Deux signaux différents régulent la même voie : il s'agit d'un cas de convergence."
+  },
+  {
+    "id": "G016",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "La cessation du signal fait partie intégrante de la communication cellulaire et intervient à plusieurs niveaux. En particulier, les enzymes neutralisant les seconds messagers permettent de mettre un terme à la signalisation. Comment s'appelle l'enzyme qui neutralise l'AMP cyclique ?",
+    "options": [
+      "Phosphodiestérase",
+      "Phosphatase",
+      "Kinase",
+      "Adénylyl cyclase",
+      "GTPase"
+    ],
+    "correct": [0],
+    "explanation": "L'AMP cyclique est produit par l'adénylyl cyclase et dégradé par une phosphodiestérase."
+  },
+  {
+    "id": "G017",
+    "section": "signalling",
+    "type": "single-choice",
+    "level": 1,
+    "question": "Parmi les maladies suivantes, laquelle est directement due à une interférence avec la cessation du signal ?",
+    "options": [
+      "Choléra",
+      "Maladie d'Alzheimer",
+      "Maladie de Parkinson",
+      "Diabète de type I",
+      "Diabète de type II"
+    ],
+    "correct": [0],
+    "explanation": "La toxine cholérique interfère avec la cessation du signal en maintenant l'adénylyl cyclase active, ce qui mène à une augmentation de la concentration d'AMP cyclique et à une déshydratation."
+  }
+]
