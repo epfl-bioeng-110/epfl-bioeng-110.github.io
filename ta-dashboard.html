@@ -436,6 +436,7 @@ td.clk:hover{color:var(--accent);}
             <option value="molecular">Biologie moléculaire</option>
             <option value="cellcycle">Cycle cellulaire</option>
             <option value="immunology">Immunologie</option>
+            <option value="signalling">Communication cellulaire</option>
           </select>
           <select id="q-lv" onchange="renderQTable()">
             <option value="all">Tous niveaux</option>
@@ -605,10 +606,11 @@ const Q_FILES = {
   genetics:    'data/questions_genetics.json',
   molecular:   'data/questions_molecular.json',
   cellcycle:   'data/questions_cellcycle.json',
-  immunology:  'data/questions_immunology.json'
+  immunology:  'data/questions_immunology.json',
+  signalling:  'data/questions_signalling.json'
 };
-const SEC_LBL = {biomolecules:'Biomolécules',genetics:'Génétique',molecular:'Bio. moléculaire',cellcycle:'Cycle cellulaire',immunology:'Immunologie'};
-const SEC_COL = {biomolecules:'#10b981',genetics:'#3b82f6',molecular:'#f59e0b',cellcycle:'#0bd7f5',immunology:'#FFEE8C'};
+const SEC_LBL = {biomolecules:'Biomolécules',genetics:'Génétique',molecular:'Bio. moléculaire',cellcycle:'Cycle cellulaire',immunology:'Immunologie',signalling:'Comm. cell.'};
+const SEC_COL = {biomolecules:'#10b981',genetics:'#3b82f6',molecular:'#f59e0b',cellcycle:'#0bd7f5',immunology:'#FFEE8C',signalling:'#77dd77'};
 
 // ═══════════════════════════════════════════════════════════
 // STATE
