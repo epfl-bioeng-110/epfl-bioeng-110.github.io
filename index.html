@@ -1297,6 +1297,7 @@
                         <option value="cellcycle">Cycle cellulaire</option>
                         <option value="immunology">Immunologie</option>
                         <option value="signalling">Communication cellulaire</option>
+                        <option value="metabolism">Métabolisme</option>
                     </select>
                 </div>
 
@@ -1596,7 +1597,8 @@
             'molecular': 'data/questions_molecular.json',
             'cellcycle': 'data/questions_cellcycle.json',
             'immunology': 'data/questions_immunology.json',
-            'signalling': 'data/questions_signalling.json'
+            'signalling': 'data/questions_signalling.json',
+            'metabolism': 'data/questions_metabolism.json'
         };
 
         // States
@@ -3261,7 +3263,8 @@
                 'molecular': 'Biologie moléculaire',
                 'cellcycle': 'Cycle cellulaire',
                 'immunology': 'Immunologie',
-                'signalling': 'Communication cellulaire'
+                'signalling': 'Communication cellulaire',
+                'metabolism': 'Métabolisme'
             };
 
             allQuestions.forEach(q => {
@@ -3405,7 +3408,7 @@
                 contentDiv.style.flex = '1';
                 contentDiv.style.cursor = 'pointer';
                 contentDiv.onclick = () => showQuestionModal(question, lastAnswer, false);
-                const secLabels = { biomolecules: 'Biomolécules', genetics: 'Génétique', molecular: 'Biologie moléculaire', cellcycle: 'Cycle cellulaire', immunology: 'Immunologie', signalling: 'Communication cellulaire' };
+                const secLabels = { biomolecules: 'Biomolécules', genetics: 'Génétique', molecular: 'Biologie moléculaire', cellcycle: 'Cycle cellulaire', immunology: 'Immunologie', signalling: 'Communication cellulaire', metabolism: 'Métabolisme' };
                 contentDiv.innerHTML = `
                     <strong>${question.id}</strong> · ${secLabels[question.section] || question.section} · Niveau ${question.level}<br>
                     <span style="color: var(--text-secondary); font-size: 0.9rem;">${question.question.length > 70 ? question.question.substring(0, 70) + '…' : question.question}</span>
