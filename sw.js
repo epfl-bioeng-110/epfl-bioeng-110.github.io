@@ -1,4 +1,4 @@
-const CACHE = 'bioeng110-v12';
+const CACHE = 'bioeng110-v13';
 const ASSETS = [
     '/',
     '/index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
     '/data/questions_cellcycle.json',
     '/data/questions_immunology.json',
     '/data/questions_signalling.json',
+    '/data/questions_metabolism.json',
     '/favicon.png',
     '/manifest.json',
     '/data/images/manifest.json'
