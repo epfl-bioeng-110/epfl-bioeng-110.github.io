@@ -486,6 +486,7 @@
             border-radius: 16px;
             padding: 2rem;
             max-width: 800px;
+            width: 100%;
             max-height: 80vh;
             overflow-y: auto;
             border: 2px solid var(--border);
@@ -1059,10 +1060,10 @@
             <div class="card">
                 <h2>Commencer</h2>
                 <div id="continue-session-btn" class="hidden">
-                    <button onclick="continueSavedSession()" style="background:var(--success); color:#fff;">▶️ Continuer ma session</button>
+                    <button onclick="continueSavedSession()" style="background:var(--success); color:#fff;">Continuer ma session</button>
                 </div>
-                <button onclick="createNewSession()">🚀 Nouvelle session</button>
-                <button onclick="showLoadSession()" class="secondary">📂 Charger une session</button>
+                <button onclick="createNewSession()">Nouvelle session</button>
+                <button onclick="showLoadSession()" class="secondary">Charger une session</button>
                 <button onclick="showInformation()" class="secondary">ⓘ Informations</button>
             </div>
         </div>
@@ -1076,13 +1077,13 @@
                     <h3>À propos de cette plateforme</h3>
                     <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.7;">
                         Cette plateforme de révision a été créée par l'équipe d'assistants du cours <strong style="color:var(--text-primary);">BIOENG-110 Biologie Générale</strong> (EPFL - SV BA2).
-                        Il couvre l'essentiel du cours et propose des questions de différents niveaux de difficulté.
+                        Elle couvre l'essentiel du cours et propose des questions de différents niveaux de difficulté.
                         Ton score et ta progression sont sauvegardés automatiquement à chaque réponse.
                     </p>
                     <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.75rem;">
-                        Si tu as une question à propos du contenu d'une question, poste-la sur le forum <a href="https://edstem.org/eu/courses/3080/discussion" target="_blank" style="color:var(--accent); font-weight:bold;">Ed</a>. 
+                        Si tu as une question à propos du contenu d'un énoncé, poste-la sur le forum <a href="https://edstem.org/eu/courses/3080/discussion" target="_blank" style="color:var(--accent); font-weight:bold;">Ed</a>. 
                         Pour toute question ou problème lié au quiz (bug, etc.), contacte directement
-                        <a href="mailto:benjamin.mancini@epfl.ch?subject=Quiz%20de%20révision" style="color:var(--accent);">
+                        <a href="mailto:benjamin.mancini@epfl.ch?subject=BIOENG-110%20Quiz%20de%20révision" style="color:var(--accent);">
                             l'équipe d'assistants
                         </a>
                     </p>
@@ -1105,7 +1106,7 @@
                         <div class="info-feature-icon">🔀</div>
                         <div class="info-feature-text">
                             <strong>Mode Vrai / Faux</strong>
-                            <span>Pour les QCM, tu peux choisir d'évaluer chaque affirmation une par une. Clique "Bonne réponse" si l'affirmation répond correctement à la question, "Mauvaise réponse" sinon.</span>
+                            <span>Pour les QCM, tu peux choisir d'évaluer chaque affirmation une par une. Clique "Bonne réponse" si l'affirmation répond correctement à la question et "Mauvaise réponse" sinon.</span>
                         </div>
                     </div>
 
@@ -1179,11 +1180,11 @@
                         </thead>
                         <tbody>
                             <tr><td>✅ Réponse correcte</td><td style="color:var(--success); font-weight:700;">1 pt</td></tr>
-                            <tr><td>🔵 Réponse partielle</td><td style="color:var(--partial); font-weight:700;">Proportionnel</td></tr>
+                            <tr><td>🟡 Réponse partielle</td><td style="color:var(--partial); font-weight:700;">Proportionnel</td></tr>
                             <tr><td>❌ Réponse incorrecte</td><td style="color:var(--error); font-weight:700;">0 pt</td></tr>
-                            <tr><td>💡 Indice utilisé</td><td style="color:var(--warning);">-50 %</td></tr>
-                            <tr><td>🔢 Nombre de réponses révélé</td><td style="color:var(--warning);">-50 %</td></tr>
-                            <tr><td>💡 + 🔢 Indice et nombre de réponses</td><td style="color:var(--warning);">-75 %</td></tr>
+                            <tr><td>Indice utilisé</td><td style="color:var(--warning);">-50 %</td></tr>
+                            <tr><td>Nombre de réponses révélé</td><td style="color:var(--warning);">-50 %</td></tr>
+                            <tr><td>Indice et nombre de réponses</td><td style="color:var(--warning);">-75 %</td></tr>
                         </tbody>
                     </table>
                     <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:0.75rem;">
@@ -1201,8 +1202,8 @@
                     <ul class="tip-list">
                         <li>Chaque session est identifiée par un ID unique. Sauvegarde-le pour retrouver ta progression depuis un autre appareil ou navigateur.</li>
                         <li>L'ID est affiché dans le menu principal. Utilise le bouton "⧉ Copier" pour le copier facilement.</li>
-                        <li>Si tu reviens sur le même navigateur, ton ID est sauvegardé automatiquement : choisis "▶️ Continuer ma session" sur la page d'accueil.</li>
-                        <li>Si tu changes d'appareil ou de navigateur, utilise "📂 Charger une session" et colle ton ID.</li>
+                        <li>Si tu reviens sur le même navigateur, ton ID est sauvegardé automatiquement : choisis "Continuer ma session" sur la page d'accueil.</li>
+                        <li>Si tu changes d'appareil ou de navigateur, utilise "Charger une session" et colle ton ID.</li>
                     </ul>
                 </div>
             </div>
@@ -1249,7 +1250,7 @@
                     </div>
                 </div>
             </div>
-            <button onclick="showWelcome()" class="secondary">Retour à l'accueil</button>
+            <button onclick="showWelcome()" class="secondary">← Retour</button>
         </div>
 
         <!-- Load session -->
@@ -1269,17 +1270,17 @@
         <div id="main-menu" class="hidden">
             <h2>Ma session</h2>
             <div class="session-id">
-                <strong>ID de session :</strong><span id="current-session"></span><button class="copy-btn" onclick="copySessionId()" title="Copier l'ID de session">📋 Copier</button>
+                <strong>ID de session :</strong><span id="current-session"></span><button class="copy-btn" onclick="copySessionId()" title="Copier l'ID de session">⧉ Copier</button>
             </div>
             <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">
-                💡 Sauvegarde cet ID pour retrouver ta progression sur n'importe quel appareil !
+                Sauvegarde cet ID pour retrouver ta progression sur n'importe quel appareil !
             </p>
             
             <div class="card">
-                <button onclick="showQuizOptions()">📝 Quiz</button>
-                <button onclick="showFlaggedQuestions()" class="secondary" style="border:1px solid var(--warning); color:var(--warning);">🚩 Questions marquées (<span id="flagged-count">0</span>)</button>
-                <button onclick="showStats()" class="secondary" style="border:1px solid var(--partial); color:var(--partial);">📊 Mes statistiques</button>
-                <button onclick="showWelcome()" class="secondary">Retour à l'accueil</button>
+                <button onclick="showQuizOptions()">Quiz</button>
+                <button onclick="showFlaggedQuestions()" class="secondary" style="border:1px solid var(--warning); color:var(--warning);">Questions marquées (<span id="flagged-count">0</span>)</button>
+                <button onclick="showStats()" class="secondary" style="border:1px solid var(--partial); color:var(--partial);">Mes statistiques</button>
+                <button onclick="showWelcome()" class="secondary">← Retour</button>
             </div>
         </div>
 
@@ -1288,7 +1289,7 @@
             <h2>Configuration du quiz</h2>
             <div class="card">
                 <div class="option-group">
-                    <label>📚 Section</label>
+                    <label>Section</label>
                     <select id="quiz-section" onchange="refreshStartQuestions()">
                         <option value="all">Toutes les sections</option>
                         <option value="biomolecules">Biomolécules et domaines du vivant</option>
@@ -1302,7 +1303,7 @@
                 </div>
 
                 <div class="option-group">
-                    <label>⭐ Niveau de difficulté</label>
+                    <label>Difficulté</label>
                     <div class="btn-selector" id="level-selector">
                         <button class="active" onclick="setLevel('all', this)">Tous</button>
                         <button onclick="setLevel('1', this)">Niveau 1</button>
@@ -1312,16 +1313,16 @@
                 </div>
 
                 <div class="option-group">
-                    <label>🗪 Mode de feedback</label>
+                    <label>Feedback</label>
                     <div class="btn-selector" id="feedback-selector">
-                        <button class="active" onclick="setFeedback('immediate', this)" title="Voir la réponse après chaque question">⚡ Immédiat</button>
-                        <button onclick="setFeedback('final', this)" title="Voir toutes les réponses à la fin">📋 Final</button>
+                        <button class="active" onclick="setFeedback('immediate', this)" title="Voir la réponse après chaque question">Immédiat</button>
+                        <button onclick="setFeedback('final', this)" title="Voir toutes les réponses à la fin">Final</button>
                     </div>
                     <input type="hidden" id="feedback-mode" value="immediate">
                 </div>
 
                 <div class="option-group">
-                    <label>🔀 Ordre des questions</label>
+                    <label>Ordre des questions</label>
                     <select id="question-order" onchange="toggleStartQuestion()">
                         <option value="random">Aléatoire</option>
                         <option value="sequential">Séquentiel</option>
@@ -1335,10 +1336,10 @@
                 </div>
 
                 <div class="option-group">
-                    <label>🧩 Mode QCM</label>
+                    <label>Mode QCM</label>
                     <div class="btn-selector" id="mcq-mode-selector">
-                        <button class="active" onclick="setMcqMode('grouped', this)" title="Voir toutes les options ensemble">☑️ Classique</button>
-                        <button onclick="setMcqMode('truefalse', this)" title="Évaluer chaque affirmation une par une">🔀 Vrai / Faux</button>
+                        <button class="active" onclick="setMcqMode('grouped', this)" title="Voir toutes les options ensemble">Classique</button>
+                        <button onclick="setMcqMode('truefalse', this)" title="Évaluer chaque affirmation une par une">Vrai / Faux</button>
                     </div>
                     <input type="hidden" id="mcq-mode" value="grouped">
                     <p id="mcq-mode-desc" style="color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.4rem; margin-bottom: 0;">Sélectionne toutes les affirmations correctes parmi les options.</p>
@@ -1346,7 +1347,7 @@
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-top:0.5rem;">
                     <button onclick="showMainMenu()" class="secondary">← Retour</button>
-                    <button onclick="startQuiz()">🚀 Commencer</button>
+                    <button onclick="startQuiz()">▶ Commencer</button>
                 </div>
             </div>
         </div>
@@ -1376,14 +1377,14 @@
                 <div id="mcq-hint" style="display:none; font-size:0.82rem; color:var(--text-secondary); margin-bottom:1rem; font-style:italic;">Plusieurs réponses possibles</div>
 
                 <div id="hint-container" class="hidden hint">
-                    <strong>💡 Indice :</strong>
-                    <span class="hint-penalty">-0.5 pt</span>
+                    <strong>Indice :</strong>
+                    <span class="hint-penalty">× 0.5</span>
                     <div id="hint-text" style="margin-top: 0.5rem;"></div>
                 </div>
 
                 <div id="count-container" class="hidden hint">
-                    <strong>🔢 Nombre de bonnes réponses :</strong>
-                    <span class="hint-penalty">-0.5 pt</span>
+                    <strong>Nombre de bonnes réponses :</strong>
+                    <span class="hint-penalty">× 0.5</span>
                     <div id="count-text" style="margin-top: 0.5rem;"></div>
                 </div>
 
@@ -1398,17 +1399,17 @@
 
                 <!-- Helpers -->
                 <div class="button-group quiz-helpers">
-                    <button onclick="showHint()" id="hint-btn" class="secondary small">💡 Indice</button>
-                    <button onclick="showCorrectCount()" id="count-btn" class="secondary small hidden">🔢 Nb. réponses</button>
-                    <button onclick="toggleFlag(currentQuizQuestions[currentQuestionIndex].id)" id="flag-btn" class="secondary small">🚩 Marquer <span class="kbd-hint">F</span></button>
-                    <button onclick="skipQuestion()" id="skip-btn" class="secondary small">⏭️ Passer</button>
+                    <button onclick="showHint()" id="hint-btn" class="secondary small">Indice</button>
+                    <button onclick="showCorrectCount()" id="count-btn" class="secondary small hidden">Nb. réponses</button>
+                    <button onclick="toggleFlag(currentQuizQuestions[currentQuestionIndex].id)" id="flag-btn" class="secondary small">🚩 Marquer</button>
+                    <button onclick="skipQuestion()" id="skip-btn" class="secondary small">→ Passer</button>
                 </div>
                 <!-- Navigation -->
                 <div class="button-group quiz-nav">
                     <button onclick="previousQuestion()" id="prev-btn" class="secondary">← Précédent</button>
-                    <button onclick="submitAnswer()" id="submit-btn">✅ Valider</button>
+                    <button onclick="submitAnswer()" id="submit-btn">Valider</button>
                     <button onclick="nextQuestion()" id="next-btn" class="hidden">Suivant →</button>
-                    <button onclick="endQuiz()" class="secondary danger-btn" style="font-size:0.85rem;">➜] Terminer</button>
+                    <button onclick="endQuiz()" class="secondary danger-btn" style="font-size:0.85rem;">■ Terminer</button>
                 </div>
             </div>
         </div>
@@ -1433,14 +1434,14 @@
             </div>
 
             <div class="card" id="section-breakdown-card" style="display: none;">
-                <h3>📈 Performance par section</h3>
+                <h3>Performance par section</h3>
                 <div id="section-breakdown" style="display: grid; gap: 0.75rem; margin-top: 1rem;"></div>
             </div>
 
             <div class="card">
                 <h3>Toutes les questions</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
-                    🟢 Correcte &nbsp;|&nbsp; 🔵 Partielle &nbsp;|&nbsp; 🔴 Incorrecte &nbsp;|&nbsp; ⚪ Non répondue<br>
+                    🟢 Correcte &nbsp;|&nbsp; 🟡 Partielle &nbsp;|&nbsp; 🔴 Incorrecte &nbsp;|&nbsp; ⚪ Non répondue<br>
                     Clique sur une question pour la voir en détail.
                 </p>
                 <div id="stats-coverage-bar" style="margin-bottom:1rem; display:none;">
@@ -1453,7 +1454,7 @@
                     </div>
                 </div>
                 <div class="question-list" id="all-questions-list"></div>
-                <button onclick="showMainMenu()" class="secondary">Retour au menu</button>
+                <button onclick="showMainMenu()" class="secondary">← Retour</button>
             </div>
         </div>
 
@@ -1461,7 +1462,7 @@
         <div id="review-page" class="hidden">
             <h2>Révision de tes réponses</h2>
             <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">
-                Tu peux revoir et modifier tes réponses avant de voir la correction. Clique sur une question pour y retourner, puis clique <strong>➜] Terminer</strong> pour revenir ici.
+                Tu peux revoir et modifier tes réponses avant de voir la correction. Clique sur une question pour y retourner, puis clique <strong>■ Terminer</strong> pour revenir ici.
             </p>
             <div class="card">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
@@ -1469,11 +1470,11 @@
                     <span id="review-progress-label" style="color:var(--text-secondary); font-size:0.85rem;"></span>
                 </div>
                 <p style="color:var(--text-secondary); font-size:0.82rem; margin-bottom:1rem;">
-                    ✏️ Répondu &nbsp;|&nbsp; ⬜ Pas répondu
+                    Répondu &nbsp;|&nbsp; Pas répondu
                 </p>
                 <div class="question-list" id="review-list"></div>
-                <button onclick="finaliseQuiz()" style="margin-top:0.5rem;">✅ Valider et voir la correction</button>
-                <button onclick="returnToQuizFromReview()" class="secondary">Retour au quiz</button>
+                <button onclick="finaliseQuiz()" style="margin-top:0.5rem;">Valider et voir la correction</button>
+                <button onclick="returnToQuizFromReview()" class="secondary">← Retour</button>
             </div>
         </div>
 
@@ -1499,7 +1500,7 @@
 
             <!-- Dual score panel (shown when there are unanswered questions) -->
             <div id="summary-dual-score" class="card hidden" style="padding:1.25rem 1.5rem;">
-                <h3 style="margin-bottom:1rem; font-size:1rem;">📊 Réussite</h3>
+                <h3 style="margin-bottom:1rem; font-size:1rem;">Réussite</h3>
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                     <div style="background:var(--bg-tertiary); border-radius:10px; padding:1rem; text-align:center;">
                         <div style="font-size:0.78rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">Questions répondues</div>
@@ -1518,7 +1519,7 @@
                 <h3>Détail des réponses</h3>
                 <p style="color:var(--text-secondary); font-size:0.82rem; margin-bottom:1rem;">Clique sur une question pour voir la correction détaillée.</p>
                 <div class="question-list" id="summary-list"></div>
-                <button onclick="downloadSummary()">📥 Télécharger mes réponses</button>
+                <button onclick="downloadSummary()">Télécharger mes réponses</button>
                 <button onclick="showMainMenu()" class="secondary">Retour au menu</button>
             </div>
         </div>
@@ -1541,7 +1542,7 @@
                 <div class="question-list" id="flagged-questions-list"></div>
                 
                 <div id="flagged-actions" class="hidden" style="margin-top: 1.5rem;">
-                    <button onclick="startFlaggedQuiz()">📝 Réviser ces questions</button>
+                    <button onclick="startFlaggedQuiz()">Réviser ces questions</button>
                     <button onclick="clearAllFlags()" class="secondary">🗑️ Tout effacer</button>
                 </div>
                 
@@ -1553,11 +1554,11 @@
     <!-- Confirm end-quiz modal (immediate feedback mode) -->
     <div id="end-confirm-modal" class="modal" onclick="closeEndConfirm(event)">
         <div class="modal-content" style="max-width:480px;" onclick="event.stopPropagation()">
-            <h2 style="margin-bottom:0.75rem; font-size:1.4rem;">➜] Terminer le quiz ?</h2>
+            <h2 style="margin-bottom:0.75rem; font-size:1.4rem;">Terminer le quiz ?</h2>
             <p id="end-confirm-msg" style="color:var(--text-secondary); margin-bottom:1.5rem; line-height:1.6;"></p>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
                 <button onclick="closeEndConfirm()" class="secondary">← Continuer</button>
-                <button onclick="confirmEndQuiz()" style="background:var(--error); color:#fff;">➜] Terminer</button>
+                <button onclick="confirmEndQuiz()" style="background:var(--error); color:#fff;">■ Terminer</button>
             </div>
         </div>
     </div>
@@ -1685,7 +1686,7 @@
                 showToast('🚩 Marqueur retiré');
             } else {
                 flaggedQuestions.add(questionId);
-                showToast('🚩 Question marquée');
+                showToast('🚩 Marqueur ajouté');
             }
             saveFlaggedQuestions();
             updateFlagButton();
@@ -1695,6 +1696,7 @@
             const btn = document.getElementById('flag-btn');
             if (!btn) return;
             const question = currentQuizQuestions[currentQuestionIndex];
+            if (!question) return;
             if (flaggedQuestions.has(question.id)) {
                 btn.innerHTML = '🚩 Marquée';
                 btn.classList.add('flagged');
@@ -1764,7 +1766,7 @@
                 localStorage.setItem('quizSession', sessionId);
                 await loadUserHistory();
                 _lastHistoryLoad = Date.now();
-                showToast('⚠️ Hors ligne. Historique local chargé.');
+                showToast('⚠️ Hors ligne - historique local chargé');
                 showMainMenu();
                 return;
             }
@@ -1796,7 +1798,7 @@
                     const remoteIds = new Set(remoteHistory.map(h => h.question_id + '_' + h.timestamp));
                     const localOnly = localHistory.filter(h => !remoteIds.has(h.question_id + '_' + h.timestamp));
                     userHistory = [...remoteHistory, ...localOnly];
-                    console.log(`✅ ${userHistory.length} réponses chargées (${remoteHistory.length} remote + ${localOnly.length} local)`);
+                    console.log(`${userHistory.length} réponses chargées (${remoteHistory.length} remote + ${localOnly.length} local)`);
                 } else {
                     userHistory = localHistory;
                     console.warn('⚠️ Mode hors ligne - historique local utilisé');
@@ -1837,7 +1839,7 @@
             }
             if (failed.length === 0) {
                 localStorage.removeItem(key);
-                console.log('✅ Réponses hors-ligne synchronisées (' + pending.length + ' réponses)');
+                console.log('Réponses hors-ligne synchronisées (' + pending.length + ' réponses)');
             } else {
                 localStorage.setItem(key, JSON.stringify(failed));
             }
@@ -1868,7 +1870,7 @@
                     body: JSON.stringify(answerData)
                 });
                 if (res.ok) {
-                    console.log('✅ Réponse sauvegardée');
+                    console.log('Réponse sauvegardée');
                     // Also update local cache so stats page reflects latest answers immediately
                     userHistory.push(answerData);
                     localStorage.setItem(`history_${currentSession}`, JSON.stringify(userHistory));
@@ -1915,7 +1917,7 @@
             isLoadingQuestions = true;
             
             try {
-                console.log('🔄 Chargement des questions...');
+                console.log('Chargement des questions...');
                 
                 for (const [section, filename] of Object.entries(SECTION_FILES)) {
                     try {
@@ -1923,7 +1925,7 @@
                         if (response.ok) {
                             const questions = await response.json();
                             allQuestions = allQuestions.concat(questions);
-                            console.log(`✅ ${questions.length} questions chargées depuis ${filename}`);
+                            console.log(`${questions.length} questions chargées depuis ${filename}`);
                         }
                     } catch (err) {
                         console.warn(`⚠️ Fichier ${filename} non trouvé`);
@@ -1938,7 +1940,7 @@
                     if (!q.image) q.image = null;
                 });
                 
-                console.log(`📚 Total: ${allQuestions.length} questions`);
+                console.log(`Total: ${allQuestions.length} questions`);
             } catch (error) {
                 console.error('❌ Erreur:', error);
                 showToast('❌ Impossible de charger les questions.');
@@ -2079,9 +2081,9 @@
             tfPartialStateMap.clear();
 
             const startBtn = document.querySelector('#quiz-options button[onclick="startQuiz()"]');
-            if (startBtn) { startBtn.disabled = true; startBtn.textContent = '⏳ Chargement…'; }
+            if (startBtn) { startBtn.disabled = true; startBtn.textContent = 'Chargement…'; }
             await loadQuestions();
-            if (startBtn) { startBtn.disabled = false; startBtn.textContent = '🚀 Commencer'; }
+            if (startBtn) { startBtn.disabled = false; startBtn.textContent = 'Commencer'; }
             
             if (allQuestions.length === 0) {
                 showToast('❌ Aucune question disponible'); return;
@@ -2235,7 +2237,7 @@
             document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
             
             // Barre de progression
-            const progress = ((currentQuestionIndex + 1) / currentQuizQuestions.length) * 100;
+            const progress = (currentQuestionIndex / currentQuizQuestions.length) * 100;
             document.getElementById('quiz-progress').style.width = `${progress}%`;
             const pctEl = document.getElementById('progress-pct');
             if (pctEl) pctEl.textContent = `${Math.round(progress)}%`;
@@ -2397,7 +2399,7 @@
             }
 
             if (selectedOriginalIndices.length === 0) {
-                showToast('⚠️ Veuillez sélectionner au moins une réponse'); return;
+                showToast('⚠️ Sélectionne au moins une réponse'); return;
             }
 
             const { score, status } = calculateScore(question, selectedOriginalIndices);
@@ -2489,7 +2491,7 @@
                 let statusText = '';
                 let statusColor = '';
                 if (status === 'correct') { statusText = '✅ Correct !'; statusColor = 'var(--success)'; }
-                else if (status === 'partial') { statusText = '🔵 Partiellement correct'; statusColor = 'var(--partial)'; }
+                else if (status === 'partial') { statusText = '🟡 Partiellement correct'; statusColor = 'var(--partial)'; }
                 else { statusText = '❌ Incorrect'; statusColor = 'var(--error)'; }
                 
                 let inner = `<div style="font-weight:700; font-size:1.05rem; color:${statusColor}; margin-bottom:${!isArrayExplanation && question.explanation !== 'Aucune explication disponible' ? '0.75rem' : '0'};">${statusText}</div>`;
@@ -2519,7 +2521,11 @@
 
             if (currentQuestionIndex < currentQuizQuestions.length - 1) {
                 currentQuestionIndex++;
-                displayQuestion();
+                if (quizConfig.mcqMode === 'truefalse') {
+                    displayQuestionTF();
+                } else {
+                    displayQuestion();
+                }
             } else {
                 if (quizConfig.feedbackMode === 'final') {
                     showReviewPage();
@@ -2538,7 +2544,7 @@
             }
             _saveTFPartialState();
             if (currentQuestionIndex < currentQuizQuestions.length - 1) {
-                showToast('⏭️ Question passée');
+                showToast('Question passée');
                 currentQuestionIndex++;
                 if (quizConfig.mcqMode === 'truefalse') {
                     displayQuestionTF();
@@ -2546,7 +2552,7 @@
                     displayQuestion();
                 }
             } else {
-                showToast('⚠️ Dernière question du quiz — utilise "Terminer" pour voir le résumé.');
+                showToast('⚠️ Dernière question du quiz — clique sur "■ Terminer" pour voir le résumé');
             }
         }
 
@@ -2638,7 +2644,7 @@
                 </tr>`;
             });
             const status = answerRecord.status;
-            let statusText = status === 'correct' ? '✅ Parfait !' : status === 'partial' ? '🔵 Partiellement correct' : '❌ Incorrect';
+            let statusText = status === 'correct' ? '✅ Parfait !' : status === 'partial' ? '🟡 Partiellement correct' : '❌ Incorrect';
             let globalExp = (!isArrayExp && question.explanation && question.explanation !== 'Aucune explication disponible')
                 ? `<div class="explanation" style="margin-top:1rem;"><strong>Explication :</strong> ${question.explanation}</div>` : '';
 
@@ -2647,7 +2653,7 @@
             document.getElementById('question-level').textContent = `Niveau ${question.level}`;
             document.getElementById('question-counter').textContent =
                 `${currentQuestionIndex + 1} / ${currentQuizQuestions.length}`;
-            const progress = ((currentQuestionIndex + 1) / currentQuizQuestions.length) * 100;
+            const progress = (currentQuestionIndex / currentQuizQuestions.length) * 100;
             document.getElementById('quiz-progress').style.width = `${progress}%`;
             document.getElementById('question-image').classList.add('hidden');
             document.getElementById('hint-container').classList.add('hidden');
@@ -2726,7 +2732,7 @@
                 `${currentQuestionIndex + 1} / ${currentQuizQuestions.length}`;
 
             // Progress bar (question-level)
-            const progress = ((currentQuestionIndex + 1) / currentQuizQuestions.length) * 100;
+            const progress = (currentQuestionIndex / currentQuizQuestions.length) * 100;
             document.getElementById('quiz-progress').style.width = `${progress}%`;
             const pctElTF = document.getElementById('progress-pct');
             if (pctElTF) pctElTF.textContent = `${Math.round(progress)}%`;
@@ -2845,7 +2851,7 @@
             const baseScore = correctCount / total;
             let status = 'incorrect';
             if (correctCount === total) status = 'correct';
-            else if (correctCount > total / 2) status = 'partial';
+            else if (correctCount >= total / 2) status = 'partial';
             const score = baseScore * hintPenalty;
 
             const answerRecord = {
@@ -2884,7 +2890,7 @@
                     </tr>`;
                 });
 
-                let statusText = status === 'correct' ? '✅ Parfait !' : status === 'partial' ? '🔵 Partiellement correct' : '❌ Incorrect';
+                let statusText = status === 'correct' ? '✅ Parfait !' : status === 'partial' ? '🟡 Partiellement correct' : '❌ Incorrect';
                 let globalExp = (!isArrayExp && question.explanation && question.explanation !== 'Aucune explication disponible')
                     ? `<div class="explanation" style="margin-top:1rem;"><strong>Explication :</strong> ${question.explanation}</div>` : '';
 
@@ -3063,23 +3069,23 @@
                 // Main stats show exam score
                 pctEl.textContent = `${pctExam}%`;
                 pctEl.className = 'stat-value ' + (pctExam >= 80 ? 'result-excellent' : pctExam >= 50 ? 'result-good' : 'result-poor');
-                document.getElementById('summary-score-label').textContent = 'Score (répondues)';
+                document.getElementById('summary-score-label').textContent = 'Score (réponses)';
                 document.getElementById('summary-percent-label').textContent = 'Score examen';
                 document.getElementById('summary-total').textContent = `${answeredCount}/${seenCount}`;
             } else {
                 document.getElementById('summary-dual-score').classList.add('hidden');
                 pctEl.textContent = `${pctAnswered}%`;
                 pctEl.className = 'stat-value ' + (pctAnswered >= 80 ? 'result-excellent' : pctAnswered >= 50 ? 'result-good' : 'result-poor');
-                document.getElementById('summary-score-label').textContent = 'Score total';
+                document.getElementById('summary-score-label').textContent = 'Score (réponses)';
                 document.getElementById('summary-percent-label').textContent = 'Pourcentage';
             }
 
             const usePercent = unansweredCount > 0 ? pctExam : pctAnswered;
             const feedbackEl = document.getElementById('summary-feedback');
             if (feedbackEl) {
-                if (usePercent >= 90) feedbackEl.textContent = '🏆 Excellent travail !';
-                else if (usePercent >= 60) feedbackEl.textContent = '✅ Bien joué !';
-                else feedbackEl.textContent = '📚 Continue à réviser, tu vas y arriver !';
+                if (usePercent >= 90) feedbackEl.textContent = 'Excellent !';
+                else if (usePercent >= 60) feedbackEl.textContent = 'Bien joué !';
+                else feedbackEl.textContent = 'Tu vas y arriver !';
             }
 
             const summaryList = document.getElementById('summary-list');
@@ -3147,8 +3153,8 @@
                 const qText = question.question.length > 65
                     ? question.question.substring(0, 65) + '…' : question.question;
                 const tag = answer
-                    ? `<span style="font-size:0.75rem; color:var(--text-secondary);">✏️ répondu</span>`
-                    : `<span style="font-size:0.75rem; color:var(--warning); font-weight:600;">⬜ passé</span>`;
+                    ? `<span style="font-size:0.75rem; color:var(--text-secondary);">répondu</span>`
+                    : `<span style="font-size:0.75rem; color:var(--warning); font-weight:600;">passé</span>`;
                 const dotStyle = answer
                     ? 'background:var(--text-secondary);'
                     : 'background:transparent; border:2px solid var(--border);';
@@ -3175,7 +3181,7 @@
             } else {
                 displayQuestion();
             }
-            showToast('📝 Modifie ta réponse puis clique ➜] Terminer pour revenir à la révision.');
+            showToast('Modifie ta réponse puis clique "■ Terminer" pour revenir à la révision.');
         }
 
         function returnToQuizFromReview() {
@@ -3296,17 +3302,11 @@
                     const successRate = Math.round((stats.correct / stats.answered) * 100);
                     const coverage = Math.round((stats.answered / stats.total) * 100);
                     
-                    let emoji = '📊';
-                    if (successRate >= 80) emoji = '🌟';
-                    else if (successRate >= 60) emoji = '✅';
-                    else if (successRate >= 40) emoji = '⚠️';
-                    else emoji = '🔴';
-                    
                     const item = document.createElement('div');
                     item.style.cssText = 'background: var(--bg-tertiary); padding: 0.75rem 1rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;';
                     item.innerHTML = `
                         <div>
-                            <strong>${emoji} ${sectionNames[section] || section}</strong><br>
+                            <strong>{sectionNames[section] || section}</strong><br>
                             <span style="font-size: 0.85rem; color: var(--text-secondary);">
                                 ${stats.answered}/${stats.total} répondues (${coverage}%)
                             </span>
@@ -3547,7 +3547,7 @@
             content += '</div>';
 
             // Score & status
-            const statusText = answerRecord.status === 'correct' ? '✅ Correct' : answerRecord.status === 'partial' ? '🔵 Partiel' : '❌ Incorrect';
+            const statusText = answerRecord.status === 'correct' ? '✅ Correct' : answerRecord.status === 'partial' ? '🟡 Partiel' : '❌ Incorrect';
             const statusColor = answerRecord.status === 'correct' ? 'var(--success)' : answerRecord.status === 'partial' ? 'var(--partial)' : 'var(--error)';
             content += `<div style="padding:0.75rem 1rem;background:var(--bg-tertiary);border-radius:8px;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;">
                 <span style="font-weight:700;color:${statusColor};">${statusText}</span>
@@ -3555,7 +3555,7 @@
             </div>`;
 
             if (question.hint && answerRecord.hintUsed) {
-                content += `<div class="hint" style="margin-bottom:1rem;"><strong>💡 Indice :</strong> ${question.hint}</div>`;
+                content += `<div class="hint" style="margin-bottom:1rem;"><strong>Indice :</strong> ${question.hint}</div>`;
             }
             if (!Array.isArray(question.explanation) && question.explanation !== 'Aucune explication disponible') {
                 content += `<div class="explanation"><strong>Explication :</strong><br>${question.explanation}</div>`;
@@ -3596,12 +3596,12 @@
                 content += `<div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
                     <strong>Votre dernière réponse :</strong><br>
                     Score: ${answer.score ? answer.score.toFixed(2) : '0.00'} pts<br>
-                    Statut: ${answer.is_correct ? '✅ Correct' : (answer.score > 0 ? '🔵 Partiel' : '❌ Incorrect')}
+                    Statut: ${answer.is_correct ? '✅ Correct' : (answer.score > 0 ? '🟡 Partiel' : '❌ Incorrect')}
                 </div>`;
             }
             
             if (question.hint) {
-                content += `<div class="hint" style="margin-top: 1rem;"><strong>💡 Indice :</strong> ${question.hint}</div>`;
+                content += `<div class="hint" style="margin-top: 1rem;"><strong>Indice :</strong> ${question.hint}</div>`;
             }
 
             if (!hideExplanation) {
@@ -3715,7 +3715,7 @@
         function copySessionId() {
             if (!currentSession) return;
             navigator.clipboard.writeText(currentSession)
-                .then(() => showToast('✅ ID de session copié !'))
+                .then(() => showToast('ID de session copié !'))
                 .catch(() => {
                     const el = document.createElement('textarea');
                     el.value = currentSession;
@@ -3723,7 +3723,7 @@
                     el.select();
                     document.execCommand('copy');
                     document.body.removeChild(el);
-                    showToast('✅ ID de session copié !');
+                    showToast('ID de session copié !');
                 });
         }
 
@@ -3750,6 +3750,9 @@
             { icon: '🔩', text: 'Le suc gastrique est suffisamment acide pour dissoudre du métal !' },
             { icon: '👶', text: 'Les bébés clignent des yeux 10x moins que les adultes !' },
             { icon: '🩸', text: 'Mis bout à bout, la longueur des vaisseaux sanguins d\'un être humain est d\'environ 100\'000 km !' },
+            { icon: '🦠', text: 'Thiomargarita magnifica est la plus grande bactérie connue : elle mesure 1 cm !' },
+            { icon: '🌱', text: 'Le plus vieil arbre du monde est âgé de presque 5000 ans !' },
+            { icon: '🐥', text: 'Le faucon pèlerin est l\'animal le plus rapide, avec des pointes à presque 400 km/h !' },
         ];
 
         function showFunFact() {
@@ -3834,7 +3837,7 @@
 
         if ('serviceWorker' in navigator) {
                         navigator.serviceWorker.register('sw.js').then(reg => {
-                console.log('✅ Service Worker enregistré', reg.scope);
+                console.log('Service Worker enregistré', reg.scope);
                 // Flush any pending answers when SW activates (back online)
                 reg.addEventListener('updatefound', () => flushPendingAnswers());
             }).catch(err => {
