@@ -280,8 +280,8 @@
       "IgE",
       "IgA",
       "IgD",
-      "IgE",
-      "IgG"
+      "IgG",
+      "IgM"
     ],
     "correct": [0],
     "explanation": "Il s'agit des IgE, qui déclenchent la libération de médiateurs des mastocytes et basophiles, p. ex. l'histamine."
